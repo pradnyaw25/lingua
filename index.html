@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lingua — Parallel Reading</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">Lingua<span>.</span></div>
+      <nav class="nav" data-nav></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Read in parallel.</h1>
+      <p class="subtitle">French &amp; Spanish beside English, sentence by sentence. Pick a text to begin.</p>
+
+      <div id="library"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">Personal language-learning workshop · texts are public-domain fables retold in simple prose.</div>
+  </footer>
+
+  <script src="data/texts.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const texts = window.TEXTS || [];
+      const byLang = {};
+      texts.forEach((t) => { (byLang[t.langLabel] = byLang[t.langLabel] || []).push(t); });
+      const lib = document.getElementById("library");
+      Object.keys(byLang).forEach((label) => {
+        const h = document.createElement("p");
+        h.className = "section-label";
+        h.textContent = label;
+        lib.appendChild(h);
+        const grid = document.createElement("div");
+        grid.className = "card-grid";
+        byLang[label].forEach((t) => {
+          const a = document.createElement("a");
+          a.className = "card";
+          a.href = "reader.html?id=" + encodeURIComponent(t.id);
+          a.innerHTML =
+            '<span class="lang-tag">' + t.langLabel + '</span>' +
+            '<h3>' + t.title + '</h3>' +
+            '<p class="meta">' + t.pairs.length + ' sentences · ' + (t.level || '') + '</p>';
+          grid.appendChild(a);
+        });
+        lib.appendChild(grid);
+      });
+    })();
+  </script>
+</body>
+</html>

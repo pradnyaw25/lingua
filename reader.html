@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reader — Lingua</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand"><a href="index.html" style="color:inherit">Lingua<span>.</span></a></div>
+      <nav class="nav" data-nav></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="toolbar">
+        <label for="text-select">Text</label>
+        <select id="text-select"></select>
+        <span class="spacer"></span>
+        <button class="btn" id="btn-swap" title="Put English first">Swap sides</button>
+        <button class="btn" id="btn-hide-en">Hide English (self-test)</button>
+        <label for="font-size">Size</label>
+        <select id="font-size">
+          <option value="s">Small</option>
+          <option value="m" selected>Medium</option>
+          <option value="l">Large</option>
+        </select>
+      </div>
+
+      <div class="text-head" id="text-head"></div>
+      <div class="parallel" id="parallel"></div>
+      <p class="subtitle" style="margin-top:16px;font-size:.9rem">
+        Tip: hover a sentence to sync both sides; click to pin the highlight while you study it.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap"><a href="index.html">← Back to library</a></div>
+  </footer>
+
+  <script src="data/texts.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/reader.js"></script>
+</body>
+</html>

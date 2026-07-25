@@ -1,0 +1,8 @@
+# OS / editor cruft
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Local server logs
+*.log

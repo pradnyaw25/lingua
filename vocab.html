@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequency Words — Lingua</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand"><a href="index.html" style="color:inherit">Lingua<span>.</span></a></div>
+      <nav class="nav" data-nav></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Frequency words</h1>
+      <p class="subtitle">The most common words first. Mark the ones you know — progress is saved on this device.</p>
+
+      <div class="toolbar">
+        <div id="lang-tabs" style="display:flex;gap:8px"></div>
+        <span class="spacer"></span>
+        <input type="search" id="vocab-search" placeholder="Search word or meaning…" />
+        <label for="known-filter">Show</label>
+        <select id="known-filter">
+          <option value="all">All</option>
+          <option value="unknown">Not yet known</option>
+        </select>
+      </div>
+
+      <p class="vocab-stats" id="vocab-stats"></p>
+      <table class="vocab">
+        <thead>
+          <tr><th>#</th><th>Word</th><th>English</th><th>Type</th><th>Known</th></tr>
+        </thead>
+        <tbody id="vocab-body"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">Starter list (~70 words each). Grow toward 1,000 by appending to <code>data/vocab.js</code>.</div>
+  </footer>
+
+  <script src="data/vocab.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/vocab.js"></script>
+</body>
+</html>
