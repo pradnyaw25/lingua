@@ -139,7 +139,10 @@ def read_dict(path):
         line = raw.rstrip("\n")
         if not line.strip() or line.lstrip().startswith("#"):
             continue
-        fields = re.split(r"\t|,", line)
+        # Prefer tab so an English field may itself contain commas ("me, to me");
+        # fall back to comma only for pure CSV dictionaries.
+        sep = "\t" if "\t" in line else ","
+        fields = line.split(sep)
         fields = [f.strip() for f in fields]
         if len(fields) < 2 or not fields[0]:
             continue
