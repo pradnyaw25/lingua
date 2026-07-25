@@ -1,0 +1,9 @@
+# sample "rank word count" frequency list (mix of already-curated and new words)
+1 le 998877
+2 de 812340
+3 temps 71230
+4 grand 60110
+5 monde 55010
+6 année 48120
+7 pays 33440
+8 gouvernement 21200
