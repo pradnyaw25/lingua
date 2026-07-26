@@ -150,33 +150,37 @@ python3 scripts/build_dictionary.py \
 
 Run this whenever you add or edit a text.
 
-## Daily auto-generated content
+## Auto-generated content
 
-`data/daily.js` is a rolling window of short bilingual stories generated **once a day**
-by a GitHub Actions cron (`.github/workflows/daily-content.yml`), and merged in front of
-the library by `js/app.js`. No backend — the job just commits static files, same as the
-rest of the site.
+Content is generated from **`scripts/theme_ideas.txt`** — your editable list of topics
+(one per line, `#` for comments). No live backend: a GitHub Actions job calls OpenAI and
+commits static files, and `js/app.js` merges the results into the library.
 
-Each run (`scripts/generate_daily.py`):
-1. picks a topic from **`scripts/theme_ideas.txt`** — your editable list of ideas
-   (one per line), walked one per day so it cycles through the whole list,
-2. asks OpenAI (`gpt-4.1-mini`, structured outputs) for a French + Spanish piece,
-   sentence-aligned 1:1 with English — the model picks the format that fits the topic
-   (a light **story** for everyday scenes, a **explainer** for how-things-work / history /
-   science) — at a CEFR level that rotates by day (A2 → B1 → B2),
-3. **validates** alignment, length, and a sensitive-topic screen (drops the day if it fails),
-4. prepends it to `data/daily.js` (keeping the newest ~20 days), then `regen.sh` updates
-   the click-a-word dictionary.
-
-**To enable it:** add an `OPENAI_API_KEY` repo secret (Settings → Secrets → Actions).
-Trigger a first run manually from the Actions tab ("Daily content" → Run workflow), or wait
-for the 13:00 UTC schedule. Test locally without the API:
+**Batch (primary).** `scripts/generate_batch.py` generates one piece for *every* topic and
+writes them all to `data/generated.js`. Run it ad hoc from the Actions tab
+("Generate library" → Run workflow), or locally:
 
 ```bash
-python3 scripts/generate_daily.py --mock
+OPENAI_API_KEY=sk-… python3 scripts/generate_batch.py     # the whole list
+python3 scripts/generate_batch.py --mock --limit 3        # offline smoke test
 ```
 
-**Note:** daily texts skip the hand-QA the curated dictionary gets — their click-a-word
+**Daily (paused).** `scripts/generate_daily.py` drips one piece per day into a rolling
+window (`data/daily.js`). The cron in `.github/workflows/daily-content.yml` is commented
+out — re-enable it if you'd rather drip daily than batch.
+
+For each topic the model:
+- picks the **format** that fits — a light *story* for everyday scenes, an *explainer* for
+  how-things-work / history / science,
+- writes it in French **and** Spanish, sentence-aligned 1:1 with English,
+- at a CEFR level rotated across A2 / B1 / B2,
+- and it's **validated** (alignment, length, a graphic-content screen); topics that fail are skipped.
+
+Then `regen.sh` updates the click-a-word dictionary for the new words.
+
+**To use it:** add an `OPENAI_API_KEY` repo secret (Settings → Secrets → Actions).
+
+**Note:** generated texts skip the hand-QA the curated dictionary gets — their click-a-word
 glosses come straight from the machine dictionary, so expect the occasional rough gloss.
 
 ## Data sources & credits

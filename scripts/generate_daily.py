@@ -45,11 +45,13 @@ FALLBACK_THEMES = [
     "a rainy day at the market", "a very long queue", "a mysterious key",
 ]
 
-# Words that, if they appear, mean we drop the story (belt-and-suspenders screen).
+# Last-ditch screen for clearly graphic/harmful output. Topic-appropriateness (no
+# politics, medical advice, violence, current events) is handled by the prompt and the
+# curated topic list — so keep this NARROW: don't block ordinary educational vocabulary
+# like "virus", "attack", "president", or "true crime".
 BLOCKLIST = re.compile(
-    r"\b(war|guerre|guerra|kill|killed|tué|muert|dead|death|mort|weapon|arme|arma|"
-    r"attack|attaque|ataque|bomb|shoot|terror|riot|protest|election|président|presidente|"
-    r"covid|virus|disease|maladie|enfermedad|suicid|drug|drogue|droga|rape|abuse)\b",
+    r"\b(genocid\w*|génocide|massacre|masacre|terroris\w*|"
+    r"rape|viol|violación|suicid\w*|overdose|sobredosis|self-harm)\b",
     re.IGNORECASE,
 )
 

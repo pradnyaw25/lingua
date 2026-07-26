@@ -1,17 +1,20 @@
-name: Daily content
+name: Generate library
 
+# Ad-hoc: generate a reading piece for every idea in scripts/theme_ideas.txt.
+# Run manually from the Actions tab when you want to (re)build the batch library.
 on:
-  # Daily schedule is paused — content is generated ad hoc via the "Generate library"
-  # workflow. Re-enable this cron to resume one-a-day drip generation.
-  # schedule:
-  #   - cron: "0 13 * * *"
-  workflow_dispatch: {}     # still runnable manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Only the first N topics (blank = all)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
 
 concurrency:
-  group: daily-content
+  group: generate-library
   cancel-in-progress: false
 
 jobs:
@@ -19,39 +22,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - name: Install OpenAI SDK
         run: pip install openai
-
-      - name: Cache source data (frequency lists + dictionaries)
+      - name: Cache source data
         uses: actions/cache@v4
         with:
           path: scripts/.data
           key: lingua-source-data-v1
-
       - name: Fetch source data if not cached
         run: test -f scripts/.data/fr-en.tsv || bash scripts/fetch_data.sh
-
-      - name: Generate today's story
+      - name: Generate the library
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python3 scripts/generate_daily.py --date "$(date -u +%F)"
-
+        run: python3 scripts/generate_batch.py ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
       - name: Regenerate click-a-word dictionary
         run: bash scripts/regen.sh
-
       - name: Commit and push if changed
         run: |
-          if [ -n "$(git status --porcelain data/daily.js data/dictionary.js)" ]; then
+          if [ -n "$(git status --porcelain data/generated.js data/dictionary.js)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add data/daily.js data/dictionary.js
-            git commit -m "Daily text: $(date -u +%F)"
+            git add data/generated.js data/dictionary.js
+            git commit -m "Generate batch library ($(date -u +%F))"
             git push
           else
-            echo "No new content today — nothing to commit."
+            echo "No changes to commit."
           fi

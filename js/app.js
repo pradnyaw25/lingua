@@ -1,8 +1,9 @@
 // Shared helpers: build the top nav and mark the active page.
 (function () {
-  // Merge the daily auto-generated texts (window.DAILY) in front of the library.
-  if (window.DAILY && window.DAILY.length && window.TEXTS) {
-    window.TEXTS = window.DAILY.concat(window.TEXTS);
+  // Merge auto-generated texts (batch library + daily) in front of the curated library.
+  var extra = [].concat(window.DAILY || [], window.GENERATED || []);
+  if (extra.length && window.TEXTS) {
+    window.TEXTS = extra.concat(window.TEXTS);
   }
 
   const pages = [

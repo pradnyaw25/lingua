@@ -31,6 +31,7 @@ from build_vocab import parse_vocab, read_dict, aliases  # noqa: E402
 
 TEXTS = os.path.normpath(os.path.join(HERE, "..", "data", "texts.js"))
 DAILY = os.path.normpath(os.path.join(HERE, "..", "data", "daily.js"))
+GENERATED = os.path.normpath(os.path.join(HERE, "..", "data", "generated.js"))
 VOCAB = os.path.normpath(os.path.join(HERE, "..", "data", "vocab.js"))
 OUT = os.path.normpath(os.path.join(HERE, "..", "data", "dictionary.js"))
 
@@ -79,8 +80,9 @@ def _collect_words(src, words):
 def text_words_by_lang():
     words = {}
     _collect_words(open(TEXTS, encoding="utf-8").read(), words)
-    if os.path.exists(DAILY):
-        _collect_words(open(DAILY, encoding="utf-8").read(), words)
+    for extra in (DAILY, GENERATED):
+        if os.path.exists(extra):
+            _collect_words(open(extra, encoding="utf-8").read(), words)
     return words
 
 

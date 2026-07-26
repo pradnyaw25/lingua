@@ -9,7 +9,7 @@ on:
   # Redeploy after the daily-content job commits (bot pushes with GITHUB_TOKEN
   # don't fire the `push` trigger, so deploy on that workflow's completion).
   workflow_run:
-    workflows: ["Daily content"]
+    workflows: ["Daily content", "Generate library"]
     types: [completed]
 
   # Allows you to run this workflow manually from the Actions tab
