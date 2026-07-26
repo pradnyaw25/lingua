@@ -3,7 +3,8 @@
   const pages = [
     { href: "index.html", label: "Library" },
     { href: "vocab.html", label: "Frequency Words" },
-    { href: "flashcards.html", label: "Flashcards" }
+    { href: "flashcards.html", label: "Flashcards" },
+    { href: "about.html", label: "About" }
   ];
   const here = location.pathname.split("/").pop() || "index.html";
 
@@ -14,15 +15,6 @@
         return `<a href="${p.href}"${active}>${p.label}</a>`;
       })
       .join("");
-  });
-
-  // Link back to the personal site on every page footer.
-  document.querySelectorAll("footer .wrap").forEach((w) => {
-    w.appendChild(document.createTextNode(" · "));
-    const a = document.createElement("a");
-    a.href = "https://pradnya.dev";
-    a.textContent = "pradnya.dev";
-    w.appendChild(a);
   });
 })();
 

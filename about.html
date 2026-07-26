@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Lingua</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .about p { max-width: 640px; font-size: 1.12rem; line-height: 1.75; margin: 0 0 18px; }
+    .about-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .about-link {
+      display: inline-flex; align-items: center;
+      padding: 10px 18px; border: 1px solid var(--line); border-radius: 10px;
+      background: var(--surface); font-family: system-ui, sans-serif; font-size: .95rem;
+    }
+    .about-link:hover { border-color: var(--accent); text-decoration: none; }
+    .about-link.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand"><a href="index.html" style="color:inherit">Lingua<span>.</span></a></div>
+      <nav class="nav" data-nav></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap about">
+      <h1>About Lingua</h1>
+      <p class="subtitle">A personal workshop for reading my way into French and Spanish.</p>
+
+      <p>Lingua is a small, dependency-free site I built to learn French and Spanish the way that actually works for me: reading real sentences with the English right beside them, and drilling the words that come up most.</p>
+      <p>It has three parts — a <a href="index.html">parallel-text reader</a> where you tap any word for its meaning, the <a href="vocab.html">1,000 most common words</a> in each language sorted into quick categories, and <a href="flashcards.html">flashcards</a> over any set.</p>
+      <p>Built and maintained by Pradnya Wakchaure.</p>
+
+      <div class="about-links">
+        <a class="about-link primary" href="https://pradnya.dev" target="_blank" rel="noopener">pradnya.dev</a>
+        <a class="about-link" href="https://github.com/pradnyaw25/lingua" target="_blank" rel="noopener">Source on GitHub</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap"><a href="index.html">← Back to library</a></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
