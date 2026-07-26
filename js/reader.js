@@ -120,6 +120,7 @@
       '<h1>' + text.title + '</h1>' +
       '<p class="meta">' + text.langLabel + ' · ' + (text.level || "") +
       ' · <span>' + text.source + '</span></p>';
+    updateReadBtn();
 
     grid.innerHTML = "";
     grid.appendChild(el("div", { class: "col-head target-head", text: text.langLabel }, []));
@@ -148,6 +149,18 @@
   }
 
   selectEl.addEventListener("change", () => render(texts.find((t) => t.id === selectEl.value)));
+
+  // "Mark as read" — remembered per text on this device; the library hides read texts.
+  const readBtn = document.getElementById("btn-read");
+  function updateReadBtn() {
+    const on = window.isRead(current.id);
+    readBtn.classList.toggle("on", on);
+    readBtn.textContent = on ? "✓ Read" : "Mark as read";
+  }
+  readBtn.addEventListener("click", () => {
+    window.setRead(current.id, !window.isRead(current.id));
+    updateReadBtn();
+  });
 
   // Toolbar toggles.
   document.getElementById("btn-swap").addEventListener("click", (e) => {

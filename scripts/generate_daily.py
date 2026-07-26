@@ -40,8 +40,9 @@ def pick_level(date_str):
 # Section (interest) tag per theme_ideas.txt category header. Everyday = default.
 SECTION_BY_CATEGORY = {
     "Modern culture & tech": "Culture", "Food & drink": "Food", "Travel & places": "Travel",
-    "Tech & science": "Science", "Mind & psychology": "Mind", "History & culture": "History",
-    "Pop culture & origins": "Culture", "Sports & personalities": "Sports",
+    "Technology": "Technology", "Mind & psychology": "Psychology", "History & culture": "History",
+    "Pop culture & origins": "Culture", "Movies & TV": "Movies & TV",
+    "Sports & personalities": "Sports",
 }
 NEW_CATEGORIES = {"Sports & personalities"}
 _SMALL_WORDS = {"a", "an", "the", "and", "or", "but", "of", "in", "on", "at", "to",

@@ -25,9 +25,12 @@ Built for personal use. No build step, no framework, no server required — just
   reflected in the URL (`?lang=fr`), so each language is a shareable link and reading a
   text drops you into that language.
 - **Library** — the texts for your chosen language, filterable by **CEFR level** (A1–B2)
-  *and* by **interest** (Fiction, Travel, Food, Science, Sports, …). Each card shows the
-  target-language title with its English title, an interest tag, and a **New** badge on
-  fresh topics.
+  *and* by **interest** (Fiction, Travel, Food, Technology, Movies & TV, Sports, …). Each
+  card shows the target-language title with its English title, an interest tag, and a
+  **New** badge on fresh topics.
+- **Read tracking** — mark a text **read** from its card or the reader toolbar; the choice
+  is saved in your browser. The library **hides read stories by default**, with a *Show
+  read stories* toggle to bring them back (and unmark any you like).
 - **About** — project blurb and links.
 
 Everything is theme-aware (light + dark) and works on mobile.

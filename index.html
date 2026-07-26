@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lingua — Parallel Reading</title>
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
   <style>
     .filter-row { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; margin-bottom: .5rem; }
     .filter-label { font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
@@ -15,6 +15,16 @@
     .new-tag { font-size: .68rem; font-weight: 900; text-transform: uppercase; letter-spacing: .05em;
                padding: .12rem .5rem; border-radius: 999px; background: #ff2d6f; color: #fff; }
     .card .en-title { margin: .1rem 0 0; font-style: italic; opacity: .7; font-size: .92rem; }
+    .read-toggle { margin-left: auto; font-family: system-ui, sans-serif; font-size: .68rem;
+                   font-weight: 800; letter-spacing: .03em; padding: .14rem .55rem; border-radius: 999px;
+                   border: 2px solid var(--ink); background: transparent; color: var(--muted); cursor: pointer; }
+    .read-toggle:hover { color: var(--ink); }
+    .read-toggle.on { background: var(--ink); color: var(--surface); }
+    .card.is-read { opacity: .58; }
+    .card.is-read:hover { opacity: 1; }
+    .show-read { font-family: system-ui, sans-serif; font-size: .9rem; font-weight: 600;
+                 color: var(--muted); display: inline-flex; align-items: center; gap: .45rem; cursor: pointer; }
+    .show-read input { width: 16px; height: 16px; accent-color: var(--accent); }
   </style>
 </head>
 <body>
@@ -32,6 +42,9 @@
 
       <div class="filter-row"><span class="filter-label">Level</span><div class="chipbar" id="level-bar"></div></div>
       <div class="filter-row"><span class="filter-label">Interest</span><div class="chipbar" id="section-bar"></div></div>
+      <div class="filter-row" id="read-row" hidden><span class="filter-label">Read</span>
+        <label class="show-read"><input type="checkbox" id="show-read" /> Show read stories <span id="read-count"></span></label>
+      </div>
       <div id="library"></div>
     </div>
   </main>
@@ -40,10 +53,10 @@
     <div class="wrap">Personal language-learning workshop · texts are public-domain fables retold in simple prose.</div>
   </footer>
 
-  <script src="data/texts.js?v=4"></script>
-  <script src="data/daily.js?v=4"></script>
-  <script src="data/generated.js?v=4"></script>
-  <script src="js/app.js?v=4"></script>
+  <script src="data/texts.js?v=5"></script>
+  <script src="data/daily.js?v=5"></script>
+  <script src="data/generated.js?v=5"></script>
+  <script src="js/app.js?v=5"></script>
   <script>
     (function () {
       const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
@@ -52,6 +65,9 @@
       const lib = document.getElementById("library");
       const levelBar = document.getElementById("level-bar");
       const sectionBar = document.getElementById("section-bar");
+      const readRow = document.getElementById("read-row");
+      const showReadEl = document.getElementById("show-read");
+      const readCountEl = document.getElementById("read-count");
 
       const LEVEL_ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"];
       const levels = LEVEL_ORDER.filter((l) => texts.some((t) => t.level === l));
@@ -59,37 +75,63 @@
 
       let level = "all";
       let section = "all";
+      let showRead = false; // read stories are hidden by default
 
       function matches(t) {
-        return (level === "all" || t.level === level) && (section === "all" || t.section === section);
+        return (level === "all" || t.level === level) &&
+               (section === "all" || t.section === section) &&
+               (showRead || !window.isRead(t.id));
       }
 
       function card(t) {
+        const read = window.isRead(t.id);
         const a = document.createElement("a");
-        a.className = "card";
+        a.className = "card" + (read ? " is-read" : "");
         a.href = "reader.html?id=" + encodeURIComponent(t.id);
         a.innerHTML =
           '<div class="card-top">' +
             (t.section ? '<span class="section-tag">' + esc(t.section) + '</span>' : '') +
             (t.new ? '<span class="new-tag">New</span>' : '') +
+            '<button type="button" class="read-toggle' + (read ? ' on' : '') + '" title="' +
+              (read ? 'Read — click to mark unread' : 'Mark as read') + '">' +
+              (read ? '✓ Read' : 'Mark read') + '</button>' +
           '</div>' +
           '<h3>' + esc(t.title) + '</h3>' +
           (t.en_title ? '<p class="en-title">' + esc(t.en_title) + '</p>' : '') +
           '<p class="meta">' + esc(t.level || '') + '</p>';
+        a.querySelector(".read-toggle").addEventListener("click", (e) => {
+          e.preventDefault(); e.stopPropagation();
+          window.setRead(t.id, !window.isRead(t.id));
+          render();
+        });
         return a;
       }
 
       function render() {
         levelBar.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.dataset.val === level));
         sectionBar.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.dataset.val === section));
+
+        const readCount = texts.filter((t) => window.isRead(t.id)).length;
+        readRow.hidden = readCount === 0;
+        readCountEl.textContent = "(" + readCount + ")";
+
         const shown = texts.filter(matches);
         lib.innerHTML = "";
-        if (!shown.length) { lib.innerHTML = '<p class="empty">No texts match these filters yet.</p>'; return; }
+        if (!shown.length) {
+          const hiddenByRead = !showRead && texts.filter((t) => window.isRead(t.id))
+            .some((t) => (level === "all" || t.level === level) && (section === "all" || t.section === section));
+          lib.innerHTML = hiddenByRead
+            ? '<p class="empty">All read here — tick “Show read stories” to see them again.</p>'
+            : '<p class="empty">No texts match these filters yet.</p>';
+          return;
+        }
         const grid = document.createElement("div");
         grid.className = "card-grid";
         shown.forEach((t) => grid.appendChild(card(t)));
         lib.appendChild(grid);
       }
+
+      showReadEl.addEventListener("change", () => { showRead = showReadEl.checked; render(); });
 
       function chip(bar, val, label, onPick) {
         const b = document.createElement("button");

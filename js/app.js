@@ -114,6 +114,17 @@
   }
 })();
 
+// Per-text "read" state, remembered on this device.
+window.isRead = function (id) {
+  try { return localStorage.getItem("read:" + id) === "1"; } catch (e) { return false; }
+};
+window.setRead = function (id, on) {
+  try {
+    if (on) localStorage.setItem("read:" + id, "1");
+    else localStorage.removeItem("read:" + id);
+  } catch (e) {}
+};
+
 // Tiny helper shared by pages.
 window.el = function (tag, attrs, children) {
   const node = document.createElement(tag);

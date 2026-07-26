@@ -4771,7 +4771,7 @@ window.GENERATED = [
         "en": "In short, these assistants are a new step in programming history."
       }
     ],
-    "section": "Culture",
+    "section": "Technology",
     "new": false,
     "en_title": "The Rise of AI Coding Assistants"
   },
@@ -4841,7 +4841,7 @@ window.GENERATED = [
         "en": "In short, these assistants are a new step in programming history."
       }
     ],
-    "section": "Culture",
+    "section": "Technology",
     "new": false,
     "en_title": "The Rise of AI Coding Assistants"
   },
@@ -4915,7 +4915,7 @@ window.GENERATED = [
         "en": "This reflects a trend toward more sustainable and responsible technologies."
       }
     ],
-    "section": "Culture",
+    "section": "Technology",
     "new": false,
     "en_title": "The Latest iPhone Features, Explained Simply"
   },
@@ -4989,7 +4989,7 @@ window.GENERATED = [
         "en": "This reflects a trend toward more sustainable and responsible technologies."
       }
     ],
-    "section": "Culture",
+    "section": "Technology",
     "new": false,
     "en_title": "The Latest iPhone Features, Explained Simply"
   },
@@ -7967,7 +7967,7 @@ window.GENERATED = [
         "en": "Although impressive, ChatGPT is a tool that helps humans, not one that replaces them."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "What ChatGPT Actually Does"
   },
@@ -8037,7 +8037,7 @@ window.GENERATED = [
         "en": "Although impressive, ChatGPT is a tool that helps humans, not one that replaces them."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "What ChatGPT Actually Does"
   },
@@ -8107,7 +8107,7 @@ window.GENERATED = [
         "en": "GPUs make our digital experience more enjoyable."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "Why GPUs Matter"
   },
@@ -8177,7 +8177,7 @@ window.GENERATED = [
         "en": "GPUs make our digital experience more enjoyable."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "Why GPUs Matter"
   },
@@ -8247,7 +8247,7 @@ window.GENERATED = [
         "en": "In summary, GPS makes life easier by guiding us wherever we are."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "How GPS Works"
   },
@@ -8317,7 +8317,7 @@ window.GENERATED = [
         "en": "In summary, GPS makes life easier by guiding us wherever we are."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "How GPS Works"
   },
@@ -8387,7 +8387,7 @@ window.GENERATED = [
         "en": "One day, quantum computers could revolutionize science, medicine, and many other fields."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "What Quantum Computing Is"
   },
@@ -8457,7 +8457,7 @@ window.GENERATED = [
         "en": "One day, quantum computers could revolutionize science, medicine, and many other fields."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "What Quantum Computing Is"
   },
@@ -8531,7 +8531,7 @@ window.GENERATED = [
         "en": "In summary, updates take time to work well."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "Why Software Updates Take So Long"
   },
@@ -8605,7 +8605,7 @@ window.GENERATED = [
         "en": "In summary, updates take time to work well."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "Why Software Updates Take So Long"
   },
@@ -8675,7 +8675,7 @@ window.GENERATED = [
         "en": "But we must stay curious and critical about their suggestions."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "How Recommendation Algorithms Work"
   },
@@ -8745,7 +8745,7 @@ window.GENERATED = [
         "en": "But we must stay curious and critical about their suggestions."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "How Recommendation Algorithms Work"
   },
@@ -8815,7 +8815,7 @@ window.GENERATED = [
         "en": "Thus, better understanding why batteries degrade helps us use them better."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "Why Batteries Degrade"
   },
@@ -8885,7 +8885,7 @@ window.GENERATED = [
         "en": "Thus, better understanding why batteries degrade helps us use them better."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "Why Batteries Degrade"
   },
@@ -8955,7 +8955,7 @@ window.GENERATED = [
         "en": "This is the technology of the future for driving."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "How Self-driving Cars See the Road"
   },
@@ -9025,7 +9025,7 @@ window.GENERATED = [
         "en": "This is the technology of the future for driving."
       }
     ],
-    "section": "Science",
+    "section": "Technology",
     "new": false,
     "en_title": "How Self-driving Cars See the Road"
   },
@@ -9099,7 +9099,7 @@ window.GENERATED = [
         "en": "Then, the new habit becomes natural and easy to do."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Why Habits Are Hard to Break"
   },
@@ -9173,7 +9173,7 @@ window.GENERATED = [
         "en": "Then, the new habit becomes natural and easy to do."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Why Habits Are Hard to Break"
   },
@@ -9247,7 +9247,7 @@ window.GENERATED = [
         "en": "This not only improves our well-being but also the quality of our choices."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Decision Fatigue"
   },
@@ -9321,7 +9321,7 @@ window.GENERATED = [
         "en": "This not only improves our well-being but also the quality of our choices."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Decision Fatigue"
   },
@@ -9391,7 +9391,7 @@ window.GENERATED = [
         "en": "Finally, understanding why we procrastinate helps to change this habit."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Why We Procrastinate"
   },
@@ -9461,7 +9461,7 @@ window.GENERATED = [
         "en": "Finally, understanding why we procrastinate helps to change this habit."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Why We Procrastinate"
   },
@@ -9531,7 +9531,7 @@ window.GENERATED = [
         "en": "Understanding the science of sleep can help us take better care of ourselves."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "The Science of Sleep"
   },
@@ -9601,7 +9601,7 @@ window.GENERATED = [
         "en": "Understanding the science of sleep can help us take better care of ourselves."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "The Science of Sleep"
   },
@@ -9671,7 +9671,7 @@ window.GENERATED = [
         "en": "This proves the importance of mental attitude in health."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "The Placebo Effect"
   },
@@ -9741,7 +9741,7 @@ window.GENERATED = [
         "en": "This proves the importance of mental attitude in health."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "The Placebo Effect"
   },
@@ -9811,7 +9811,7 @@ window.GENERATED = [
         "en": "That's why our brain likes to keep music in memory."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Why We Remember Music"
   },
@@ -9881,7 +9881,7 @@ window.GENERATED = [
         "en": "That's why our brain likes to keep music in memory."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Why We Remember Music"
   },
@@ -9951,7 +9951,7 @@ window.GENERATED = [
         "en": "Therefore, nostalgia is a natural and beneficial emotion."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Why Nostalgia Feels Good"
   },
@@ -10021,7 +10021,7 @@ window.GENERATED = [
         "en": "Therefore, nostalgia is a natural and beneficial emotion."
       }
     ],
-    "section": "Mind",
+    "section": "Psychology",
     "new": false,
     "en_title": "Why Nostalgia Feels Good"
   },
@@ -11171,7 +11171,7 @@ window.GENERATED = [
         "en": "This explains why Studio Ghibli became so famous."
       }
     ],
-    "section": "Culture",
+    "section": "Movies & TV",
     "new": false,
     "en_title": "Why Studio Ghibli Became Famous"
   },
@@ -11241,7 +11241,7 @@ window.GENERATED = [
         "en": "This explains why Studio Ghibli became so famous."
       }
     ],
-    "section": "Culture",
+    "section": "Movies & TV",
     "new": false,
     "en_title": "Why Studio Ghibli Became Famous"
   },

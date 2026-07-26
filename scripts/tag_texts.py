@@ -24,10 +24,13 @@ def main():
     for it in arr:
         topic = it.get("topic", "")
         tm = meta.get(topic, {"section": "Everyday", "new": False})
-        if "section" not in it:
-            it["section"] = tm["section"]
+        # Re-derive section/new from theme_ideas.txt every run so category edits
+        # (renames, moves) propagate to already-generated texts. en_title is left
+        # alone once set — it may be a model-written title, not a slug guess.
+        if it.get("section") != tm["section"] or it.get("new") != tm["new"]:
             filled += 1
-        it.setdefault("new", tm["new"])
+        it["section"] = tm["section"]
+        it["new"] = tm["new"]
         it.setdefault("en_title", gd.title_case(topic) if topic else it["title"])
     body = ("// Generated in batch by scripts/generate_batch.py from scripts/theme_ideas.txt.\n"
             "// Merged into window.TEXTS by js/app.js. Regenerate any time; it's overwritten wholesale.\n"

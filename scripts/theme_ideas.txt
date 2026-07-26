@@ -41,8 +41,6 @@ why handwritten journals are back
 why everyone suddenly wants to visit Albania
 why Formula 1 is exploding in popularity
 why people are obsessed with pickleball
-the rise of AI coding assistants
-the latest iPhone features, explained simply
 why more people are taking solo trips
 is remote work ending?
 
@@ -69,7 +67,7 @@ the world's happiest countries
 airport etiquette around the world
 underrated Oaxaca
 
-# Tech & science
+# Technology
 what ChatGPT actually does
 why GPUs matter
 how GPS works
@@ -78,6 +76,8 @@ why software updates take so long
 how recommendation algorithms work
 why batteries degrade
 how self-driving cars see the road
+the rise of AI coding assistants
+the latest iPhone features, explained simply
 
 # Mind & psychology
 why habits are hard to break
@@ -99,12 +99,19 @@ the history of sushi
 why people started shaking hands
 
 # Pop culture & origins
-why Studio Ghibli became famous
 the history of LEGO
 why Pokémon became global
 the Beatles' first concert
 why chess became popular again
 the story behind Wikipedia
+
+# Movies & TV
+why Studio Ghibli became famous
+the global rise of anime
+why everyone loves a good heist movie
+the enduring appeal of sitcoms
+how Pixar tells a story
+the rise of Korean cinema
 
 # Sports & personalities
 the rise of Kylian Mbappé
