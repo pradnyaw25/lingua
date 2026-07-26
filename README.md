@@ -160,8 +160,10 @@ rest of the site.
 Each run (`scripts/generate_daily.py`):
 1. picks a topic from **`scripts/theme_ideas.txt`** — your editable list of ideas
    (one per line), walked one per day so it cycles through the whole list,
-2. asks OpenAI (`gpt-4.1-mini`, structured outputs) for a French + Spanish story,
-   sentence-aligned 1:1 with English, at a CEFR level that rotates by day (A2 → B1 → B2),
+2. asks OpenAI (`gpt-4.1-mini`, structured outputs) for a French + Spanish piece,
+   sentence-aligned 1:1 with English — the model picks the format that fits the topic
+   (a light **story** for everyday scenes, a **explainer** for how-things-work / history /
+   science) — at a CEFR level that rotates by day (A2 → B1 → B2),
 3. **validates** alignment, length, and a sensitive-topic screen (drops the day if it fails),
 4. prepends it to `data/daily.js` (keeping the newest ~20 days), then `regen.sh` updates
    the click-a-word dictionary.

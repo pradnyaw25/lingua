@@ -56,6 +56,7 @@ BLOCKLIST = re.compile(
 SCHEMA = {
     "type": "object",
     "properties": {
+        "format": {"type": "string", "enum": ["story", "explainer"]},
         "title_fr": {"type": "string"},
         "title_es": {"type": "string"},
         "title_en": {"type": "string"},
@@ -69,14 +70,15 @@ SCHEMA = {
             "properties": {"target": {"type": "string"}, "en": {"type": "string"}},
             "required": ["target", "en"], "additionalProperties": False}},
     },
-    "required": ["title_fr", "title_es", "title_en", "level", "fr_pairs", "es_pairs"],
+    "required": ["format", "title_fr", "title_es", "title_en", "level", "fr_pairs", "es_pairs"],
     "additionalProperties": False,
 }
 
 SYSTEM = (
-    "You write short bilingual graded reading stories for language learners. "
-    "The French and Spanish versions tell the SAME story, sentence by sentence, and every "
-    "sentence aligns 1:1 with its English translation. Language must be natural and correct."
+    "You write short bilingual reading pieces for language learners — either a light everyday "
+    "STORY or a clear nonfiction EXPLAINER, whichever fits the topic. The French and Spanish "
+    "versions say the same thing, sentence by sentence, and every sentence aligns 1:1 with its "
+    "English translation. Language must be natural and correct."
 )
 
 
@@ -98,19 +100,22 @@ def pick_topic(date_str):
 
 def user_prompt(topic, level, n_min, n_max):
     return (
-        f"Write an original, light, evergreen short story for language learners at CEFR level {level}.\n\n"
-        f"Inspiration (theme only, optional): {topic}. Use it loosely for a gentle everyday angle. "
-        "If it is heavy, political, tragic, violent, medical, or about real named people or current "
-        "events, IGNORE it and invent a simple everyday scene instead. Do not write a news report "
-        "and do not state real facts about real people or events.\n\n"
-        "Requirements:\n"
+        f"Create a short bilingual reading piece for language learners at CEFR level {level}, "
+        f"about: {topic}.\n\n"
+        "First choose the format that best fits this topic, and set the \"format\" field:\n"
+        "- STORY: a light, everyday fictional scene loosely inspired by the topic. Gentle humour welcome.\n"
+        "- EXPLAINER: a clear, friendly, accurate nonfiction piece that actually explains the topic simply.\n"
+        "Use EXPLAINER for how-things-work, history, science, food, culture, and 'why/how' topics; "
+        "use STORY for ordinary everyday scenes. Pick whichever genuinely fits — not everything is a story.\n\n"
+        "Rules for either format:\n"
         f"- {n_min}-{n_max} short sentences.\n"
         f"- Vocabulary and grammar appropriate to CEFR {level} "
         "(mostly present tense at A2; past tenses and richer vocabulary at B1/B2).\n"
-        "- A little gentle humour is welcome.\n"
-        "- Provide the story in BOTH French and Spanish, telling the same story beat by beat.\n"
+        "- Provide it in BOTH French and Spanish, saying the same thing beat by beat.\n"
         "- fr_pairs and es_pairs must have the SAME number of items, aligned 1:1: fr_pairs[i] and "
         "es_pairs[i] are the same sentence, and each item's 'en' is that sentence's English translation.\n"
+        "- Keep it light and evergreen. Do NOT cover breaking news, politics, or medical advice, and do "
+        "not make claims about specific living individuals or current events.\n"
         "- Give a short French title, Spanish title, and English title.\n"
         "Return only the structured object."
     )
@@ -157,6 +162,7 @@ def validate(p, n_min, n_max):
 
 
 MOCK = {
+    "format": "story",
     "title_fr": "Le parapluie perdu", "title_es": "El paraguas perdido", "title_en": "The Lost Umbrella",
     "level": "A2",
     "fr_pairs": [
@@ -227,17 +233,19 @@ def main():
         print(f"Skipping today — {type(e).__name__}: {e}")
         return
 
+    fmt = payload.get("format", "story")
+    src = f"Daily {fmt} · {date}"
     fr = {"id": f"fr-daily-{date}", "lang": "fr", "langLabel": "Français",
-          "title": payload["title_fr"], "source": f"Daily (auto) · {date}", "level": level,
+          "title": payload["title_fr"], "source": src, "level": level,
           "date": date, "pairs": payload["fr_pairs"]}
     es = {"id": f"es-daily-{date}", "lang": "es", "langLabel": "Español",
-          "title": payload["title_es"], "source": f"Daily (auto) · {date}", "level": level,
+          "title": payload["title_es"], "source": src, "level": level,
           "date": date, "pairs": payload["es_pairs"]}
 
     existing = [t for t in load_daily() if t.get("date") != date]
     items = ([fr, es] + existing)[:CAP]
     write_daily(items)
-    print(f"Wrote {date} [{level}]: '{payload['title_en']}' (theme: {topic}) — {len(items)} texts in daily.js")
+    print(f"Wrote {date} [{level}/{fmt}]: '{payload['title_en']}' (topic: {topic}) — {len(items)} texts in daily.js")
 
 
 if __name__ == "__main__":
