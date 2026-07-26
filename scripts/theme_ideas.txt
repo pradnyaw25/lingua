@@ -69,3 +69,13 @@ overnight trains in Europe
 what it's like to hike Machu Picchu
 the world's happiest countries
 airport etiquette around the world
+
+# Tech & science
+what ChatGPT actually does
+why GPUs matter
+how GPS works
+what quantum computing is
+why software updates take so long
+how recommendation algorithms work
+why batteries degrade
+how self-driving cars see the road
