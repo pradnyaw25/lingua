@@ -19,6 +19,7 @@
       <h1>Read in parallel.</h1>
       <p class="subtitle">French &amp; Spanish beside English, sentence by sentence. Pick a text to begin.</p>
 
+      <div class="chipbar" id="level-bar"></div>
       <div id="library"></div>
     </div>
   </main>
@@ -32,28 +33,54 @@
   <script>
     (function () {
       const texts = window.TEXTS || [];
-      const byLang = {};
-      texts.forEach((t) => { (byLang[t.langLabel] = byLang[t.langLabel] || []).push(t); });
       const lib = document.getElementById("library");
-      Object.keys(byLang).forEach((label) => {
-        const h = document.createElement("p");
-        h.className = "section-label";
-        h.textContent = label;
-        lib.appendChild(h);
-        const grid = document.createElement("div");
-        grid.className = "card-grid";
-        byLang[label].forEach((t) => {
-          const a = document.createElement("a");
-          a.className = "card";
-          a.href = "reader.html?id=" + encodeURIComponent(t.id);
-          a.innerHTML =
-            '<span class="lang-tag">' + t.langLabel + '</span>' +
-            '<h3>' + t.title + '</h3>' +
-            '<p class="meta">' + t.pairs.length + ' sentences · ' + (t.level || '') + '</p>';
-          grid.appendChild(a);
+      const bar = document.getElementById("level-bar");
+      const LEVEL_ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"];
+      const levels = LEVEL_ORDER.filter((l) => texts.some((t) => t.level === l));
+      let active = "all";
+
+      function card(t) {
+        const a = document.createElement("a");
+        a.className = "card";
+        a.href = "reader.html?id=" + encodeURIComponent(t.id);
+        a.innerHTML =
+          '<span class="lang-tag">' + t.langLabel + '</span>' +
+          '<h3>' + t.title + '</h3>' +
+          '<p class="meta">' + t.pairs.length + ' sentences · ' + (t.level || '') + '</p>';
+        return a;
+      }
+
+      function render() {
+        bar.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.dataset.lvl === active));
+        const shown = texts.filter((t) => active === "all" || t.level === active);
+        lib.innerHTML = "";
+        if (!shown.length) { lib.innerHTML = '<p class="empty">No texts at this level yet.</p>'; return; }
+        const byLang = {};
+        shown.forEach((t) => { (byLang[t.langLabel] = byLang[t.langLabel] || []).push(t); });
+        Object.keys(byLang).forEach((label) => {
+          const h = document.createElement("p");
+          h.className = "section-label";
+          h.textContent = label;
+          lib.appendChild(h);
+          const grid = document.createElement("div");
+          grid.className = "card-grid";
+          byLang[label].forEach((t) => grid.appendChild(card(t)));
+          lib.appendChild(grid);
         });
-        lib.appendChild(grid);
-      });
+      }
+
+      function chip(lvl, label) {
+        const b = document.createElement("button");
+        b.className = "chip";
+        b.dataset.lvl = lvl;
+        b.textContent = label;
+        b.addEventListener("click", () => { active = lvl; render(); });
+        return b;
+      }
+
+      bar.appendChild(chip("all", "All levels (" + texts.length + ")"));
+      levels.forEach((l) => bar.appendChild(chip(l, l + " (" + texts.filter((t) => t.level === l).length + ")")));
+      render();
     })();
   </script>
 </body>
