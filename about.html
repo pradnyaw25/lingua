@@ -4,17 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Lingua</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
   <style>
     .about p { max-width: 640px; font-size: 1.12rem; line-height: 1.75; margin: 0 0 18px; }
     .about-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
     .about-link {
       display: inline-flex; align-items: center;
-      padding: 10px 18px; border: 1px solid var(--line); border-radius: 10px;
-      background: var(--surface); font-family: system-ui, sans-serif; font-size: .95rem;
+      padding: 10px 18px; border: 2px solid var(--ink); border-radius: 10px;
+      background: var(--surface); font-family: system-ui, sans-serif; font-size: .95rem; font-weight: 700;
+      box-shadow: 2px 2px 0 var(--ink); transition: transform .08s ease, box-shadow .08s ease;
     }
-    .about-link:hover { border-color: var(--accent); text-decoration: none; }
-    .about-link.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .about-link:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--ink); text-decoration: none; }
+    .about-link:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
+    .about-link.primary { background: var(--accent); color: #fff; }
   </style>
 </head>
 <body>
