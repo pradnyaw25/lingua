@@ -115,11 +115,24 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dict-fr", help="MUSE fr-en TSV (headword<TAB>english)")
     ap.add_argument("--dict-es", help="MUSE es-en TSV")
+    ap.add_argument("--override-fr", help="TSV of word<TAB>gloss to force (wins over everything)")
+    ap.add_argument("--override-es", help="TSV of word<TAB>gloss to force (wins over everything)")
     ap.add_argument("--out", default=OUT)
     args = ap.parse_args()
 
     vocab = parse_vocab(VOCAB)
     lookup, curated = build_lookup(vocab, {"fr": args.dict_fr, "es": args.dict_es})
+    # Top-priority manual fixes for glosses the machine dictionary gets wrong.
+    for lang, path in {"fr": args.override_fr, "es": args.override_es}.items():
+        if not path:
+            continue
+        for raw in open(path, encoding="utf-8"):
+            if not raw.strip() or raw.lstrip().startswith("#"):
+                continue
+            parts = raw.rstrip("\n").split("\t")
+            if len(parts) >= 2 and parts[0].strip():
+                lookup[lang][norm(parts[0])] = parts[1].strip()
+                curated[lang].add(norm(parts[0]))
     text_words = text_words_by_lang()
 
     result = {}
