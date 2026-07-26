@@ -186,6 +186,27 @@ h1 { font-size: 2rem; margin: 0 0 6px; }
 .sent:hover { background: var(--accent-soft); }
 .sent.active { background: var(--highlight); }
 
+/* Clickable words (target column) */
+.sent.target .tok { cursor: pointer; border-radius: 3px; padding: 0 1px; }
+.sent.target .tok:hover { background: rgba(180,83,31,.16); }
+.sent.target .tok.sel { background: var(--highlight); box-shadow: inset 0 -2px 0 var(--accent); }
+
+/* Word-translation popover */
+.wordpop {
+  position: absolute;
+  z-index: 50;
+  max-width: 260px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 13px;
+  box-shadow: var(--shadow);
+  font-family: system-ui, sans-serif;
+}
+.wp-word { font-weight: 700; color: var(--accent); font-size: 1rem; }
+.wp-gloss { color: var(--ink); font-size: .95rem; margin-top: 2px; }
+.wp-gloss.none { color: var(--muted); font-style: italic; }
+
 /* Self-test: hide english column */
 .parallel.hide-en .sent.en,
 .parallel.hide-en .col-head.en-head { visibility: hidden; }
