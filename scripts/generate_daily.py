@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 generate_daily.py — generate one short bilingual graded story per day, inspired by a
-trending topic, and prepend it to data/daily.js (a rolling window merged into the
-library by js/app.js). Designed to run from a daily GitHub Actions cron.
+topic you seed in scripts/theme_ideas.txt, and prepend it to data/daily.js (a rolling
+window merged into the library by js/app.js). Runs from a daily GitHub Actions cron.
 
 It calls the OpenAI API with structured outputs (JSON schema) to get a French +
 Spanish story, sentence-aligned 1:1 with English, then validates alignment, length,
@@ -22,7 +22,6 @@ import json
 import os
 import re
 import sys
-import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DAILY = os.path.normpath(os.path.join(HERE, "..", "data", "daily.js"))
@@ -37,8 +36,7 @@ def pick_level(date_str):
     d = datetime.date.fromisoformat(date_str)
     return LEVELS[d.toordinal() % len(LEVELS)]
 
-# Light, evergreen fallback themes (seeded by date) if the trend fetch fails or a
-# trend is too heavy to use.
+# Built-in defaults, used only if scripts/theme_ideas.txt is missing or empty.
 FALLBACK_THEMES = [
     "a lost umbrella", "a neighbor's very loud cat", "learning to bake bread",
     "a slow morning train", "a surprise package at the door", "a new coffee shop",
@@ -92,20 +90,10 @@ def load_themes():
     return FALLBACK_THEMES
 
 
-def fetch_topic():
-    """Best-effort trending topic; None on any failure (caller falls back)."""
-    try:
-        req = urllib.request.Request(
-            "https://trends.google.com/trending/rss?geo=US",
-            headers={"User-Agent": "Mozilla/5.0 lingua-daily"},
-        )
-        with urllib.request.urlopen(req, timeout=15) as r:
-            xml = r.read().decode("utf-8", "replace")
-        titles = re.findall(r"<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>", xml)
-        titles = [t.strip() for t in titles[1:] if t.strip()]  # skip channel title
-        return ", ".join(titles[:5]) or None
-    except Exception:
-        return None
+def pick_topic(date_str):
+    """Walk the seeded ideas one per day, cycling through the whole list."""
+    themes = load_themes()
+    return themes[datetime.date.fromisoformat(date_str).toordinal() % len(themes)]
 
 
 def user_prompt(topic, level, n_min, n_max):
@@ -229,8 +217,7 @@ def main():
         if args.mock:
             payload, topic = dict(MOCK, level=level), "a lost umbrella (mock)"
         else:
-            themes = load_themes()
-            topic = fetch_topic() or themes[sum(map(ord, date)) % len(themes)]
+            topic = pick_topic(date)
             payload = generate(topic, args.model, level, n_min, n_max)
         if payload is None:
             print("No content generated (model declined). Skipping today.")
