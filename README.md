@@ -159,13 +159,13 @@ rest of the site.
 
 Each run (`scripts/generate_daily.py`):
 1. pulls a trending topic (Google Trends RSS, with evergreen fallbacks),
-2. asks Claude (`claude-opus-5`, structured outputs) for a French + Spanish A2 story,
+2. asks OpenAI (`gpt-4.1-mini`, structured outputs) for a French + Spanish A2 story,
    sentence-aligned 1:1 with English,
 3. **validates** alignment, length, and a sensitive-topic screen (drops the day if it fails),
 4. prepends it to `data/daily.js` (keeping the newest ~20 days), then `regen.sh` updates
    the click-a-word dictionary.
 
-**To enable it:** add an `ANTHROPIC_API_KEY` repo secret (Settings → Secrets → Actions).
+**To enable it:** add an `OPENAI_API_KEY` repo secret (Settings → Secrets → Actions).
 Trigger a first run manually from the Actions tab ("Daily content" → Run workflow), or wait
 for the 13:00 UTC schedule. Test locally without the API:
 

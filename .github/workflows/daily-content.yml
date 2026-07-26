@@ -22,8 +22,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Anthropic SDK
-        run: pip install anthropic
+      - name: Install OpenAI SDK
+        run: pip install openai
 
       - name: Cache source data (frequency lists + dictionaries)
         uses: actions/cache@v4
@@ -36,7 +36,7 @@ jobs:
 
       - name: Generate today's story
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python3 scripts/generate_daily.py --date "$(date -u +%F)"
 
       - name: Regenerate click-a-word dictionary

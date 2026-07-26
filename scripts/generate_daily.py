@@ -4,15 +4,15 @@ generate_daily.py — generate one short bilingual graded story per day, inspire
 trending topic, and prepend it to data/daily.js (a rolling window merged into the
 library by js/app.js). Designed to run from a daily GitHub Actions cron.
 
-It calls Claude (Anthropic API) with structured outputs to get a French + Spanish
-story, sentence-aligned 1:1 with English, then validates alignment, length, and
-screens for sensitive themes before writing anything.
+It calls the OpenAI API with structured outputs (JSON schema) to get a French +
+Spanish story, sentence-aligned 1:1 with English, then validates alignment, length,
+and screens for sensitive themes before writing anything.
 
-  python3 scripts/generate_daily.py                 # live (needs ANTHROPIC_API_KEY)
+  python3 scripts/generate_daily.py                 # live (needs OPENAI_API_KEY)
   python3 scripts/generate_daily.py --mock          # no API/network — canned story
   python3 scripts/generate_daily.py --date 2026-07-26
 
-The model defaults to claude-opus-5 (override with ANTHROPIC_MODEL). Cost is a few
+The model defaults to gpt-4.1-mini (override with OPENAI_MODEL). Cost is a few
 cents per day.
 """
 
@@ -111,20 +111,24 @@ def user_prompt(topic):
 
 
 def generate(topic, model):
-    """Call Claude; return the parsed dict, or None if it refused."""
-    import anthropic
-    client = anthropic.Anthropic()
-    resp = client.messages.create(
+    """Call OpenAI; return the parsed dict, or None if it refused."""
+    from openai import OpenAI
+    client = OpenAI()
+    resp = client.chat.completions.create(
         model=model,
-        max_tokens=16000,
-        output_config={"effort": "medium", "format": {"type": "json_schema", "schema": SCHEMA}},
-        system=SYSTEM,
-        messages=[{"role": "user", "content": user_prompt(topic)}],
+        messages=[
+            {"role": "system", "content": SYSTEM},
+            {"role": "user", "content": user_prompt(topic)},
+        ],
+        response_format={
+            "type": "json_schema",
+            "json_schema": {"name": "daily_lesson", "strict": True, "schema": SCHEMA},
+        },
     )
-    if resp.stop_reason == "refusal":
+    msg = resp.choices[0].message
+    if getattr(msg, "refusal", None):
         return None
-    text = next((b.text for b in resp.content if b.type == "text"), None)
-    return json.loads(text) if text else None
+    return json.loads(msg.content) if msg.content else None
 
 
 def validate(p):
@@ -195,7 +199,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--mock", action="store_true", help="skip API/network; use a canned story")
     ap.add_argument("--date", help="YYYY-MM-DD id/date (default: today UTC)")
-    ap.add_argument("--model", default=os.environ.get("ANTHROPIC_MODEL", "claude-opus-5"))
+    ap.add_argument("--model", default=os.environ.get("OPENAI_MODEL", "gpt-4.1-mini"))
     args = ap.parse_args()
 
     date = args.date or datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
