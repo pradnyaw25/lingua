@@ -2,7 +2,8 @@
 (function () {
   const pages = [
     { href: "index.html", label: "Library" },
-    { href: "vocab.html", label: "Frequency Words" }
+    { href: "vocab.html", label: "Frequency Words" },
+    { href: "flashcards.html", label: "Flashcards" }
   ];
   const here = location.pathname.split("/").pop() || "index.html";
 

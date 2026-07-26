@@ -291,6 +291,81 @@ tr.known .know-btn { background: var(--known-ink); color: #fff; border-color: va
 
 .empty { color: var(--muted); font-family: system-ui, sans-serif; padding: 40px; text-align: center; }
 
+/* ---- Flashcards ---- */
+.hidden { display: none; }
+.fc-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0;
+  font-family: system-ui, sans-serif;
+  font-size: .95rem;
+}
+.fc-row label { color: var(--muted); }
+.fc-row select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 7px 11px; }
+.fc-hint { color: var(--muted); font-family: system-ui, sans-serif; font-size: .88rem; }
+.fc-center { text-align: center; }
+.btn-start { font-size: 1.05rem; padding: 11px 26px; background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn-quiet { color: var(--muted); background: transparent; }
+
+.fc-progress { text-align: center; color: var(--muted); font-family: system-ui, sans-serif; font-size: .9rem; margin: 6px 0 14px; }
+
+.card3d { perspective: 1200px; margin: 8px auto 0; max-width: 520px; }
+.card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  transition: transform .45s cubic-bezier(.4,.2,.2,1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.card3d.flipped .card-inner { transform: rotateY(180deg); }
+.card3d .face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  backface-visibility: hidden;
+}
+.card3d .face.back { transform: rotateY(180deg); }
+.card3d .lbl {
+  font-family: system-ui, sans-serif;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--muted);
+}
+.card3d .term { font-size: 2.1rem; font-weight: 700; line-height: 1.2; }
+.card3d .face.back .term { color: var(--accent); }
+
+.fc-controls { display: flex; gap: 12px; justify-content: center; margin: 20px 0 10px; }
+.fc-controls .btn { font-size: 1rem; padding: 12px 24px; }
+.btn-again { border-color: var(--line); }
+.btn-got { background: var(--known-ink); color: #fff; border-color: var(--known-ink); }
+
+kbd {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: .8em;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 1px 6px;
+}
+
+.fc-done-card { text-align: center; padding: 40px 20px; }
+.fc-done-emoji { font-size: 3rem; }
+.fc-done-text { font-size: 1.2rem; margin: 12px 0 22px; }
+
 footer {
   border-top: 1px solid var(--line);
   color: var(--muted);

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards — Lingua</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand"><a href="index.html" style="color:inherit">Lingua<span>.</span></a></div>
+      <nav class="nav" data-nav></nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Flashcards</h1>
+      <p class="subtitle">Pick a set and drill it. Flip the card, then grade yourself.</p>
+
+      <!-- SETUP -->
+      <section id="fc-setup">
+        <div class="toolbar">
+          <div id="fc-lang" style="display:flex;gap:8px"></div>
+        </div>
+        <div class="fc-row">
+          <label for="fc-set">Set</label>
+          <select id="fc-set"></select>
+          <span id="fc-count" class="fc-hint"></span>
+        </div>
+        <div class="fc-row">
+          <label>Show first</label>
+          <button class="btn on" id="fc-dir-target"></button>
+          <button class="btn" id="fc-dir-en">English</button>
+        </div>
+        <div class="fc-row">
+          <label><input type="checkbox" id="fc-mark" checked /> Mark “Got it” cards as known</label>
+        </div>
+        <div class="fc-row">
+          <button class="btn btn-start" id="fc-start">Start &nbsp;▶</button>
+        </div>
+      </section>
+
+      <!-- SESSION -->
+      <section id="fc-session" class="hidden">
+        <p class="fc-progress" id="fc-progress"></p>
+        <div class="card3d" id="fc-card">
+          <div class="card-inner">
+            <div class="face front"><span class="lbl" id="fc-front-lbl"></span><span class="term" id="fc-front"></span></div>
+            <div class="face back"><span class="lbl" id="fc-back-lbl"></span><span class="term" id="fc-back"></span></div>
+          </div>
+        </div>
+        <p class="fc-hint fc-center">Click the card or press <kbd>Space</kbd> to flip · <kbd>←</kbd> Again · <kbd>→</kbd> Got it</p>
+        <div class="fc-controls">
+          <button class="btn btn-again" id="fc-again">↺ Again</button>
+          <button class="btn btn-got" id="fc-got">✓ Got it</button>
+        </div>
+        <p class="fc-center"><button class="btn btn-quiet" id="fc-exit">End session</button></p>
+      </section>
+
+      <!-- DONE -->
+      <section id="fc-done" class="hidden">
+        <div class="fc-done-card">
+          <div class="fc-done-emoji">🎉</div>
+          <p class="fc-done-text" id="fc-summary"></p>
+          <div class="fc-controls">
+            <button class="btn btn-got" id="fc-restart">Study again</button>
+            <button class="btn" id="fc-new">Pick another set</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">“Got it / Again” shuffles the deck; cards you miss come back until you clear them.</div>
+  </footer>
+
+  <script src="data/vocab.js"></script>
+  <script src="data/categories.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/flashcards.js"></script>
+</body>
+</html>
