@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lingua — Parallel Reading</title>
-  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/style.css?v=6" />
   <style>
     .filter-row { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; margin-bottom: .5rem; }
     .filter-label { font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
@@ -53,10 +53,10 @@
     <div class="wrap">Personal language-learning workshop · texts are public-domain fables retold in simple prose.</div>
   </footer>
 
-  <script src="data/texts.js?v=5"></script>
-  <script src="data/daily.js?v=5"></script>
-  <script src="data/generated.js?v=5"></script>
-  <script src="js/app.js?v=5"></script>
+  <script src="data/texts.js?v=6"></script>
+  <script src="data/daily.js?v=6"></script>
+  <script src="data/generated.js?v=6"></script>
+  <script src="js/app.js?v=6"></script>
   <script>
     (function () {
       const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
@@ -98,7 +98,7 @@
           '</div>' +
           '<h3>' + esc(t.title) + '</h3>' +
           (t.en_title ? '<p class="en-title">' + esc(t.en_title) + '</p>' : '') +
-          '<p class="meta">' + esc(t.level || '') + '</p>';
+          '<p class="meta">' + esc(window.levelText(t.level)) + '</p>';
         a.querySelector(".read-toggle").addEventListener("click", (e) => {
           e.preventDefault(); e.stopPropagation();
           window.setRead(t.id, !window.isRead(t.id));
@@ -144,7 +144,7 @@
 
       chip(levelBar, "all", "All levels (" + texts.length + ")", (v) => { level = v; });
       levels.forEach((l) =>
-        chip(levelBar, l, l + " (" + texts.filter((t) => t.level === l).length + ")", (v) => { level = v; }));
+        chip(levelBar, l, window.levelText(l) + " (" + texts.filter((t) => t.level === l).length + ")", (v) => { level = v; }));
 
       chip(sectionBar, "all", "All topics", (v) => { section = v; });
       sections.forEach((s) =>

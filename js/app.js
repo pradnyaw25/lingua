@@ -114,6 +114,17 @@
   }
 })();
 
+// Plain-English names for CEFR levels — not everyone knows the A1/B2 codes.
+window.LEVEL_LABELS = {
+  A1: "Beginner", A2: "Advanced Beginner", B1: "Intermediate",
+  B2: "Upper Intermediate", C1: "Advanced", C2: "Mastery"
+};
+// "A2 · Advanced Beginner" (falls back to the bare code if unknown).
+window.levelText = function (code) {
+  const name = window.LEVEL_LABELS[code];
+  return name ? code + " · " + name : (code || "");
+};
+
 // Per-text "read" state, remembered on this device.
 window.isRead = function (id) {
   try { return localStorage.getItem("read:" + id) === "1"; } catch (e) { return false; }

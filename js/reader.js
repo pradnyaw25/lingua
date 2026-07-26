@@ -118,7 +118,7 @@
 
     headEl.innerHTML =
       '<h1>' + text.title + '</h1>' +
-      '<p class="meta">' + text.langLabel + ' · ' + (text.level || "") +
+      '<p class="meta">' + text.langLabel + ' · ' + window.levelText(text.level) +
       ' · <span>' + text.source + '</span></p>';
     updateReadBtn();
 
