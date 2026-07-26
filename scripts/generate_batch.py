@@ -66,6 +66,7 @@ def main():
         topics = topics[:args.limit]
 
     existing = {} if args.force else load_existing()
+    meta = gd.topic_meta()
     items, made, reused, skipped = [], 0, 0, 0
     for i, topic in enumerate(topics):
         level = gd.LEVELS[i % len(gd.LEVELS)]
@@ -90,12 +91,16 @@ def main():
         fmt = payload.get("format", "story")
         sid = f"{i:02d}-{slug(topic)}"
         src = f"Generated {fmt}"
+        tm = meta.get(topic, {"section": "Everyday", "new": False})
+        en_title = payload.get("title_en") or gd.title_case(topic)
         items.append({"id": f"fr-lib-{sid}", "lang": "fr", "langLabel": "Français",
-                      "title": payload["title_fr"], "source": src, "level": level,
-                      "topic": topic, "pairs": payload["fr_pairs"]})
+                      "title": payload["title_fr"], "en_title": en_title, "section": tm["section"],
+                      "new": tm["new"], "source": src, "level": level, "topic": topic,
+                      "pairs": payload["fr_pairs"]})
         items.append({"id": f"es-lib-{sid}", "lang": "es", "langLabel": "Español",
-                      "title": payload["title_es"], "source": src, "level": level,
-                      "topic": topic, "pairs": payload["es_pairs"]})
+                      "title": payload["title_es"], "en_title": en_title, "section": tm["section"],
+                      "new": tm["new"], "source": src, "level": level, "topic": topic,
+                      "pairs": payload["es_pairs"]})
         made += 1
         print(f"  [{i+1}/{len(topics)}] {level}/{fmt}: {payload['title_en']}")
 

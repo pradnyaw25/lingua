@@ -32,9 +32,47 @@ CAP = 40  # keep the newest N text objects (2 per day → ~20 days)
 
 
 def pick_level(date_str):
-    """Deterministic A1 → A2 → B1 rotation by calendar day."""
+    """Deterministic A2 → B1 → B2 rotation by calendar day."""
     d = datetime.date.fromisoformat(date_str)
     return LEVELS[d.toordinal() % len(LEVELS)]
+
+
+# Section (interest) tag per theme_ideas.txt category header. Everyday = default.
+SECTION_BY_CATEGORY = {
+    "Modern culture & tech": "Culture", "Food & drink": "Food", "Travel & places": "Travel",
+    "Tech & science": "Science", "Mind & psychology": "Mind", "History & culture": "History",
+    "Pop culture & origins": "Culture", "Sports & personalities": "Sports",
+}
+NEW_CATEGORIES = {"Sports & personalities"}
+_SMALL_WORDS = {"a", "an", "the", "and", "or", "but", "of", "in", "on", "at", "to",
+                "for", "vs", "with", "from", "by"}
+
+
+def title_case(s):
+    out = []
+    for i, w in enumerate(s.split()):
+        if any(c.isupper() for c in w):
+            out.append(w)                       # keep proper nouns / iPhone / GPS
+        elif i and w.lower() in _SMALL_WORDS:
+            out.append(w.lower())
+        else:
+            out.append(w[:1].upper() + w[1:])
+    return " ".join(out)
+
+
+def topic_meta():
+    """topic -> {'section', 'new'} from the # category headers in theme_ideas.txt."""
+    meta, cur = {}, None
+    if not os.path.exists(THEMES_FILE):
+        return meta
+    for ln in open(THEMES_FILE, encoding="utf-8"):
+        s = ln.strip()
+        if s.startswith("#"):
+            cur = s.lstrip("#").strip()
+        elif s:
+            meta[s] = {"section": SECTION_BY_CATEGORY.get(cur, "Everyday"),
+                       "new": cur in NEW_CATEGORIES}
+    return meta
 
 # Built-in defaults, used only if scripts/theme_ideas.txt is missing or empty.
 FALLBACK_THEMES = [
@@ -239,12 +277,14 @@ def main():
 
     fmt = payload.get("format", "story")
     src = f"Daily {fmt} · {date}"
+    m = topic_meta().get(topic, {"section": "Everyday", "new": False})
+    en_title = payload.get("title_en") or title_case(topic)
     fr = {"id": f"fr-daily-{date}", "lang": "fr", "langLabel": "Français",
-          "title": payload["title_fr"], "source": src, "level": level,
-          "date": date, "pairs": payload["fr_pairs"]}
+          "title": payload["title_fr"], "en_title": en_title, "section": m["section"],
+          "new": m["new"], "source": src, "level": level, "date": date, "pairs": payload["fr_pairs"]}
     es = {"id": f"es-daily-{date}", "lang": "es", "langLabel": "Español",
-          "title": payload["title_es"], "source": src, "level": level,
-          "date": date, "pairs": payload["es_pairs"]}
+          "title": payload["title_es"], "en_title": en_title, "section": m["section"],
+          "new": m["new"], "source": src, "level": level, "date": date, "pairs": payload["es_pairs"]}
 
     existing = [t for t in load_daily() if t.get("date") != date]
     items = ([fr, es] + existing)[:CAP]

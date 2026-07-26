@@ -62,7 +62,10 @@ window.GENERATED = [
         "target": "Sophie promet de ne plus jamais oublier son parapluie.",
         "en": "Sophie promises never to forget her umbrella again."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Lost Umbrella on a Rainy Morning"
   },
   {
     "id": "es-lib-00-a-lost-umbrella-on-a-rainy-morning",
@@ -125,7 +128,10 @@ window.GENERATED = [
         "target": "Sofía promete no olvidar nunca más su paraguas.",
         "en": "Sophie promises never to forget her umbrella again."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Lost Umbrella on a Rainy Morning"
   },
   {
     "id": "fr-lib-01-a-neighbor-s-very-loud-cat",
@@ -192,7 +198,10 @@ window.GENERATED = [
         "target": "Même si c’est bruyant, on l’aime bien quand même.",
         "en": "Even if it is noisy, we still like it."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Neighbor's Very Loud Cat"
   },
   {
     "id": "es-lib-01-a-neighbor-s-very-loud-cat",
@@ -259,7 +268,10 @@ window.GENERATED = [
         "target": "Aunque es ruidoso, nos gusta mucho de todos modos.",
         "en": "Even if it is noisy, we still like it."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Neighbor's Very Loud Cat"
   },
   {
     "id": "fr-lib-02-learning-to-bake-bread-for-the-first-tim",
@@ -338,7 +350,10 @@ window.GENERATED = [
         "target": "Le pain maison est non seulement délicieux, mais aussi très satisfaisant à réaliser.",
         "en": "Homemade bread is not only delicious but also very satisfying to make."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Learning to Bake Bread for the First Time"
   },
   {
     "id": "es-lib-02-learning-to-bake-bread-for-the-first-tim",
@@ -417,7 +432,10 @@ window.GENERATED = [
         "target": "El pan casero no solo es delicioso, sino también muy satisfactorio de hacer.",
         "en": "Homemade bread is not only delicious but also very satisfying to make."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Learning to Bake Bread for the First Time"
   },
   {
     "id": "fr-lib-03-a-slow-train-and-a-talkative-stranger",
@@ -488,7 +506,10 @@ window.GENERATED = [
         "target": "Le train lent et le voyageur bavard rendent le voyage spécial.",
         "en": "The slow train and the talkative traveler make the trip special."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Slow Train and a Talkative Stranger"
   },
   {
     "id": "es-lib-03-a-slow-train-and-a-talkative-stranger",
@@ -559,7 +580,10 @@ window.GENERATED = [
         "target": "El tren lento y el viajero hablador hacen que el viaje sea especial.",
         "en": "The slow train and the talkative traveler make the trip special."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Slow Train and a Talkative Stranger"
   },
   {
     "id": "fr-lib-04-a-surprise-package-at-the-door",
@@ -622,7 +646,10 @@ window.GENERATED = [
         "target": "Maintenant, je vais lire ce livre en riant un bon moment.",
         "en": "Now, I am going to read this book, laughing for a good while."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Surprise Package at the Door"
   },
   {
     "id": "es-lib-04-a-surprise-package-at-the-door",
@@ -685,7 +712,10 @@ window.GENERATED = [
         "target": "Ahora, voy a leer este libro riendo un buen rato.",
         "en": "Now, I am going to read this book, laughing for a good while."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Surprise Package at the Door"
   },
   {
     "id": "fr-lib-05-the-opening-day-of-a-tiny-new-coffee-sho",
@@ -752,7 +782,10 @@ window.GENERATED = [
         "target": "Le café a peut-être commencé petit, mais son avenir semble prometteur.",
         "en": "The coffee shop may have started small, but its future looks promising."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "The Opening Day of a Tiny New Coffee Shop"
   },
   {
     "id": "es-lib-05-the-opening-day-of-a-tiny-new-coffee-sho",
@@ -819,7 +852,10 @@ window.GENERATED = [
         "target": "La cafetería quizás haya empezado pequeña, pero su futuro parece prometedor.",
         "en": "The coffee shop may have started small, but its future looks promising."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "The Opening Day of a Tiny New Coffee Shop"
   },
   {
     "id": "fr-lib-06-a-walk-in-the-park-right-after-the-rain",
@@ -870,7 +906,10 @@ window.GENERATED = [
         "target": "Je me sens heureux et calme lors de cette promenade après la pluie.",
         "en": "I feel happy and calm during this walk after the rain."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Walk in the Park Right After the Rain"
   },
   {
     "id": "es-lib-06-a-walk-in-the-park-right-after-the-rain",
@@ -921,7 +960,10 @@ window.GENERATED = [
         "target": "Me siento feliz y tranquilo durante este paseo después de la lluvia.",
         "en": "I feel happy and calm during this walk after the rain."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Walk in the Park Right After the Rain"
   },
   {
     "id": "fr-lib-07-an-alarm-clock-that-refuses-to-work",
@@ -988,7 +1030,10 @@ window.GENERATED = [
         "target": "J'espère qu'il sera prêt à sonner demain matin !",
         "en": "I hope it will be ready to ring tomorrow morning!"
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "An Alarm Clock That Refuses to Work"
   },
   {
     "id": "es-lib-07-an-alarm-clock-that-refuses-to-work",
@@ -1055,7 +1100,10 @@ window.GENERATED = [
         "target": "¡Espero que esté listo para sonar mañana por la mañana!",
         "en": "I hope it will be ready to ring tomorrow morning!"
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "An Alarm Clock That Refuses to Work"
   },
   {
     "id": "fr-lib-08-planning-a-small-weekend-trip",
@@ -1126,7 +1174,10 @@ window.GENERATED = [
         "target": "Ils ont décidé de refaire ce genre de petits voyages plus souvent.",
         "en": "They decided to do this kind of small trip more often."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Planning a Small Weekend Trip"
   },
   {
     "id": "es-lib-08-planning-a-small-weekend-trip",
@@ -1197,7 +1248,10 @@ window.GENERATED = [
         "target": "Decidieron hacer este tipo de viajes pequeños con más frecuencia.",
         "en": "They decided to do this kind of small trip more often."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Planning a Small Weekend Trip"
   },
   {
     "id": "fr-lib-09-a-houseplant-that-will-not-grow",
@@ -1264,7 +1318,10 @@ window.GENERATED = [
         "target": "Peut-être un jour elle grandira !",
         "en": "Maybe one day it will grow!"
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Houseplant That Will Not Grow"
   },
   {
     "id": "es-lib-09-a-houseplant-that-will-not-grow",
@@ -1331,7 +1388,10 @@ window.GENERATED = [
         "target": "¡Quizás algún día crezca!",
         "en": "Maybe one day it will grow!"
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Houseplant That Will Not Grow"
   },
   {
     "id": "fr-lib-10-a-forgotten-grocery-list",
@@ -1390,7 +1450,10 @@ window.GENERATED = [
         "target": "Paul a compris que les listes sont très utiles pour ne rien oublier.",
         "en": "Paul understood that lists are very useful to forget nothing."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Forgotten Grocery List"
   },
   {
     "id": "es-lib-10-a-forgotten-grocery-list",
@@ -1449,7 +1512,10 @@ window.GENERATED = [
         "target": "Pablo entendió que las listas son muy útiles para no olvidar nada.",
         "en": "Paul understood that lists are very useful to forget nothing."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Forgotten Grocery List"
   },
   {
     "id": "fr-lib-11-a-friendly-dog-that-follows-you-home",
@@ -1520,7 +1586,10 @@ window.GENERATED = [
         "target": "Peut-être qu'il cherche une nouvelle maison et un ami.",
         "en": "Maybe he is looking for a new home and a friend."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Friendly Dog That Follows You Home"
   },
   {
     "id": "es-lib-11-a-friendly-dog-that-follows-you-home",
@@ -1591,7 +1660,10 @@ window.GENERATED = [
         "target": "Quizás está buscando un nuevo hogar y un amigo.",
         "en": "Maybe he is looking for a new home and a friend."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Friendly Dog That Follows You Home"
   },
   {
     "id": "fr-lib-12-a-very-long-queue-at-the-post-office",
@@ -1654,7 +1726,10 @@ window.GENERATED = [
         "target": "Même si la file était longue, j'ai rencontré une nouvelle amie.",
         "en": "Even though the queue was long, I met a new friend."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Very Long Queue at the Post Office"
   },
   {
     "id": "es-lib-12-a-very-long-queue-at-the-post-office",
@@ -1717,7 +1792,10 @@ window.GENERATED = [
         "target": "Aunque la fila era larga, hice una nueva amiga.",
         "en": "Even though the queue was long, I met a new friend."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Very Long Queue at the Post Office"
   },
   {
     "id": "fr-lib-13-a-mysterious-old-key-with-no-lock",
@@ -1780,7 +1858,10 @@ window.GENERATED = [
         "target": "Parfois, la clé lui rappelle que certains mystères sont amusants.",
         "en": "Sometimes, the key reminds her that some mysteries are fun."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Mysterious Old Key with No Lock"
   },
   {
     "id": "es-lib-13-a-mysterious-old-key-with-no-lock",
@@ -1843,7 +1924,10 @@ window.GENERATED = [
         "target": "A veces, la llave le recuerda que algunos misterios son divertidos.",
         "en": "Sometimes, the key reminds her that some mysteries are fun."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Mysterious Old Key with No Lock"
   },
   {
     "id": "fr-lib-14-cooking-a-family-recipe-from-memory",
@@ -1910,7 +1994,10 @@ window.GENERATED = [
         "target": "Cela m'a rappelé que la cuisine est aussi une histoire d'amour et de tradition.",
         "en": "It reminded me that cooking is also a story of love and tradition."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Cooking a Family Recipe from Memory"
   },
   {
     "id": "es-lib-14-cooking-a-family-recipe-from-memory",
@@ -1977,7 +2064,10 @@ window.GENERATED = [
         "target": "Me recordó que la cocina también es una historia de amor y tradición.",
         "en": "It reminded me that cooking is also a story of love and tradition."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Cooking a Family Recipe from Memory"
   },
   {
     "id": "fr-lib-15-getting-a-little-lost-in-a-new-city",
@@ -2032,7 +2122,10 @@ window.GENERATED = [
         "target": "Je suis fier de moi parce que j'ai trouvé le musée.",
         "en": "I am proud of myself because I found the museum."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Getting a Little Lost in a New City"
   },
   {
     "id": "es-lib-15-getting-a-little-lost-in-a-new-city",
@@ -2087,7 +2180,10 @@ window.GENERATED = [
         "target": "Estoy orgulloso de mí porque encontré el museo.",
         "en": "I am proud of myself because I found the museum."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Getting a Little Lost in a New City"
   },
   {
     "id": "fr-lib-16-a-market-stall-with-the-best-fruit-in-to",
@@ -2158,7 +2254,10 @@ window.GENERATED = [
         "target": "Pour elle, le marché est plus qu'un travail, c’est une passion.",
         "en": "For her, the market is more than a job; it’s a passion."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Market Stall with the Best Fruit in Town"
   },
   {
     "id": "es-lib-16-a-market-stall-with-the-best-fruit-in-to",
@@ -2229,7 +2328,10 @@ window.GENERATED = [
         "target": "Para ella, el mercado es más que un trabajo; es una pasión.",
         "en": "For her, the market is more than a job; it’s a passion."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Market Stall with the Best Fruit in Town"
   },
   {
     "id": "fr-lib-17-a-power-cut-and-a-box-of-candles",
@@ -2296,7 +2398,10 @@ window.GENERATED = [
         "target": "Cela me prépare à d'éventuelles coupures et ajoute un charme inattendu à mes soirées.",
         "en": "It prepares me for possible outages and adds unexpected charm to my evenings."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Power Cut and a Box of Candles"
   },
   {
     "id": "es-lib-17-a-power-cut-and-a-box-of-candles",
@@ -2363,7 +2468,10 @@ window.GENERATED = [
         "target": "Eso me prepara para posibles cortes de luz y añade un encanto inesperado a mis noches.",
         "en": "It prepares me for possible outages and adds unexpected charm to my evenings."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Power Cut and a Box of Candles"
   },
   {
     "id": "fr-lib-18-a-phone-with-a-nearly-dead-battery",
@@ -2426,7 +2534,10 @@ window.GENERATED = [
         "target": "Elle cherche encore son chargeur dans sa maison.",
         "en": "She keeps looking for her charger in her house."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Phone with a Nearly Dead Battery"
   },
   {
     "id": "es-lib-18-a-phone-with-a-nearly-dead-battery",
@@ -2489,7 +2600,10 @@ window.GENERATED = [
         "target": "Sigue buscando su cargador en su casa.",
         "en": "She keeps looking for her charger in her house."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Phone with a Nearly Dead Battery"
   },
   {
     "id": "fr-lib-19-trying-a-new-sport-and-being-wonderfully",
@@ -2552,7 +2666,10 @@ window.GENERATED = [
         "target": "Parfois, être mauvais donne de bons souvenirs.",
         "en": "Sometimes, being bad makes good memories."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Trying a New Sport and Being Wonderfully Bad at It"
   },
   {
     "id": "es-lib-19-trying-a-new-sport-and-being-wonderfully",
@@ -2615,7 +2732,10 @@ window.GENERATED = [
         "target": "A veces, ser malo crea buenos recuerdos.",
         "en": "Sometimes, being bad makes good memories."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "Trying a New Sport and Being Wonderfully Bad at It"
   },
   {
     "id": "fr-lib-20-a-rooftop-garden-in-the-middle-of-the-ci",
@@ -2686,7 +2806,10 @@ window.GENERATED = [
         "target": "Ils offrent un lieu paisible pour se détendre loin de la circulation et du bruit.",
         "en": "They provide a peaceful place to relax away from traffic and noise."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Rooftop Garden in the Middle of the City"
   },
   {
     "id": "es-lib-20-a-rooftop-garden-in-the-middle-of-the-ci",
@@ -2757,7 +2880,10 @@ window.GENERATED = [
         "target": "Ofrecen un lugar tranquilo para relajarse lejos del tráfico y el ruido.",
         "en": "They provide a peaceful place to relax away from traffic and noise."
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Rooftop Garden in the Middle of the City"
   },
   {
     "id": "fr-lib-21-a-bookshop-where-the-cat-runs-the-regist",
@@ -2820,7 +2946,10 @@ window.GENERATED = [
         "target": "Si vous passez dans le quartier, venez dire bonjour à Minou !",
         "en": "If you pass by the neighborhood, come say hello to Minou!"
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Bookshop Where the Cat Runs the Register"
   },
   {
     "id": "es-lib-21-a-bookshop-where-the-cat-runs-the-regist",
@@ -2883,7 +3012,10 @@ window.GENERATED = [
         "target": "Si pasas por el barrio, ¡ven a saludar a Minou!",
         "en": "If you pass by the neighborhood, come say hello to Minou!"
       }
-    ]
+    ],
+    "section": "Everyday",
+    "new": false,
+    "en_title": "A Bookshop Where the Cat Runs the Register"
   },
   {
     "id": "fr-lib-22-why-people-love-wordle",
@@ -2954,7 +3086,10 @@ window.GENERATED = [
         "target": "Enfin, c’est un moyen simple et gratuit de passer un bon moment.",
         "en": "Finally, it is a simple and free way to have a good time."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why People Love Wordle"
   },
   {
     "id": "es-lib-22-why-people-love-wordle",
@@ -3025,7 +3160,10 @@ window.GENERATED = [
         "target": "Finalmente, es una forma simple y gratis de pasar un buen rato.",
         "en": "Finally, it is a simple and free way to have a good time."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why People Love Wordle"
   },
   {
     "id": "fr-lib-23-what-doomscrolling-means",
@@ -3092,7 +3230,10 @@ window.GENERATED = [
         "target": "Reconnaître ce comportement est la première étape pour mieux le gérer.",
         "en": "Recognizing this behavior is the first step to managing it better."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "What \"doomscrolling\" Means"
   },
   {
     "id": "es-lib-23-what-doomscrolling-means",
@@ -3159,7 +3300,10 @@ window.GENERATED = [
         "target": "Reconocer este comportamiento es el primer paso para manejarlo mejor.",
         "en": "Recognizing this behavior is the first step to managing it better."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "What \"doomscrolling\" Means"
   },
   {
     "id": "fr-lib-24-a-digital-detox-weekend",
@@ -3226,7 +3370,10 @@ window.GENERATED = [
         "target": "Essayer une détox digitale ce week-end peut être très bénéfique.",
         "en": "Trying a digital detox this weekend can be very beneficial."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "A Digital Detox Weekend"
   },
   {
     "id": "es-lib-24-a-digital-detox-weekend",
@@ -3293,7 +3440,10 @@ window.GENERATED = [
         "target": "Probar una desintoxicación digital este fin de semana puede ser muy beneficioso.",
         "en": "Trying a digital detox this weekend can be very beneficial."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "A Digital Detox Weekend"
   },
   {
     "id": "fr-lib-25-why-gen-z-prefers-voice-notes",
@@ -3360,7 +3510,10 @@ window.GENERATED = [
         "target": "Les nouvelles technologies rendent les messages vocaux simples à envoyer et à recevoir.",
         "en": "New technologies make voice messages easy to send and receive."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Gen Z Prefers Voice Notes"
   },
   {
     "id": "es-lib-25-why-gen-z-prefers-voice-notes",
@@ -3427,7 +3580,10 @@ window.GENERATED = [
         "target": "Las nuevas tecnologías hacen que las notas de voz sean fáciles de enviar y recibir.",
         "en": "New technologies make voice messages easy to send and receive."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Gen Z Prefers Voice Notes"
   },
   {
     "id": "fr-lib-26-the-return-of-flip-phones",
@@ -3498,7 +3654,10 @@ window.GENERATED = [
         "target": "Cette tendance montre que la technologie n'avance pas toujours vers le plus compliqué.",
         "en": "This trend shows that technology doesn’t always progress towards complexity."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Return of Flip Phones"
   },
   {
     "id": "es-lib-26-the-return-of-flip-phones",
@@ -3569,7 +3728,10 @@ window.GENERATED = [
         "target": "Esta tendencia muestra que la tecnología no siempre avanza hacia lo más complicado.",
         "en": "This trend shows that technology doesn’t always progress towards complexity."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Return of Flip Phones"
   },
   {
     "id": "fr-lib-27-why-everyone-suddenly-drinks-matcha",
@@ -3636,7 +3798,10 @@ window.GENERATED = [
         "target": "C'est pour cela que tout le monde boit du matcha aujourd'hui.",
         "en": "This is why everyone drinks matcha today."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Everyone Suddenly Drinks Matcha"
   },
   {
     "id": "es-lib-27-why-everyone-suddenly-drinks-matcha",
@@ -3703,7 +3868,10 @@ window.GENERATED = [
         "target": "Por eso, hoy en día todo el mundo bebe matcha.",
         "en": "This is why everyone drinks matcha today."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Everyone Suddenly Drinks Matcha"
   },
   {
     "id": "fr-lib-28-the-psychology-of-notifications",
@@ -3770,7 +3938,10 @@ window.GENERATED = [
         "target": "Cela peut améliorer notre bien-être et notre productivité.",
         "en": "This can improve our well-being and productivity."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Psychology of Notifications"
   },
   {
     "id": "es-lib-28-the-psychology-of-notifications",
@@ -3837,7 +4008,10 @@ window.GENERATED = [
         "target": "Esto puede mejorar nuestro bienestar y productividad.",
         "en": "This can improve our well-being and productivity."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Psychology of Notifications"
   },
   {
     "id": "fr-lib-29-why-people-collect-vinyl-records",
@@ -3904,7 +4078,10 @@ window.GENERATED = [
         "target": "En résumé, collectionner des vinyles est un loisir qui mêle histoire, son et émotion.",
         "en": "In summary, collecting vinyl is a hobby that mixes history, sound, and emotion."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why People Collect Vinyl Records"
   },
   {
     "id": "es-lib-29-why-people-collect-vinyl-records",
@@ -3971,7 +4148,10 @@ window.GENERATED = [
         "target": "En resumen, coleccionar vinilos es un hobby que mezcla historia, sonido y emoción.",
         "en": "In summary, collecting vinyl is a hobby that mixes history, sound, and emotion."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why People Collect Vinyl Records"
   },
   {
     "id": "fr-lib-30-why-handwritten-journals-are-back",
@@ -4038,7 +4218,10 @@ window.GENERATED = [
         "target": "C’est pour cela que les journaux écrits à la main reviennent à la mode.",
         "en": "That is why handwritten journals are becoming popular again."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Handwritten Journals Are Back"
   },
   {
     "id": "es-lib-30-why-handwritten-journals-are-back",
@@ -4105,7 +4288,10 @@ window.GENERATED = [
         "target": "Por eso los diarios escritos a mano vuelven a estar de moda.",
         "en": "That is why handwritten journals are becoming popular again."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Handwritten Journals Are Back"
   },
   {
     "id": "fr-lib-31-why-everyone-suddenly-wants-to-visit-alb",
@@ -4176,7 +4362,10 @@ window.GENERATED = [
         "target": "Tout cela explique pourquoi l'Albanie devient une destination très populaire.",
         "en": "All of this explains why Albania is becoming a very popular destination."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Everyone Suddenly Wants to Visit Albania"
   },
   {
     "id": "es-lib-31-why-everyone-suddenly-wants-to-visit-alb",
@@ -4247,7 +4436,10 @@ window.GENERATED = [
         "target": "Todo esto explica por qué Albania se está convirtiendo en un destino muy popular.",
         "en": "All of this explains why Albania is becoming a very popular destination."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Everyone Suddenly Wants to Visit Albania"
   },
   {
     "id": "fr-lib-32-why-formula-1-is-exploding-in-popularity",
@@ -4314,7 +4506,10 @@ window.GENERATED = [
         "target": "Tout cela contribue à rendre la Formule 1 passionnante pour un public diversifié.",
         "en": "All of this helps make Formula 1 exciting for a diverse audience."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Formula 1 Is Exploding in Popularity"
   },
   {
     "id": "es-lib-32-why-formula-1-is-exploding-in-popularity",
@@ -4381,7 +4576,10 @@ window.GENERATED = [
         "target": "Todo esto contribuye a hacer la Fórmula 1 apasionante para un público diverso.",
         "en": "All of this helps make Formula 1 exciting for a diverse audience."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Formula 1 Is Exploding in Popularity"
   },
   {
     "id": "fr-lib-33-why-people-are-obsessed-with-pickleball",
@@ -4440,7 +4638,10 @@ window.GENERATED = [
         "target": "Cela explique pourquoi beaucoup de gens l’aiment.",
         "en": "This explains why many people like it."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why People Are Obsessed with Pickleball"
   },
   {
     "id": "es-lib-33-why-people-are-obsessed-with-pickleball",
@@ -4499,7 +4700,10 @@ window.GENERATED = [
         "target": "Por eso muchas personas lo aman.",
         "en": "This explains why many people like it."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why People Are Obsessed with Pickleball"
   },
   {
     "id": "fr-lib-34-the-rise-of-ai-coding-assistants",
@@ -4566,7 +4770,10 @@ window.GENERATED = [
         "target": "En somme, ces assistants sont une nouvelle étape dans l'histoire de la programmation.",
         "en": "In short, these assistants are a new step in programming history."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Rise of AI Coding Assistants"
   },
   {
     "id": "es-lib-34-the-rise-of-ai-coding-assistants",
@@ -4633,7 +4840,10 @@ window.GENERATED = [
         "target": "En resumen, estos asistentes son un nuevo paso en la historia de la programación.",
         "en": "In short, these assistants are a new step in programming history."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Rise of AI Coding Assistants"
   },
   {
     "id": "fr-lib-35-the-latest-iphone-features-explained-sim",
@@ -4704,7 +4914,10 @@ window.GENERATED = [
         "target": "Cela reflète une tendance vers des technologies plus durables et responsables.",
         "en": "This reflects a trend toward more sustainable and responsible technologies."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Latest iPhone Features, Explained Simply"
   },
   {
     "id": "es-lib-35-the-latest-iphone-features-explained-sim",
@@ -4775,7 +4988,10 @@ window.GENERATED = [
         "target": "Esto refleja una tendencia hacia tecnologías más sostenibles y responsables.",
         "en": "This reflects a trend toward more sustainable and responsible technologies."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Latest iPhone Features, Explained Simply"
   },
   {
     "id": "fr-lib-36-why-more-people-are-taking-solo-trips",
@@ -4842,7 +5058,10 @@ window.GENERATED = [
         "target": "C'est une expérience que beaucoup recommandent.",
         "en": "It is an experience that many recommend."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why More People Are Taking Solo Trips"
   },
   {
     "id": "es-lib-36-why-more-people-are-taking-solo-trips",
@@ -4909,7 +5128,10 @@ window.GENERATED = [
         "target": "Es una experiencia que muchos recomiendan.",
         "en": "It is an experience that many recommend."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why More People Are Taking Solo Trips"
   },
   {
     "id": "fr-lib-37-is-remote-work-ending",
@@ -4976,7 +5198,10 @@ window.GENERATED = [
         "target": "En résumé, le télétravail n’est pas forcément terminé, il évolue.",
         "en": "In summary, remote work is not necessarily ending; it is evolving."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Is Remote Work Ending?"
   },
   {
     "id": "es-lib-37-is-remote-work-ending",
@@ -5043,7 +5268,10 @@ window.GENERATED = [
         "target": "En resumen, el teletrabajo no termina necesariamente, está evolucionando.",
         "en": "In summary, remote work is not necessarily ending; it is evolving."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Is Remote Work Ending?"
   },
   {
     "id": "fr-lib-38-why-sourdough-became-popular",
@@ -5110,7 +5338,10 @@ window.GENERATED = [
         "target": "Enfin, le pain au levain a un goût riche qui plaît aux gourmets.",
         "en": "Finally, sourdough bread has a rich flavor that appeals to food lovers."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Why Sourdough Became Popular"
   },
   {
     "id": "es-lib-38-why-sourdough-became-popular",
@@ -5177,7 +5408,10 @@ window.GENERATED = [
         "target": "Por último, el pan de masa madre tiene un sabor rico que gusta a los gourmets.",
         "en": "Finally, sourdough bread has a rich flavor that appeals to food lovers."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Why Sourdough Became Popular"
   },
   {
     "id": "fr-lib-39-matcha-vs-coffee",
@@ -5244,7 +5478,10 @@ window.GENERATED = [
         "target": "Vous pouvez essayer les deux et choisir ce que vous aimez.",
         "en": "You can try both and choose what you like."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Matcha vs Coffee"
   },
   {
     "id": "es-lib-39-matcha-vs-coffee",
@@ -5311,7 +5548,10 @@ window.GENERATED = [
         "target": "Puedes probar los dos y elegir lo que te gusta.",
         "en": "You can try both and choose what you like."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Matcha vs Coffee"
   },
   {
     "id": "fr-lib-40-the-history-of-ramen",
@@ -5378,7 +5618,10 @@ window.GENERATED = [
         "target": "Le ramen est un excellent exemple de la fusion alimentaire entre les cultures.",
         "en": "Ramen is a great example of food fusion between cultures."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "The History of Ramen"
   },
   {
     "id": "es-lib-40-the-history-of-ramen",
@@ -5445,7 +5688,10 @@ window.GENERATED = [
         "target": "El ramen es un gran ejemplo de la fusión culinaria entre culturas.",
         "en": "Ramen is a great example of food fusion between cultures."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "The History of Ramen"
   },
   {
     "id": "fr-lib-41-michelin-stars-explained",
@@ -5516,7 +5762,10 @@ window.GENERATED = [
         "target": "La quête des étoiles Michelin motive les chefs à innover et s'améliorer constamment.",
         "en": "The quest for Michelin stars motivates chefs to innovate and constantly improve."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Michelin Stars Explained"
   },
   {
     "id": "es-lib-41-michelin-stars-explained",
@@ -5587,7 +5836,10 @@ window.GENERATED = [
         "target": "La búsqueda de las estrellas Michelin motiva a los chefs a innovar y mejorar constantemente.",
         "en": "The quest for Michelin stars motivates chefs to innovate and constantly improve."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Michelin Stars Explained"
   },
   {
     "id": "fr-lib-42-why-people-line-up-for-croissants",
@@ -5650,7 +5902,10 @@ window.GENERATED = [
         "target": "Le croissant est un symbole de plaisir simple.",
         "en": "The croissant is a symbol of simple pleasure."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Why People Line Up for Croissants"
   },
   {
     "id": "es-lib-42-why-people-line-up-for-croissants",
@@ -5713,7 +5968,10 @@ window.GENERATED = [
         "target": "El croissant es un símbolo de placer simple.",
         "en": "The croissant is a symbol of simple pleasure."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Why People Line Up for Croissants"
   },
   {
     "id": "fr-lib-43-the-best-street-foods-in-mexico",
@@ -5780,7 +6038,10 @@ window.GENERATED = [
         "target": "Si vous voyagez au Mexique, ne manquez pas cette expérience culinaire unique!",
         "en": "If you travel to Mexico, don't miss this unique culinary experience!"
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "The Best Street Foods in Mexico"
   },
   {
     "id": "es-lib-43-the-best-street-foods-in-mexico",
@@ -5847,7 +6108,10 @@ window.GENERATED = [
         "target": "Si viajas a México, ¡no te pierdas esta experiencia culinaria única!",
         "en": "If you travel to Mexico, don't miss this unique culinary experience!"
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "The Best Street Foods in Mexico"
   },
   {
     "id": "fr-lib-44-bubble-tea-around-the-world",
@@ -5918,7 +6182,10 @@ window.GENERATED = [
         "target": "Le bubble tea montre comment une boisson régionale peut conquérir le monde.",
         "en": "Bubble tea demonstrates how a regional drink can conquer the world."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Bubble Tea Around the World"
   },
   {
     "id": "es-lib-44-bubble-tea-around-the-world",
@@ -5989,7 +6256,10 @@ window.GENERATED = [
         "target": "El té de burbujas muestra cómo una bebida regional puede conquistar el mundo.",
         "en": "Bubble tea demonstrates how a regional drink can conquer the world."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Bubble Tea Around the World"
   },
   {
     "id": "fr-lib-45-why-olive-oil-became-so-expensive",
@@ -6048,7 +6318,10 @@ window.GENERATED = [
         "target": "C'est pourquoi l'huile d'olive est devenue plus chère.",
         "en": "That is why olive oil has become more expensive."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Why Olive Oil Became So Expensive"
   },
   {
     "id": "es-lib-45-why-olive-oil-became-so-expensive",
@@ -6107,7 +6380,10 @@ window.GENERATED = [
         "target": "Por eso el aceite de oliva se ha vuelto más caro.",
         "en": "That is why olive oil has become more expensive."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "Why Olive Oil Became So Expensive"
   },
   {
     "id": "fr-lib-46-how-espresso-differs-across-europe",
@@ -6174,7 +6450,10 @@ window.GENERATED = [
         "target": "C'est ce qui rend le café si spécial dans chaque culture européenne.",
         "en": "This is what makes coffee so special in each European culture."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "How Espresso Differs Across Europe"
   },
   {
     "id": "es-lib-46-how-espresso-differs-across-europe",
@@ -6241,7 +6520,10 @@ window.GENERATED = [
         "target": "Esto es lo que hace que el café sea tan especial en cada cultura europea.",
         "en": "This is what makes coffee so special in each European culture."
       }
-    ]
+    ],
+    "section": "Food",
+    "new": false,
+    "en_title": "How Espresso Differs Across Europe"
   },
   {
     "id": "fr-lib-47-spending-48-hours-in-paris",
@@ -6308,7 +6590,10 @@ window.GENERATED = [
         "target": "Ce programme vous permet de profiter pleinement de Paris en seulement deux jours.",
         "en": "This itinerary lets you fully enjoy Paris in just two days."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Spending 48 Hours in Paris"
   },
   {
     "id": "es-lib-47-spending-48-hours-in-paris",
@@ -6375,7 +6660,10 @@ window.GENERATED = [
         "target": "Este programa te permite disfrutar plenamente de París en solo dos días.",
         "en": "This itinerary lets you fully enjoy Paris in just two days."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Spending 48 Hours in Paris"
   },
   {
     "id": "fr-lib-48-a-perfect-day-in-barcelona",
@@ -6442,7 +6730,10 @@ window.GENERATED = [
         "target": "Ce jour est un jour parfait à Barcelone.",
         "en": "This day is a perfect day in Barcelona."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "A Perfect Day in Barcelona"
   },
   {
     "id": "es-lib-48-a-perfect-day-in-barcelona",
@@ -6509,7 +6800,10 @@ window.GENERATED = [
         "target": "Este día es un día perfecto en Barcelona.",
         "en": "This day is a perfect day in Barcelona."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "A Perfect Day in Barcelona"
   },
   {
     "id": "fr-lib-49-why-japan-feels-so-different",
@@ -6572,7 +6866,10 @@ window.GENERATED = [
         "target": "C'est pourquoi visiter le Japon peut sembler être un voyage dans un autre monde.",
         "en": "That is why visiting Japan can feel like a journey into another world."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Why Japan Feels So Different"
   },
   {
     "id": "es-lib-49-why-japan-feels-so-different",
@@ -6635,7 +6932,10 @@ window.GENERATED = [
         "target": "Por eso, visitar Japón puede sentirse como un viaje a otro mundo.",
         "en": "That is why visiting Japan can feel like a journey into another world."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Why Japan Feels So Different"
   },
   {
     "id": "fr-lib-50-why-iceland-became-so-popular",
@@ -6702,7 +7002,10 @@ window.GENERATED = [
         "target": "Ainsi, grâce à ses paysages, sa culture et sa réputation, l’Islande attire chaque année des milliers de touristes.",
         "en": "Thus, thanks to its landscapes, culture, and reputation, Iceland attracts thousands of tourists every year."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Why Iceland Became So Popular"
   },
   {
     "id": "es-lib-50-why-iceland-became-so-popular",
@@ -6769,7 +7072,10 @@ window.GENERATED = [
         "target": "Así, gracias a sus paisajes, cultura y reputación, Islandia atrae cada año a miles de turistas.",
         "en": "Thus, thanks to its landscapes, culture, and reputation, Iceland attracts thousands of tourists every year."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Why Iceland Became So Popular"
   },
   {
     "id": "fr-lib-51-hidden-beaches-in-portugal",
@@ -6820,7 +7126,10 @@ window.GENERATED = [
         "target": "Si vous visitez le Portugal, essayez de découvrir une plage cachée !",
         "en": "If you visit Portugal, try to discover a hidden beach!"
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Hidden Beaches in Portugal"
   },
   {
     "id": "es-lib-51-hidden-beaches-in-portugal",
@@ -6871,7 +7180,10 @@ window.GENERATED = [
         "target": "¡Si visitas Portugal, intenta descubrir una playa escondida!",
         "en": "If you visit Portugal, try to discover a hidden beach!"
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Hidden Beaches in Portugal"
   },
   {
     "id": "fr-lib-52-overnight-trains-in-europe",
@@ -6942,7 +7254,10 @@ window.GENERATED = [
         "target": "Voyager en train de nuit est une expérience unique et agréable.",
         "en": "Traveling by overnight train is a unique and pleasant experience."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Overnight Trains in Europe"
   },
   {
     "id": "es-lib-52-overnight-trains-in-europe",
@@ -7013,7 +7328,10 @@ window.GENERATED = [
         "target": "Viajar en tren nocturno es una experiencia única y agradable.",
         "en": "Traveling by overnight train is a unique and pleasant experience."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Overnight Trains in Europe"
   },
   {
     "id": "fr-lib-53-what-it-s-like-to-hike-machu-picchu",
@@ -7080,7 +7398,10 @@ window.GENERATED = [
         "target": "La randonnée à Machu Picchu est une expérience physique et culturelle unique.",
         "en": "Hiking Machu Picchu is a unique physical and cultural experience."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "What It's Like to Hike Machu Picchu"
   },
   {
     "id": "es-lib-53-what-it-s-like-to-hike-machu-picchu",
@@ -7147,7 +7468,10 @@ window.GENERATED = [
         "target": "La excursión a Machu Picchu es una experiencia física y cultural única.",
         "en": "Hiking Machu Picchu is a unique physical and cultural experience."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "What It's Like to Hike Machu Picchu"
   },
   {
     "id": "fr-lib-54-the-world-s-happiest-countries",
@@ -7218,7 +7542,10 @@ window.GENERATED = [
         "target": "Ainsi, le bonheur dépend de nombreux petits éléments ensemble.",
         "en": "Thus, happiness depends on many small elements together."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "The World's Happiest Countries"
   },
   {
     "id": "es-lib-54-the-world-s-happiest-countries",
@@ -7289,7 +7616,10 @@ window.GENERATED = [
         "target": "Así, la felicidad depende de muchos pequeños elementos juntos.",
         "en": "Thus, happiness depends on many small elements together."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "The World's Happiest Countries"
   },
   {
     "id": "fr-lib-55-airport-etiquette-around-the-world",
@@ -7356,7 +7686,10 @@ window.GENERATED = [
         "target": "Enfin, montrer de la patience lors des retards ou des longues files est la meilleure attitude.",
         "en": "Finally, showing patience during delays or long lines is the best attitude."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Airport Etiquette Around the World"
   },
   {
     "id": "es-lib-55-airport-etiquette-around-the-world",
@@ -7423,7 +7756,10 @@ window.GENERATED = [
         "target": "Por último, mostrar paciencia durante retrasos o filas largas es la mejor actitud.",
         "en": "Finally, showing patience during delays or long lines is the best attitude."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Airport Etiquette Around the World"
   },
   {
     "id": "fr-lib-56-underrated-oaxaca",
@@ -7490,7 +7826,10 @@ window.GENERATED = [
         "target": "Visiter Oaxaca, c’est découvrir une partie du Mexique différente et fascinante.",
         "en": "Visiting Oaxaca means discovering a different and fascinating part of Mexico."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Underrated Oaxaca"
   },
   {
     "id": "es-lib-56-underrated-oaxaca",
@@ -7557,7 +7896,10 @@ window.GENERATED = [
         "target": "Visitar Oaxaca es descubrir una parte diferente y fascinante de México.",
         "en": "Visiting Oaxaca means discovering a different and fascinating part of Mexico."
       }
-    ]
+    ],
+    "section": "Travel",
+    "new": false,
+    "en_title": "Underrated Oaxaca"
   },
   {
     "id": "fr-lib-56-what-chatgpt-actually-does",
@@ -7624,7 +7966,10 @@ window.GENERATED = [
         "target": "Bien qu'impressionnant, ChatGPT est un outil qui aide les humains, pas qui les remplace.",
         "en": "Although impressive, ChatGPT is a tool that helps humans, not one that replaces them."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "What ChatGPT Actually Does"
   },
   {
     "id": "es-lib-56-what-chatgpt-actually-does",
@@ -7691,7 +8036,10 @@ window.GENERATED = [
         "target": "Aunque es impresionante, ChatGPT es una herramienta que ayuda a los humanos, no que los reemplaza.",
         "en": "Although impressive, ChatGPT is a tool that helps humans, not one that replaces them."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "What ChatGPT Actually Does"
   },
   {
     "id": "fr-lib-57-why-gpus-matter",
@@ -7758,7 +8106,10 @@ window.GENERATED = [
         "target": "Les GPU rendent notre expérience numérique plus agréable.",
         "en": "GPUs make our digital experience more enjoyable."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "Why GPUs Matter"
   },
   {
     "id": "es-lib-57-why-gpus-matter",
@@ -7825,7 +8176,10 @@ window.GENERATED = [
         "target": "Las GPU hacen que nuestra experiencia digital sea más agradable.",
         "en": "GPUs make our digital experience more enjoyable."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "Why GPUs Matter"
   },
   {
     "id": "fr-lib-58-how-gps-works",
@@ -7892,7 +8246,10 @@ window.GENERATED = [
         "target": "En résumé, le GPS rend la vie plus facile en nous guidant où que nous soyons.",
         "en": "In summary, GPS makes life easier by guiding us wherever we are."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "How GPS Works"
   },
   {
     "id": "es-lib-58-how-gps-works",
@@ -7959,7 +8316,10 @@ window.GENERATED = [
         "target": "En resumen, el GPS hace la vida más fácil guiándonos donde sea que estemos.",
         "en": "In summary, GPS makes life easier by guiding us wherever we are."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "How GPS Works"
   },
   {
     "id": "fr-lib-59-what-quantum-computing-is",
@@ -8026,7 +8386,10 @@ window.GENERATED = [
         "target": "Un jour, les ordinateurs quantiques pourraient révolutionner la science, la médecine et bien d'autres domaines.",
         "en": "One day, quantum computers could revolutionize science, medicine, and many other fields."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "What Quantum Computing Is"
   },
   {
     "id": "es-lib-59-what-quantum-computing-is",
@@ -8093,7 +8456,10 @@ window.GENERATED = [
         "target": "Un día, los ordenadores cuánticos podrían revolucionar la ciencia, la medicina y muchos otros campos.",
         "en": "One day, quantum computers could revolutionize science, medicine, and many other fields."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "What Quantum Computing Is"
   },
   {
     "id": "fr-lib-60-why-software-updates-take-so-long",
@@ -8164,7 +8530,10 @@ window.GENERATED = [
         "target": "En résumé, les mises à jour prennent du temps pour bien fonctionner.",
         "en": "In summary, updates take time to work well."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "Why Software Updates Take So Long"
   },
   {
     "id": "es-lib-60-why-software-updates-take-so-long",
@@ -8235,7 +8604,10 @@ window.GENERATED = [
         "target": "En resumen, las actualizaciones toman tiempo para funcionar bien.",
         "en": "In summary, updates take time to work well."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "Why Software Updates Take So Long"
   },
   {
     "id": "fr-lib-61-how-recommendation-algorithms-work",
@@ -8302,7 +8674,10 @@ window.GENERATED = [
         "target": "Mais nous devons rester curieux et critiques face à leurs propositions.",
         "en": "But we must stay curious and critical about their suggestions."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "How Recommendation Algorithms Work"
   },
   {
     "id": "es-lib-61-how-recommendation-algorithms-work",
@@ -8369,7 +8744,10 @@ window.GENERATED = [
         "target": "Pero debemos mantenernos curiosos y críticos ante sus propuestas.",
         "en": "But we must stay curious and critical about their suggestions."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "How Recommendation Algorithms Work"
   },
   {
     "id": "fr-lib-62-why-batteries-degrade",
@@ -8436,7 +8814,10 @@ window.GENERATED = [
         "target": "Ainsi, mieux comprendre pourquoi les batteries se dégradent aide à mieux les utiliser.",
         "en": "Thus, better understanding why batteries degrade helps us use them better."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "Why Batteries Degrade"
   },
   {
     "id": "es-lib-62-why-batteries-degrade",
@@ -8503,7 +8884,10 @@ window.GENERATED = [
         "target": "Así, entender mejor por qué se degradan las baterías ayuda a usarlas mejor.",
         "en": "Thus, better understanding why batteries degrade helps us use them better."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "Why Batteries Degrade"
   },
   {
     "id": "fr-lib-63-how-self-driving-cars-see-the-road",
@@ -8570,7 +8954,10 @@ window.GENERATED = [
         "target": "C’est la technologie du futur pour conduire.",
         "en": "This is the technology of the future for driving."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "How Self-driving Cars See the Road"
   },
   {
     "id": "es-lib-63-how-self-driving-cars-see-the-road",
@@ -8637,7 +9024,10 @@ window.GENERATED = [
         "target": "Esta es la tecnología del futuro para conducir.",
         "en": "This is the technology of the future for driving."
       }
-    ]
+    ],
+    "section": "Science",
+    "new": false,
+    "en_title": "How Self-driving Cars See the Road"
   },
   {
     "id": "fr-lib-64-why-habits-are-hard-to-break",
@@ -8708,7 +9098,10 @@ window.GENERATED = [
         "target": "Alors, la nouvelle habitude devient naturelle et facile à faire.",
         "en": "Then, the new habit becomes natural and easy to do."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Why Habits Are Hard to Break"
   },
   {
     "id": "es-lib-64-why-habits-are-hard-to-break",
@@ -8779,7 +9172,10 @@ window.GENERATED = [
         "target": "Entonces, el nuevo hábito se vuelve natural y fácil de hacer.",
         "en": "Then, the new habit becomes natural and easy to do."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Why Habits Are Hard to Break"
   },
   {
     "id": "fr-lib-65-decision-fatigue",
@@ -8850,7 +9246,10 @@ window.GENERATED = [
         "target": "Cela améliore non seulement notre bien-être, mais aussi la qualité de nos choix.",
         "en": "This not only improves our well-being but also the quality of our choices."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Decision Fatigue"
   },
   {
     "id": "es-lib-65-decision-fatigue",
@@ -8921,7 +9320,10 @@ window.GENERATED = [
         "target": "Esto mejora no solo nuestro bienestar, sino también la calidad de nuestras elecciones.",
         "en": "This not only improves our well-being but also the quality of our choices."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Decision Fatigue"
   },
   {
     "id": "fr-lib-66-why-we-procrastinate",
@@ -8988,7 +9390,10 @@ window.GENERATED = [
         "target": "Finalement, comprendre pourquoi nous procrastinons aide à changer cette habitude.",
         "en": "Finally, understanding why we procrastinate helps to change this habit."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Why We Procrastinate"
   },
   {
     "id": "es-lib-66-why-we-procrastinate",
@@ -9055,7 +9460,10 @@ window.GENERATED = [
         "target": "Finalmente, entender por qué procrastinamos ayuda a cambiar este hábito.",
         "en": "Finally, understanding why we procrastinate helps to change this habit."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Why We Procrastinate"
   },
   {
     "id": "fr-lib-67-the-science-of-sleep",
@@ -9122,7 +9530,10 @@ window.GENERATED = [
         "target": "Comprendre la science du sommeil peut nous aider à mieux prendre soin de nous-mêmes.",
         "en": "Understanding the science of sleep can help us take better care of ourselves."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "The Science of Sleep"
   },
   {
     "id": "es-lib-67-the-science-of-sleep",
@@ -9189,7 +9600,10 @@ window.GENERATED = [
         "target": "Entender la ciencia del sueño puede ayudarnos a cuidar mejor de nosotros mismos.",
         "en": "Understanding the science of sleep can help us take better care of ourselves."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "The Science of Sleep"
   },
   {
     "id": "fr-lib-68-the-placebo-effect",
@@ -9256,7 +9670,10 @@ window.GENERATED = [
         "target": "Cela prouve l'importance de l'attitude mentale dans la santé.",
         "en": "This proves the importance of mental attitude in health."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "The Placebo Effect"
   },
   {
     "id": "es-lib-68-the-placebo-effect",
@@ -9323,7 +9740,10 @@ window.GENERATED = [
         "target": "Esto demuestra la importancia de la actitud mental en la salud.",
         "en": "This proves the importance of mental attitude in health."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "The Placebo Effect"
   },
   {
     "id": "fr-lib-69-why-we-remember-music",
@@ -9390,7 +9810,10 @@ window.GENERATED = [
         "target": "C'est pourquoi notre cerveau aime garder la musique en mémoire.",
         "en": "That's why our brain likes to keep music in memory."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Why We Remember Music"
   },
   {
     "id": "es-lib-69-why-we-remember-music",
@@ -9457,7 +9880,10 @@ window.GENERATED = [
         "target": "Por eso a nuestro cerebro le gusta conservar la música en la memoria.",
         "en": "That's why our brain likes to keep music in memory."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Why We Remember Music"
   },
   {
     "id": "fr-lib-70-why-nostalgia-feels-good",
@@ -9524,7 +9950,10 @@ window.GENERATED = [
         "target": "La nostalgie est donc une émotion naturelle et bénéfique.",
         "en": "Therefore, nostalgia is a natural and beneficial emotion."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Why Nostalgia Feels Good"
   },
   {
     "id": "es-lib-70-why-nostalgia-feels-good",
@@ -9591,7 +10020,10 @@ window.GENERATED = [
         "target": "Por eso, la nostalgia es una emoción natural y beneficiosa.",
         "en": "Therefore, nostalgia is a natural and beneficial emotion."
       }
-    ]
+    ],
+    "section": "Mind",
+    "new": false,
+    "en_title": "Why Nostalgia Feels Good"
   },
   {
     "id": "fr-lib-71-why-rome-built-aqueducts",
@@ -9662,7 +10094,10 @@ window.GENERATED = [
         "target": "Les aqueducs sont encore un symbole de l'ingéniosité romaine aujourd'hui.",
         "en": "The aqueducts remain a symbol of Roman ingenuity today."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "Why Rome Built Aqueducts"
   },
   {
     "id": "es-lib-71-why-rome-built-aqueducts",
@@ -9733,7 +10168,10 @@ window.GENERATED = [
         "target": "Hoy en día, los acueductos son un símbolo de la ingeniosidad romana.",
         "en": "The aqueducts remain a symbol of Roman ingenuity today."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "Why Rome Built Aqueducts"
   },
   {
     "id": "fr-lib-72-the-invention-of-coffeehouses",
@@ -9796,7 +10234,10 @@ window.GENERATED = [
         "target": "Les cafés sont un lieu spécial pour se retrouver et partager.",
         "en": "Coffeehouses are special places to meet and share."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "The Invention of Coffeehouses"
   },
   {
     "id": "es-lib-72-the-invention-of-coffeehouses",
@@ -9859,7 +10300,10 @@ window.GENERATED = [
         "target": "Las cafeterías son un lugar especial para reunirse y compartir.",
         "en": "Coffeehouses are special places to meet and share."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "The Invention of Coffeehouses"
   },
   {
     "id": "fr-lib-73-how-the-eiffel-tower-almost-disappeared",
@@ -9922,7 +10366,10 @@ window.GENERATED = [
         "target": "Imaginez qu’elle aurait pu disparaître pour toujours !",
         "en": "Imagine that it could have disappeared forever!"
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "How the Eiffel Tower Almost Disappeared"
   },
   {
     "id": "es-lib-73-how-the-eiffel-tower-almost-disappeared",
@@ -9985,7 +10432,10 @@ window.GENERATED = [
         "target": "¡Imagina que pudo haber desaparecido para siempre!",
         "en": "Imagine that it could have disappeared forever!"
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "How the Eiffel Tower Almost Disappeared"
   },
   {
     "id": "fr-lib-74-the-history-of-the-olympics",
@@ -10052,7 +10502,10 @@ window.GENERATED = [
         "target": "Ils symbolisent l'excellence sportive et la coopération internationale.",
         "en": "They symbolize sporting excellence and international cooperation."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "The History of the Olympics"
   },
   {
     "id": "es-lib-74-the-history-of-the-olympics",
@@ -10119,7 +10572,10 @@ window.GENERATED = [
         "target": "Simbolizan la excelencia deportiva y la cooperación internacional.",
         "en": "They symbolize sporting excellence and international cooperation."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "The History of the Olympics"
   },
   {
     "id": "fr-lib-75-why-venice-doesn-t-sink",
@@ -10174,7 +10630,10 @@ window.GENERATED = [
         "target": "Venise est ancienne, mais elle reste debout et belle.",
         "en": "Venice is old, but it remains standing and beautiful."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "Why Venice Doesn't Sink"
   },
   {
     "id": "es-lib-75-why-venice-doesn-t-sink",
@@ -10229,7 +10688,10 @@ window.GENERATED = [
         "target": "Venecia es antigua, pero sigue en pie y hermosa.",
         "en": "Venice is old, but it remains standing and beautiful."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "Why Venice Doesn't Sink"
   },
   {
     "id": "fr-lib-76-the-silk-road",
@@ -10288,7 +10750,10 @@ window.GENERATED = [
         "target": "De nombreux projets modernes essaient de recréer ces échanges entre les pays.",
         "en": "Many modern projects try to recreate these exchanges between countries."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "The Silk Road"
   },
   {
     "id": "es-lib-76-the-silk-road",
@@ -10347,7 +10812,10 @@ window.GENERATED = [
         "target": "Muchos proyectos modernos intentan recrear estos intercambios entre países.",
         "en": "Many modern projects try to recreate these exchanges between countries."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "The Silk Road"
   },
   {
     "id": "fr-lib-77-the-history-of-sushi",
@@ -10418,7 +10886,10 @@ window.GENERATED = [
         "target": "La tradition et la modernité se mêlent dans ce plat délicieux.",
         "en": "Tradition and modernity blend in this delicious dish."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "The History of Sushi"
   },
   {
     "id": "es-lib-77-the-history-of-sushi",
@@ -10489,7 +10960,10 @@ window.GENERATED = [
         "target": "La tradición y la modernidad se mezclan en este delicioso plato.",
         "en": "Tradition and modernity blend in this delicious dish."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "The History of Sushi"
   },
   {
     "id": "fr-lib-78-why-people-started-shaking-hands",
@@ -10556,7 +11030,10 @@ window.GENERATED = [
         "target": "Et elle continue à être importante aujourd'hui.",
         "en": "And it continues to be important today."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "Why People Started Shaking Hands"
   },
   {
     "id": "es-lib-78-why-people-started-shaking-hands",
@@ -10623,7 +11100,10 @@ window.GENERATED = [
         "target": "Y sigue siendo importante hoy en día.",
         "en": "And it continues to be important today."
       }
-    ]
+    ],
+    "section": "History",
+    "new": false,
+    "en_title": "Why People Started Shaking Hands"
   },
   {
     "id": "fr-lib-79-why-studio-ghibli-became-famous",
@@ -10690,7 +11170,10 @@ window.GENERATED = [
         "target": "Cela explique pourquoi Studio Ghibli est devenu si célèbre.",
         "en": "This explains why Studio Ghibli became so famous."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Studio Ghibli Became Famous"
   },
   {
     "id": "es-lib-79-why-studio-ghibli-became-famous",
@@ -10757,7 +11240,10 @@ window.GENERATED = [
         "target": "Esto explica por qué Studio Ghibli se volvió tan famoso.",
         "en": "This explains why Studio Ghibli became so famous."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Studio Ghibli Became Famous"
   },
   {
     "id": "fr-lib-80-the-history-of-lego",
@@ -10824,7 +11310,10 @@ window.GENERATED = [
         "target": "Son histoire montre comment une idée simple peut devenir un phénomène culturel.",
         "en": "Its history shows how a simple idea can become a cultural phenomenon."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The History of LEGO"
   },
   {
     "id": "es-lib-80-the-history-of-lego",
@@ -10891,7 +11380,10 @@ window.GENERATED = [
         "target": "Su historia muestra cómo una idea simple puede convertirse en un fenómeno cultural.",
         "en": "Its history shows how a simple idea can become a cultural phenomenon."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The History of LEGO"
   },
   {
     "id": "fr-lib-81-why-pok-mon-became-global",
@@ -10958,7 +11450,10 @@ window.GENERATED = [
         "target": "C'est pourquoi Pokémon est devenu un phénomène global.",
         "en": "That is why Pokémon became a global phenomenon."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Pokémon Became Global"
   },
   {
     "id": "es-lib-81-why-pok-mon-became-global",
@@ -11025,7 +11520,10 @@ window.GENERATED = [
         "target": "Por eso Pokémon se volvió un fenómeno global.",
         "en": "That is why Pokémon became a global phenomenon."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Pokémon Became Global"
   },
   {
     "id": "fr-lib-82-the-beatles-first-concert",
@@ -11084,7 +11582,10 @@ window.GENERATED = [
         "target": "Il montre le début de leur incroyable aventure musicale.",
         "en": "It shows the beginning of their incredible musical journey."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Beatles' First Concert"
   },
   {
     "id": "es-lib-82-the-beatles-first-concert",
@@ -11143,7 +11644,10 @@ window.GENERATED = [
         "target": "Muestra el comienzo de su increíble aventura musical.",
         "en": "It shows the beginning of their incredible musical journey."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Beatles' First Concert"
   },
   {
     "id": "fr-lib-83-why-chess-became-popular-again",
@@ -11210,7 +11714,10 @@ window.GENERATED = [
         "target": "Ainsi, le mélange de tradition et de modernité explique le regain d'intérêt pour les échecs.",
         "en": "Thus, the mix of tradition and modernity explains the renewed interest in chess."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Chess Became Popular Again"
   },
   {
     "id": "es-lib-83-why-chess-became-popular-again",
@@ -11277,7 +11784,10 @@ window.GENERATED = [
         "target": "Así, la mezcla de tradición y modernidad explica el renovado interés por el ajedrez.",
         "en": "Thus, the mix of tradition and modernity explains the renewed interest in chess."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "Why Chess Became Popular Again"
   },
   {
     "id": "fr-lib-84-the-story-behind-wikipedia",
@@ -11344,7 +11854,10 @@ window.GENERATED = [
         "target": "Grâce à Wikipédia, on peut apprendre beaucoup de choses facilement.",
         "en": "Thanks to Wikipedia, we can learn many things easily."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Story Behind Wikipedia"
   },
   {
     "id": "es-lib-84-the-story-behind-wikipedia",
@@ -11411,7 +11924,10 @@ window.GENERATED = [
         "target": "Gracias a Wikipedia, podemos aprender muchas cosas fácilmente.",
         "en": "Thanks to Wikipedia, we can learn many things easily."
       }
-    ]
+    ],
+    "section": "Culture",
+    "new": false,
+    "en_title": "The Story Behind Wikipedia"
   },
   {
     "id": "fr-lib-86-the-rise-of-kylian-mbapp",
@@ -11482,7 +11998,10 @@ window.GENERATED = [
         "target": "Il inspire de nombreux jeunes à croire en leurs rêves.",
         "en": "He inspires many young people to believe in their dreams."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "The Rise of Kylian Mbappé"
   },
   {
     "id": "es-lib-86-the-rise-of-kylian-mbapp",
@@ -11553,141 +12072,10 @@ window.GENERATED = [
         "target": "Inspira a muchos jóvenes a creer en sus sueños.",
         "en": "He inspires many young people to believe in their dreams."
       }
-    ]
-  },
-  {
-    "id": "fr-lib-87-goodbye-didier-deschamps",
-    "lang": "fr",
-    "langLabel": "Français",
-    "title": "Au revoir, Didier Deschamps",
-    "source": "Generated explainer",
-    "level": "A2",
-    "topic": "goodbye, Didier Deschamps",
-    "pairs": [
-      {
-        "target": "Didier Deschamps est un célèbre entraîneur de football français.",
-        "en": "Didier Deschamps is a famous French football coach."
-      },
-      {
-        "target": "Il a été joueur avant d'être entraîneur.",
-        "en": "He was a player before becoming a coach."
-      },
-      {
-        "target": "Il a gagné la Coupe du Monde comme joueur en 1998.",
-        "en": "He won the World Cup as a player in 1998."
-      },
-      {
-        "target": "Après sa carrière de joueur, il est devenu entraîneur.",
-        "en": "After his playing career, he became a coach."
-      },
-      {
-        "target": "Il a été l'entraîneur de l'équipe de France pendant plusieurs années.",
-        "en": "He was the coach of the French team for several years."
-      },
-      {
-        "target": "Sous sa direction, l'équipe a gagné la Coupe du Monde encore une fois en 2018.",
-        "en": "Under his leadership, the team won the World Cup again in 2018."
-      },
-      {
-        "target": "Cette victoire a rendu beaucoup de gens très heureux.",
-        "en": "This victory made many people very happy."
-      },
-      {
-        "target": "En 2023, Didier Deschamps a décidé de dire au revoir à son poste d'entraîneur.",
-        "en": "In 2023, Didier Deschamps decided to say goodbye to his coaching position."
-      },
-      {
-        "target": "Il voulait se reposer un peu après de nombreuses années de travail dur.",
-        "en": "He wanted to rest a bit after many years of hard work."
-      },
-      {
-        "target": "Beaucoup de fans ont dit merci et au revoir à Didier Deschamps.",
-        "en": "Many fans said thank you and goodbye to Didier Deschamps."
-      },
-      {
-        "target": "Il est un héros du football français.",
-        "en": "He is a hero of French football."
-      },
-      {
-        "target": "Son travail a inspiré beaucoup de joueurs et d'entraîneurs.",
-        "en": "His work inspired many players and coaches."
-      },
-      {
-        "target": "Même s'il part, son histoire reste importante dans le football.",
-        "en": "Even if he leaves, his story remains important in football."
-      },
-      {
-        "target": "Nous lui souhaitons une belle retraite et beaucoup de bonheur.",
-        "en": "We wish him a great retirement and much happiness."
-      }
-    ]
-  },
-  {
-    "id": "es-lib-87-goodbye-didier-deschamps",
-    "lang": "es",
-    "langLabel": "Español",
-    "title": "Adiós, Didier Deschamps",
-    "source": "Generated explainer",
-    "level": "A2",
-    "topic": "goodbye, Didier Deschamps",
-    "pairs": [
-      {
-        "target": "Didier Deschamps es un famoso entrenador de fútbol francés.",
-        "en": "Didier Deschamps is a famous French football coach."
-      },
-      {
-        "target": "Fue jugador antes de ser entrenador.",
-        "en": "He was a player before becoming a coach."
-      },
-      {
-        "target": "Ganó la Copa del Mundo como jugador en 1998.",
-        "en": "He won the World Cup as a player in 1998."
-      },
-      {
-        "target": "Después de su carrera como jugador, se convirtió en entrenador.",
-        "en": "After his playing career, he became a coach."
-      },
-      {
-        "target": "Fue el entrenador del equipo de Francia durante varios años.",
-        "en": "He was the coach of the French team for several years."
-      },
-      {
-        "target": "Bajo su dirección, el equipo ganó la Copa del Mundo otra vez en 2018.",
-        "en": "Under his leadership, the team won the World Cup again in 2018."
-      },
-      {
-        "target": "Esta victoria hizo muy felices a muchas personas.",
-        "en": "This victory made many people very happy."
-      },
-      {
-        "target": "En 2023, Didier Deschamps decidió decir adiós a su puesto de entrenador.",
-        "en": "In 2023, Didier Deschamps decided to say goodbye to his coaching position."
-      },
-      {
-        "target": "Quería descansar un poco después de muchos años de trabajo duro.",
-        "en": "He wanted to rest a bit after many years of hard work."
-      },
-      {
-        "target": "Muchos aficionados dijeron gracias y adiós a Didier Deschamps.",
-        "en": "Many fans said thank you and goodbye to Didier Deschamps."
-      },
-      {
-        "target": "Es un héroe del fútbol francés.",
-        "en": "He is a hero of French football."
-      },
-      {
-        "target": "Su trabajo inspiró a muchos jugadores y entrenadores.",
-        "en": "His work inspired many players and coaches."
-      },
-      {
-        "target": "Aunque se vaya, su historia sigue siendo importante en el fútbol.",
-        "en": "Even if he leaves, his story remains important in football."
-      },
-      {
-        "target": "Le deseamos una buena jubilación y mucha felicidad.",
-        "en": "We wish him a great retirement and much happiness."
-      }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "The Rise of Kylian Mbappé"
   },
   {
     "id": "fr-lib-88-the-rising-dominance-of-spain-in-footbal",
@@ -11754,7 +12142,10 @@ window.GENERATED = [
         "target": "Les fans du monde entier admirent la technique et la passion espagnoles.",
         "en": "Fans around the world admire Spanish technique and passion."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "The Rising Dominance of Spain in Football"
   },
   {
     "id": "es-lib-88-the-rising-dominance-of-spain-in-footbal",
@@ -11821,7 +12212,10 @@ window.GENERATED = [
         "target": "Los aficionados de todo el mundo admiran la técnica y pasión españolas.",
         "en": "Fans around the world admire Spanish technique and passion."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "The Rising Dominance of Spain in Football"
   },
   {
     "id": "fr-lib-89-why-america-loves-erling-haaland",
@@ -11892,7 +12286,10 @@ window.GENERATED = [
         "target": "Ainsi, Haaland combine talent, personnalité et timing parfait avec la croissance du football aux États-Unis.",
         "en": "Thus, Haaland combines talent, personality, and perfect timing with the growth of soccer in the United States."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "Why America Loves Erling Haaland"
   },
   {
     "id": "es-lib-89-why-america-loves-erling-haaland",
@@ -11963,7 +12360,10 @@ window.GENERATED = [
         "target": "Así, Haaland combina talento, personalidad y un tiempo perfecto con el crecimiento del fútbol en Estados Unidos.",
         "en": "Thus, Haaland combines talent, personality, and perfect timing with the growth of soccer in the United States."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "Why America Loves Erling Haaland"
   },
   {
     "id": "fr-lib-90-the-legend-of-lionel-messi",
@@ -12030,7 +12430,10 @@ window.GENERATED = [
         "target": "Il est une légende du sport et un exemple pour tous.",
         "en": "He is a sports legend and an example for all."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "The Legend of Lionel Messi"
   },
   {
     "id": "es-lib-90-the-legend-of-lionel-messi",
@@ -12097,7 +12500,10 @@ window.GENERATED = [
         "target": "Es una leyenda del deporte y un ejemplo para todos.",
         "en": "He is a sports legend and an example for all."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "The Legend of Lionel Messi"
   },
   {
     "id": "fr-lib-91-the-knicks-are-champions",
@@ -12164,7 +12570,10 @@ window.GENERATED = [
         "target": "Le coach a dit que c’était le résultat d’un bon travail d’équipe.",
         "en": "The coach said it was the result of good teamwork."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "The Knicks Are Champions"
   },
   {
     "id": "es-lib-91-the-knicks-are-champions",
@@ -12231,6 +12640,9 @@ window.GENERATED = [
         "target": "El entrenador dijo que fue el resultado de un buen trabajo en equipo.",
         "en": "The coach said it was the result of good teamwork."
       }
-    ]
+    ],
+    "section": "Sports",
+    "new": true,
+    "en_title": "The Knicks Are Champions"
   }
 ];

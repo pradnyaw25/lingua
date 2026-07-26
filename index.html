@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lingua — Parallel Reading</title>
   <link rel="stylesheet" href="css/style.css?v=3" />
+  <style>
+    .filter-row { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; margin-bottom: .5rem; }
+    .filter-label { font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
+                    font-size: .72rem; opacity: .65; min-width: 4.2rem; }
+    .card-top { display: flex; align-items: center; gap: .4rem; flex-wrap: wrap; margin-bottom: .55rem; }
+    .section-tag { font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
+                   padding: .12rem .5rem; border: 2px solid currentColor; border-radius: 999px; }
+    .new-tag { font-size: .68rem; font-weight: 900; text-transform: uppercase; letter-spacing: .05em;
+               padding: .12rem .5rem; border-radius: 999px; background: #ff2d6f; color: #fff; }
+    .card .en-title { margin: .1rem 0 0; font-style: italic; opacity: .7; font-size: .92rem; }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -19,7 +30,8 @@
       <h1>Read in parallel.</h1>
       <p class="subtitle">French &amp; Spanish beside English, sentence by sentence — built for advanced-beginner to intermediate readers (A2–B2). Pick a text to begin.</p>
 
-      <div class="chipbar" id="level-bar"></div>
+      <div class="filter-row"><span class="filter-label">Level</span><div class="chipbar" id="level-bar"></div></div>
+      <div class="filter-row"><span class="filter-label">Interest</span><div class="chipbar" id="section-bar"></div></div>
       <div id="library"></div>
     </div>
   </main>
@@ -34,29 +46,46 @@
   <script src="js/app.js"></script>
   <script>
     (function () {
+      const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
+        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
       const texts = window.TEXTS || [];
       const lib = document.getElementById("library");
-      const bar = document.getElementById("level-bar");
+      const levelBar = document.getElementById("level-bar");
+      const sectionBar = document.getElementById("section-bar");
+
       const LEVEL_ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"];
       const levels = LEVEL_ORDER.filter((l) => texts.some((t) => t.level === l));
-      let active = "all";
+      const sections = Array.from(new Set(texts.map((t) => t.section).filter(Boolean))).sort();
+
+      let level = "all";
+      let section = "all";
+
+      function matches(t) {
+        return (level === "all" || t.level === level) && (section === "all" || t.section === section);
+      }
 
       function card(t) {
         const a = document.createElement("a");
         a.className = "card";
         a.href = "reader.html?id=" + encodeURIComponent(t.id);
         a.innerHTML =
-          '<span class="lang-tag">' + t.langLabel + '</span>' +
-          '<h3>' + t.title + '</h3>' +
-          '<p class="meta">' + t.pairs.length + ' sentences · ' + (t.level || '') + '</p>';
+          '<div class="card-top">' +
+            '<span class="lang-tag">' + esc(t.langLabel) + '</span>' +
+            (t.section ? '<span class="section-tag">' + esc(t.section) + '</span>' : '') +
+            (t.new ? '<span class="new-tag">New</span>' : '') +
+          '</div>' +
+          '<h3>' + esc(t.title) + '</h3>' +
+          (t.en_title ? '<p class="en-title">' + esc(t.en_title) + '</p>' : '') +
+          '<p class="meta">' + esc(t.level || '') + '</p>';
         return a;
       }
 
       function render() {
-        bar.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.dataset.lvl === active));
-        const shown = texts.filter((t) => active === "all" || t.level === active);
+        levelBar.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.dataset.val === level));
+        sectionBar.querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.dataset.val === section));
+        const shown = texts.filter(matches);
         lib.innerHTML = "";
-        if (!shown.length) { lib.innerHTML = '<p class="empty">No texts at this level yet.</p>'; return; }
+        if (!shown.length) { lib.innerHTML = '<p class="empty">No texts match these filters yet.</p>'; return; }
         const byLang = {};
         shown.forEach((t) => { (byLang[t.langLabel] = byLang[t.langLabel] || []).push(t); });
         Object.keys(byLang).forEach((label) => {
@@ -71,17 +100,23 @@
         });
       }
 
-      function chip(lvl, label) {
+      function chip(bar, val, label, onPick) {
         const b = document.createElement("button");
         b.className = "chip";
-        b.dataset.lvl = lvl;
+        b.dataset.val = val;
         b.textContent = label;
-        b.addEventListener("click", () => { active = lvl; render(); });
-        return b;
+        b.addEventListener("click", () => { onPick(val); render(); });
+        bar.appendChild(b);
       }
 
-      bar.appendChild(chip("all", "All levels (" + texts.length + ")"));
-      levels.forEach((l) => bar.appendChild(chip(l, l + " (" + texts.filter((t) => t.level === l).length + ")")));
+      chip(levelBar, "all", "All levels (" + texts.length + ")", (v) => { level = v; });
+      levels.forEach((l) =>
+        chip(levelBar, l, l + " (" + texts.filter((t) => t.level === l).length + ")", (v) => { level = v; }));
+
+      chip(sectionBar, "all", "All topics", (v) => { section = v; });
+      sections.forEach((s) =>
+        chip(sectionBar, s, s + " (" + texts.filter((t) => t.section === s).length + ")", (v) => { section = v; }));
+
       render();
     })();
   </script>

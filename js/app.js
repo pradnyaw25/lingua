@@ -6,6 +6,40 @@
     window.TEXTS = extra.concat(window.TEXTS);
   }
 
+  // Curated texts (data/texts.js) predate the section/en_title fields the generator now
+  // emits. Tag them here so every text carries an interest section + an English title,
+  // which the library filter and cards rely on.
+  var CURATED_META = {
+    "fr-pixel-1": { section: "Fiction", en: "Pixel, the Cat Who Invested — Episode 1" },
+    "es-pixel-1": { section: "Fiction", en: "Pixel, the Cat Who Invested — Episode 1" },
+    "fr-pixel-2": { section: "Fiction", en: "Pixel, the Cat Who Invested — Episode 2" },
+    "es-pixel-2": { section: "Fiction", en: "Pixel, the Cat Who Invested — Episode 2" },
+    "fr-pixel-3": { section: "Fiction", en: "Pixel, the Cat Who Invested — Episode 3" },
+    "es-pixel-3": { section: "Fiction", en: "Pixel, the Cat Who Invested — Episode 3" },
+    "fr-pixel-4": { section: "Fiction", en: "Pixel, the Cat Who Invested — Episode 4" },
+    "es-pixel-4": { section: "Fiction", en: "Pixel, the Cat Who Invested — Episode 4" },
+    "fr-au-cafe": { section: "Everyday", en: "At the Café" },
+    "es-en-el-cafe": { section: "Everyday", en: "At the Café" },
+    "fr-la-valise": { section: "Fiction", en: "The Suitcase" },
+    "es-la-maleta": { section: "Fiction", en: "The Suitcase" },
+    "fr-application": { section: "Fiction", en: "The App" },
+    "es-la-aplicacion": { section: "Fiction", en: "The App" },
+    "fr-assistant": { section: "Fiction", en: "The Voice Assistant" },
+    "es-el-asistente": { section: "Fiction", en: "The Voice Assistant" },
+    "fr-recette": { section: "Food", en: "The Secret Recipe" },
+    "es-la-receta": { section: "Food", en: "The Secret Recipe" },
+    "fr-corbeau-renard": { section: "Fiction", en: "The Crow and the Fox" },
+    "fr-lion-souris": { section: "Fiction", en: "The Lion and the Mouse" },
+    "es-liebre-tortuga": { section: "Fiction", en: "The Hare and the Tortoise" },
+    "es-viento-sol": { section: "Fiction", en: "The Wind and the Sun" }
+  };
+  (window.TEXTS || []).forEach(function (t) {
+    var c = CURATED_META[t.id];
+    if (!t.section) t.section = (c && c.section) || "Everyday";
+    if (!t.en_title) t.en_title = (c && c.en) || t.title;
+    if (typeof t.new === "undefined") t.new = false;
+  });
+
   const pages = [
     { href: "index.html", label: "Library" },
     { href: "vocab.html", label: "Frequency Words" },

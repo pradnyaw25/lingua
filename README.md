@@ -20,7 +20,10 @@ Built for personal use. No build step, no framework, no server required — just
 - **Flashcards** — study any set (the frequency list or a category) as a flip-card deck.
   Direction toggle, shuffle, keyboard shortcuts (`Space` flip, `←`/`→` grade). "Got it"
   can mark a card known — shared with the vocab table.
-- **Library** — all texts grouped by language, with a **CEFR level filter** (A1–B2).
+- **Library** — all texts grouped by language, filterable by **CEFR level** (A1–B2)
+  *and* by **interest** (Fiction, Travel, Food, Science, Sports, …). Each card shows the
+  target-language title with its English title, an interest tag, and a **New** badge on
+  fresh topics.
 - **About** — project blurb and links.
 
 Everything is theme-aware (light + dark) and works on mobile.
