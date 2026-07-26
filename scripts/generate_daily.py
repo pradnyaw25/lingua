@@ -26,9 +26,15 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DAILY = os.path.normpath(os.path.join(HERE, "..", "data", "daily.js"))
-LEVEL = "A2"
-N_MIN, N_MAX = 10, 15
+LEVELS = ["A2", "B1", "B2"]                       # rotated by date
+LEVEL_LEN = {"A2": (10, 15), "B1": (12, 16), "B2": (14, 18)}  # sentences per level
 CAP = 40  # keep the newest N text objects (2 per day → ~20 days)
+
+
+def pick_level(date_str):
+    """Deterministic A1 → A2 → B1 rotation by calendar day."""
+    d = datetime.date.fromisoformat(date_str)
+    return LEVELS[d.toordinal() % len(LEVELS)]
 
 # Light, evergreen fallback themes (seeded by date) if the trend fetch fails or a
 # trend is too heavy to use.
@@ -91,16 +97,17 @@ def fetch_topic():
         return None
 
 
-def user_prompt(topic):
+def user_prompt(topic, level, n_min, n_max):
     return (
-        f"Write an original, light, evergreen short story for language learners at CEFR level {LEVEL}.\n\n"
+        f"Write an original, light, evergreen short story for language learners at CEFR level {level}.\n\n"
         f"Inspiration (theme only, optional): {topic}. Use it loosely for a gentle everyday angle. "
         "If it is heavy, political, tragic, violent, medical, or about real named people or current "
         "events, IGNORE it and invent a simple everyday scene instead. Do not write a news report "
         "and do not state real facts about real people or events.\n\n"
         "Requirements:\n"
-        f"- {N_MIN}-{N_MAX} short sentences.\n"
-        f"- Present tense, common everyday vocabulary appropriate to {LEVEL}.\n"
+        f"- {n_min}-{n_max} short sentences.\n"
+        f"- Vocabulary and grammar appropriate to CEFR {level} "
+        "(mostly present tense at A2; past tenses and richer vocabulary at B1/B2).\n"
         "- A little gentle humour is welcome.\n"
         "- Provide the story in BOTH French and Spanish, telling the same story beat by beat.\n"
         "- fr_pairs and es_pairs must have the SAME number of items, aligned 1:1: fr_pairs[i] and "
@@ -110,7 +117,7 @@ def user_prompt(topic):
     )
 
 
-def generate(topic, model):
+def generate(topic, model, level, n_min, n_max):
     """Call OpenAI; return the parsed dict, or None if it refused."""
     from openai import OpenAI
     client = OpenAI()
@@ -118,7 +125,7 @@ def generate(topic, model):
         model=model,
         messages=[
             {"role": "system", "content": SYSTEM},
-            {"role": "user", "content": user_prompt(topic)},
+            {"role": "user", "content": user_prompt(topic, level, n_min, n_max)},
         ],
         response_format={
             "type": "json_schema",
@@ -131,14 +138,14 @@ def generate(topic, model):
     return json.loads(msg.content) if msg.content else None
 
 
-def validate(p):
+def validate(p, n_min, n_max):
     for k in ("title_fr", "title_es", "level", "fr_pairs", "es_pairs"):
         if not p.get(k):
             raise ValueError(f"missing field: {k}")
     fr, es = p["fr_pairs"], p["es_pairs"]
     if len(fr) != len(es):
         raise ValueError(f"fr/es length mismatch: {len(fr)} vs {len(es)}")
-    if not (N_MIN - 2 <= len(fr) <= N_MAX + 4):
+    if not (n_min - 2 <= len(fr) <= n_max + 4):
         raise ValueError(f"unexpected length: {len(fr)}")
     for side in (fr, es):
         for pair in side:
@@ -199,37 +206,39 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--mock", action="store_true", help="skip API/network; use a canned story")
     ap.add_argument("--date", help="YYYY-MM-DD id/date (default: today UTC)")
+    ap.add_argument("--level", choices=LEVELS, help="force a level (default: rotate A2/B1/B2 by date)")
     ap.add_argument("--model", default=os.environ.get("OPENAI_MODEL", "gpt-4.1-mini"))
     args = ap.parse_args()
 
     date = args.date or datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
+    level = args.level or pick_level(date)
+    n_min, n_max = LEVEL_LEN[level]
 
     try:
         if args.mock:
-            payload, topic = MOCK, "a lost umbrella (mock)"
+            payload, topic = dict(MOCK, level=level), "a lost umbrella (mock)"
         else:
             topic = fetch_topic() or FALLBACK_THEMES[sum(map(ord, date)) % len(FALLBACK_THEMES)]
-            payload = generate(topic, args.model)
+            payload = generate(topic, args.model, level, n_min, n_max)
         if payload is None:
             print("No content generated (model declined). Skipping today.")
             return
-        validate(payload)
+        validate(payload, n_min, n_max)
     except Exception as e:
         print(f"Skipping today — {type(e).__name__}: {e}")
         return
 
-    lvl = payload["level"]
     fr = {"id": f"fr-daily-{date}", "lang": "fr", "langLabel": "Français",
-          "title": payload["title_fr"], "source": f"Daily (auto) · {date}", "level": lvl,
+          "title": payload["title_fr"], "source": f"Daily (auto) · {date}", "level": level,
           "date": date, "pairs": payload["fr_pairs"]}
     es = {"id": f"es-daily-{date}", "lang": "es", "langLabel": "Español",
-          "title": payload["title_es"], "source": f"Daily (auto) · {date}", "level": lvl,
+          "title": payload["title_es"], "source": f"Daily (auto) · {date}", "level": level,
           "date": date, "pairs": payload["es_pairs"]}
 
     existing = [t for t in load_daily() if t.get("date") != date]
     items = ([fr, es] + existing)[:CAP]
     write_daily(items)
-    print(f"Wrote {date}: '{payload['title_en']}' (theme: {topic}) — {len(items)} texts in daily.js")
+    print(f"Wrote {date} [{level}]: '{payload['title_en']}' (theme: {topic}) — {len(items)} texts in daily.js")
 
 
 if __name__ == "__main__":
