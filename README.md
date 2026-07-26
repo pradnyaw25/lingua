@@ -156,12 +156,14 @@ Content is generated from **`scripts/theme_ideas.txt`** — your editable list o
 (one per line, `#` for comments). No live backend: a GitHub Actions job calls OpenAI and
 commits static files, and `js/app.js` merges the results into the library.
 
-**Batch (primary).** `scripts/generate_batch.py` generates one piece for *every* topic and
-writes them all to `data/generated.js`. Run it ad hoc from the Actions tab
-("Generate library" → Run workflow), or locally:
+**Batch (primary).** `scripts/generate_batch.py` generates a piece for each topic and
+writes them all to `data/generated.js`. It's **incremental** — re-running only generates
+topics you've *added* to the list and reuses the rest, so adding a few ideas is cheap.
+Run it ad hoc from the Actions tab ("Generate library" → Run workflow), or locally:
 
 ```bash
-OPENAI_API_KEY=sk-… python3 scripts/generate_batch.py     # the whole list
+OPENAI_API_KEY=sk-… python3 scripts/generate_batch.py     # new topics only
+OPENAI_API_KEY=sk-… python3 scripts/generate_batch.py --force   # rebuild everything
 python3 scripts/generate_batch.py --mock --limit 3        # offline smoke test
 ```
 

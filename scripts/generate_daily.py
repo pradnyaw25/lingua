@@ -116,8 +116,10 @@ def user_prompt(topic, level, n_min, n_max):
         "- Provide it in BOTH French and Spanish, saying the same thing beat by beat.\n"
         "- fr_pairs and es_pairs must have the SAME number of items, aligned 1:1: fr_pairs[i] and "
         "es_pairs[i] are the same sentence, and each item's 'en' is that sentence's English translation.\n"
-        "- Keep it light and evergreen. Do NOT cover breaking news, politics, or medical advice, and do "
-        "not make claims about specific living individuals or current events.\n"
+        "- Keep it engaging and appropriate for all ages. Public figures (athletes, artists, "
+        "historical figures) and popular sports, culture, and travel topics are welcome — write a "
+        "positive, broadly accurate piece, and don't invent specific quotes, scores, or statistics. "
+        "Do NOT cover politics or elections, medical advice, tragedy, or anything graphic or hateful.\n"
         "- Give a short French title, Spanish title, and English title.\n"
         "Return only the structured object."
     )

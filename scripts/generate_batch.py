@@ -29,6 +29,23 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:40]
 
 
+def load_existing():
+    """Map topic -> its [fr, es] items from a prior generated.js (for incremental runs)."""
+    if not os.path.exists(OUT):
+        return {}
+    m = re.search(r"window\.GENERATED\s*=\s*(\[.*\]);", open(OUT, encoding="utf-8").read(), re.DOTALL)
+    if not m:
+        return {}
+    try:
+        arr = json.loads(m.group(1))
+    except Exception:
+        return {}
+    by_topic = {}
+    for it in arr:
+        by_topic.setdefault(it.get("topic"), []).append(it)
+    return by_topic
+
+
 def write_generated(items):
     body = ("// Generated in batch by scripts/generate_batch.py from scripts/theme_ideas.txt.\n"
             "// Merged into window.TEXTS by js/app.js. Regenerate any time; it's overwritten wholesale.\n"
@@ -40,6 +57,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--mock", action="store_true", help="skip the API; use a canned piece per topic")
     ap.add_argument("--limit", type=int, help="only the first N topics")
+    ap.add_argument("--force", action="store_true", help="regenerate every topic (default: only new ones)")
     ap.add_argument("--model", default=os.environ.get("OPENAI_MODEL", "gpt-4.1-mini"))
     args = ap.parse_args()
 
@@ -47,10 +65,15 @@ def main():
     if args.limit:
         topics = topics[:args.limit]
 
-    items, made, skipped = [], 0, 0
+    existing = {} if args.force else load_existing()
+    items, made, reused, skipped = [], 0, 0, 0
     for i, topic in enumerate(topics):
         level = gd.LEVELS[i % len(gd.LEVELS)]
         n_min, n_max = gd.LEVEL_LEN[level]
+        if len(existing.get(topic, [])) == 2:
+            items.extend(existing[topic])
+            reused += 1
+            continue
         try:
             payload = dict(gd.MOCK, level=level) if args.mock else \
                 gd.generate(topic, args.model, level, n_min, n_max)
@@ -77,7 +100,7 @@ def main():
         print(f"  [{i+1}/{len(topics)}] {level}/{fmt}: {payload['title_en']}")
 
     write_generated(items)
-    print(f"\nWrote {len(items)} texts ({made} topics, {skipped} skipped) -> {OUT}")
+    print(f"\nWrote {len(items)} texts ({made} new, {reused} reused, {skipped} skipped) -> {OUT}")
 
 
 if __name__ == "__main__":
