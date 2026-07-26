@@ -60,19 +60,22 @@ lingua/
   data/vocab.js         window.VOCAB      — the 1,000-word frequency lists
   data/categories.js    window.CATEGORIES — curated thematic word sets
   data/dictionary.js    window.DICT       — word → gloss for click-a-word
+  scripts/fetch_data.sh        Download source data into scripts/.data/ (run once)
+  scripts/regen.sh             Regenerate dictionary.js (and optionally vocab.js)
   scripts/build_vocab.py       Generate vocab.js from a frequency list + dictionary
   scripts/build_dictionary.py  Generate dictionary.js from texts + dictionary
-  scripts/samples/             Frequency/dictionary fixtures, supplements, overrides
+  scripts/samples/             Supplements, gloss overrides, sample fixtures
 ```
 
 ## The texts
 
-16 sentence-aligned texts (4 × A1, 8 × A2, 2 × B1, 2 × B2), all original or public domain:
+22 sentence-aligned texts (4 × A1, 12 × A2, 4 × B1, 2 × B2), all original or public domain:
 
-- **Pixel, the cat who invested** — an original comedic serial (3 episodes, A2) in French
+- **Pixel, the cat who invested** — an original comedic serial (4 episodes, A2) in French
   and Spanish, mixing everyday life, travel, food, tech and finance.
-- **Café dialogues** (A1), and two intermediate standalone stories — *The Suitcase* (B1,
-  mystery) and *The App* (B2, satire).
+- Standalone comedies — *The Voice Assistant* (A2), *Café* dialogues (A1) — and
+  intermediate stories: *The Secret Recipe* (B1, food/family), *The Suitcase* (B1, mystery),
+  *The App* (B2, satire).
 - A few classic Aesop fables (A1–A2).
 
 ### Adding a text
@@ -95,7 +98,15 @@ Edit `data/texts.js` and append an object. The one rule that matters:
 }
 ```
 
-After adding a text, regenerate the dictionary (below) so click-a-word covers its words.
+After adding a text, regenerate the dictionary so click-a-word covers its words:
+
+```bash
+bash scripts/fetch_data.sh   # once per machine — pulls frequency lists + dictionaries
+bash scripts/regen.sh        # rebuilds data/dictionary.js
+```
+
+Then eyeball the new words for machine-translation mistakes and add a line to
+`scripts/samples/overrides_<lang>.tsv` for any that are wrong; re-run `regen.sh`.
 
 **Copyright note:** stick to public-domain works or your own writing. Avoid most
 20th-century books — e.g. *Le Petit Prince* is still under copyright in the US.

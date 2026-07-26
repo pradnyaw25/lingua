@@ -13,3 +13,6 @@ data/missing_*.txt
 # Python cache
 __pycache__/
 *.pyc
+
+# Fetched source data (build_vocab / build_dictionary inputs)
+scripts/.data/
