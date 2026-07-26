@@ -15,6 +15,15 @@
       })
       .join("");
   });
+
+  // Link back to the personal site on every page footer.
+  document.querySelectorAll("footer .wrap").forEach((w) => {
+    w.appendChild(document.createTextNode(" · "));
+    const a = document.createElement("a");
+    a.href = "https://pradnya.dev";
+    a.textContent = "pradnya.dev";
+    w.appendChild(a);
+  });
 })();
 
 // Tiny helper shared by pages.
