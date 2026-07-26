@@ -215,6 +215,29 @@ h1 { font-size: 2rem; margin: 0 0 6px; }
 .parallel.fs-s .sent { font-size: 1rem; }
 .parallel.fs-l .sent { font-size: 1.3rem; }
 
+/* Category chip bar */
+.chipbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.chip {
+  font-family: system-ui, sans-serif;
+  font-size: .9rem;
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.chip:hover { border-color: var(--accent); color: var(--ink); }
+.chip.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+.chip-sep { width: 1px; align-self: stretch; background: var(--line); margin: 2px 4px; }
+
 /* Vocab */
 .vocab-stats {
   font-family: system-ui, sans-serif;
@@ -248,6 +271,10 @@ table.vocab tr:last-child td { border-bottom: none; }
 table.vocab .rank { color: var(--muted); width: 48px; font-family: system-ui, sans-serif; font-size: .9rem; }
 table.vocab .word { font-weight: 600; font-size: 1.1rem; }
 table.vocab .pos { color: var(--muted); font-family: system-ui, sans-serif; font-size: .82rem; font-style: italic; }
+/* Lean view (thematic categories) hides the rank + type columns */
+table.vocab.lean th.col-rank, table.vocab.lean td.rank,
+table.vocab.lean th.col-type, table.vocab.lean td.pos { display: none; }
+
 table.vocab tr.known { background: var(--known); }
 table.vocab tr.known .word { color: var(--known-ink); }
 .know-btn {
