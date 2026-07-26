@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lingua — Parallel Reading</title>
-  <link rel="stylesheet" href="css/style.css?v=6" />
+  <link rel="stylesheet" href="css/style.css?v=7" />
   <style>
     .filter-row { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; margin-bottom: .5rem; }
     .filter-label { font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
@@ -15,11 +15,9 @@
     .new-tag { font-size: .68rem; font-weight: 900; text-transform: uppercase; letter-spacing: .05em;
                padding: .12rem .5rem; border-radius: 999px; background: #ff2d6f; color: #fff; }
     .card .en-title { margin: .1rem 0 0; font-style: italic; opacity: .7; font-size: .92rem; }
-    .read-toggle { margin-left: auto; font-family: system-ui, sans-serif; font-size: .68rem;
-                   font-weight: 800; letter-spacing: .03em; padding: .14rem .55rem; border-radius: 999px;
-                   border: 2px solid var(--ink); background: transparent; color: var(--muted); cursor: pointer; }
-    .read-toggle:hover { color: var(--ink); }
-    .read-toggle.on { background: var(--ink); color: var(--surface); }
+    .read-flag { margin-left: auto; font-family: system-ui, sans-serif; font-size: .68rem;
+                 font-weight: 800; letter-spacing: .03em; padding: .14rem .55rem; border-radius: 999px;
+                 background: var(--ink); color: var(--surface); }
     .card.is-read { opacity: .58; }
     .card.is-read:hover { opacity: 1; }
     .show-read { font-family: system-ui, sans-serif; font-size: .9rem; font-weight: 600;
@@ -53,10 +51,10 @@
     <div class="wrap">Personal language-learning workshop · texts are public-domain fables retold in simple prose.</div>
   </footer>
 
-  <script src="data/texts.js?v=6"></script>
-  <script src="data/daily.js?v=6"></script>
-  <script src="data/generated.js?v=6"></script>
-  <script src="js/app.js?v=6"></script>
+  <script src="data/texts.js?v=7"></script>
+  <script src="data/daily.js?v=7"></script>
+  <script src="data/generated.js?v=7"></script>
+  <script src="js/app.js?v=7"></script>
   <script>
     (function () {
       const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
@@ -92,18 +90,11 @@
           '<div class="card-top">' +
             (t.section ? '<span class="section-tag">' + esc(t.section) + '</span>' : '') +
             (t.new ? '<span class="new-tag">New</span>' : '') +
-            '<button type="button" class="read-toggle' + (read ? ' on' : '') + '" title="' +
-              (read ? 'Read — click to mark unread' : 'Mark as read') + '">' +
-              (read ? '✓ Read' : 'Mark read') + '</button>' +
+            (read ? '<span class="read-flag">✓ Read</span>' : '') +
           '</div>' +
           '<h3>' + esc(t.title) + '</h3>' +
           (t.en_title ? '<p class="en-title">' + esc(t.en_title) + '</p>' : '') +
           '<p class="meta">' + esc(window.levelText(t.level)) + '</p>';
-        a.querySelector(".read-toggle").addEventListener("click", (e) => {
-          e.preventDefault(); e.stopPropagation();
-          window.setRead(t.id, !window.isRead(t.id));
-          render();
-        });
         return a;
       }
 

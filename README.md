@@ -28,9 +28,9 @@ Built for personal use. No build step, no framework, no server required — just
   *and* by **interest** (Fiction, Travel, Food, Technology, Movies & TV, Sports, …). Each
   card shows the target-language title with its English title, an interest tag, and a
   **New** badge on fresh topics.
-- **Read tracking** — mark a text **read** from its card or the reader toolbar; the choice
-  is saved in your browser. The library **hides read stories by default**, with a *Show
-  read stories* toggle to bring them back (and unmark any you like).
+- **Read tracking** — mark a text **read** from the reader toolbar; the choice is saved in
+  your browser. The library **hides read stories by default**, with a *Show read stories*
+  toggle to bring them back (they show a ✓ Read flag; reopen one to unmark it).
 - **About** — project blurb and links.
 
 Everything is theme-aware (light + dark) and works on mobile.
