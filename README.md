@@ -20,7 +20,11 @@ Built for personal use. No build step, no framework, no server required — just
 - **Flashcards** — study any set (the frequency list or a category) as a flip-card deck.
   Direction toggle, shuffle, keyboard shortcuts (`Space` flip, `←`/`→` grade). "Got it"
   can mark a card known — shared with the vocab table.
-- **Library** — all texts grouped by language, filterable by **CEFR level** (A1–B2)
+- **Language switch** — a **Français / Español** toggle in the header sets your study
+  language for the whole site (Library, words, flashcards). The choice is remembered and
+  reflected in the URL (`?lang=fr`), so each language is a shareable link and reading a
+  text drops you into that language.
+- **Library** — the texts for your chosen language, filterable by **CEFR level** (A1–B2)
   *and* by **interest** (Fiction, Travel, Food, Science, Sports, …). Each card shows the
   target-language title with its English title, an interest tag, and a **New** badge on
   fresh topics.

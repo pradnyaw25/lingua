@@ -83,6 +83,30 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; text-decoratio
 .nav a:hover { color: var(--ink); text-decoration: none; }
 .nav a.active { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent2); text-decoration-thickness: 3px; text-underline-offset: 4px; }
 
+/* Global French/Spanish switch in the header — a segmented pill. */
+.site-header .wrap { flex-wrap: wrap; gap: 10px 14px; }
+.lang-switch {
+  display: inline-flex;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.lang-btn {
+  border: 0;
+  background: transparent;
+  font-family: system-ui, sans-serif;
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  padding: 5px 15px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.lang-btn + .lang-btn { border-left: 2px solid var(--ink); }
+.lang-btn:hover { color: var(--ink); }
+.lang-btn.on { background: var(--accent); color: #fff; }
+
 main { padding: 34px 0 80px; }
 
 h1 {

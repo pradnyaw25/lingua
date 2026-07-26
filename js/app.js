@@ -1,5 +1,27 @@
-// Shared helpers: build the top nav and mark the active page.
+// Shared helpers: global study language, top nav, and the active-page marker.
 (function () {
+  const here = location.pathname.split("/").pop() || "index.html";
+
+  // ---- Global study language (French / Spanish) ----
+  // Every language-scoped page reads window.LANG. Order of precedence:
+  //   ?lang= in the URL  >  the language of the text being read  >  saved choice  >  French.
+  const LANGS = [{ code: "fr", label: "Français" }, { code: "es", label: "Español" }];
+  const isLang = (v) => v === "fr" || v === "es";
+  const save = (v) => { try { localStorage.setItem("lingua.lang", v); localStorage.setItem("vocab.lang", v); } catch (e) {} };
+  function pickLang() {
+    const params = new URLSearchParams(location.search);
+    const q = params.get("lang");
+    if (isLang(q)) return q;
+    if (here === "reader.html") {
+      const id = params.get("id") || "";
+      if (isLang(id.slice(0, 2))) return id.slice(0, 2);
+    }
+    let s; try { s = localStorage.getItem("lingua.lang") || localStorage.getItem("vocab.lang"); } catch (e) {}
+    return isLang(s) ? s : "fr";
+  }
+  window.LANG = pickLang();
+  save(window.LANG);
+
   // Merge auto-generated texts (batch library + daily) in front of the curated library.
   var extra = [].concat(window.DAILY || [], window.GENERATED || []);
   if (extra.length && window.TEXTS) {
@@ -40,22 +62,56 @@
     if (typeof t.new === "undefined") t.new = false;
   });
 
+  // Pages scoped to a single language carry ?lang= so the choice follows you around
+  // (and stays shareable); About is language-neutral.
   const pages = [
-    { href: "index.html", label: "Library" },
-    { href: "vocab.html", label: "Frequency Words" },
-    { href: "flashcards.html", label: "Flashcards" },
-    { href: "about.html", label: "About" }
+    { href: "index.html", label: "Library", scoped: true },
+    { href: "vocab.html", label: "Frequency Words", scoped: true },
+    { href: "flashcards.html", label: "Flashcards", scoped: true },
+    { href: "about.html", label: "About", scoped: false }
   ];
-  const here = location.pathname.split("/").pop() || "index.html";
+  const SCOPED = { "index.html": 1, "vocab.html": 1, "flashcards.html": 1 };
+  const withLang = (href) => href + "?lang=" + window.LANG;
 
   document.querySelectorAll("[data-nav]").forEach((nav) => {
     nav.innerHTML = pages
       .map((p) => {
         const active = p.href === here ? ' class="active"' : "";
-        return `<a href="${p.href}"${active}>${p.label}</a>`;
+        const href = p.scoped ? withLang(p.href) : p.href;
+        return `<a href="${href}"${active}>${p.label}</a>`;
       })
       .join("");
   });
+
+  // Carry the active language through the brand link and the reader's "back to library"
+  // link too, so leaving a page keeps you in the same language.
+  document.querySelectorAll('a[href="index.html"], a[href="vocab.html"], a[href="flashcards.html"]')
+    .forEach((a) => { a.setAttribute("href", withLang(a.getAttribute("href"))); });
+
+  // Header language switch — shown on the language-scoped pages.
+  if (SCOPED[here]) {
+    document.querySelectorAll(".site-header .wrap").forEach((wrap) => {
+      if (wrap.querySelector(".lang-switch")) return;
+      const sw = document.createElement("div");
+      sw.className = "lang-switch";
+      LANGS.forEach((l) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.className = "lang-btn" + (l.code === window.LANG ? " on" : "");
+        b.textContent = l.label;
+        b.addEventListener("click", () => {
+          if (l.code === window.LANG) return;
+          save(l.code);
+          const u = new URL(location.href);
+          u.searchParams.set("lang", l.code);
+          location.href = u.toString();
+        });
+        sw.appendChild(b);
+      });
+      const nav = wrap.querySelector(".nav");
+      wrap.insertBefore(sw, nav || null);
+    });
+  }
 })();
 
 // Tiny helper shared by pages.

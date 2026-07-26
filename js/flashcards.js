@@ -6,7 +6,8 @@
   const categories = window.CATEGORIES || {};
   const langs = Object.keys(vocab);
 
-  let lang = localStorage.getItem("vocab.lang") || langs[0];
+  // Language is chosen globally in the site header (window.LANG); fall back gracefully.
+  let lang = (window.LANG && vocab[window.LANG]) ? window.LANG : langs[0];
   let dir = "target"; // "target" = show target word first; "en" = show English first
   let queue = [];
   let started = 0, got = 0;
@@ -42,19 +43,13 @@
   }
 
   // ---- setup ----
+  // Language is set in the header now; hide the in-page tabs (and their toolbar row).
   function buildLangTabs() {
-    langEl.innerHTML = "";
-    langs.forEach((l) => {
-      const b = el("button", { class: "btn", text: vocab[l].langLabel }, []);
-      b.classList.toggle("on", l === lang);
-      b.addEventListener("click", () => {
-        lang = l;
-        localStorage.setItem("vocab.lang", l);
-        buildLangTabs();
-        buildSetOptions();
-      });
-      langEl.appendChild(b);
-    });
+    if (langEl) {
+      langEl.style.display = "none";
+      const toolbar = langEl.closest(".toolbar");
+      if (toolbar) toolbar.style.display = "none";
+    }
     dirTargetBtn.textContent = vocab[lang].langLabel;
   }
   function buildSetOptions() {

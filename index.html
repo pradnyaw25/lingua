@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lingua — Parallel Reading</title>
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
   <style>
     .filter-row { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; margin-bottom: .5rem; }
     .filter-label { font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
@@ -48,7 +48,7 @@
     (function () {
       const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
         ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-      const texts = window.TEXTS || [];
+      const texts = (window.TEXTS || []).filter((t) => t.lang === window.LANG);
       const lib = document.getElementById("library");
       const levelBar = document.getElementById("level-bar");
       const sectionBar = document.getElementById("section-bar");
@@ -70,7 +70,6 @@
         a.href = "reader.html?id=" + encodeURIComponent(t.id);
         a.innerHTML =
           '<div class="card-top">' +
-            '<span class="lang-tag">' + esc(t.langLabel) + '</span>' +
             (t.section ? '<span class="section-tag">' + esc(t.section) + '</span>' : '') +
             (t.new ? '<span class="new-tag">New</span>' : '') +
           '</div>' +
@@ -86,18 +85,10 @@
         const shown = texts.filter(matches);
         lib.innerHTML = "";
         if (!shown.length) { lib.innerHTML = '<p class="empty">No texts match these filters yet.</p>'; return; }
-        const byLang = {};
-        shown.forEach((t) => { (byLang[t.langLabel] = byLang[t.langLabel] || []).push(t); });
-        Object.keys(byLang).forEach((label) => {
-          const h = document.createElement("p");
-          h.className = "section-label";
-          h.textContent = label;
-          lib.appendChild(h);
-          const grid = document.createElement("div");
-          grid.className = "card-grid";
-          byLang[label].forEach((t) => grid.appendChild(card(t)));
-          lib.appendChild(grid);
-        });
+        const grid = document.createElement("div");
+        grid.className = "card-grid";
+        shown.forEach((t) => grid.appendChild(card(t)));
+        lib.appendChild(grid);
       }
 
       function chip(bar, val, label, onPick) {

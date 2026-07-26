@@ -6,7 +6,8 @@
   const categories = window.CATEGORIES || {};
   const langs = Object.keys(vocab);
 
-  let activeLang = localStorage.getItem("vocab.lang") || langs[0];
+  // Language is chosen globally in the site header (window.LANG); fall back gracefully.
+  let activeLang = (window.LANG && vocab[window.LANG]) ? window.LANG : langs[0];
   let activeCat = "all";
   let query = "";
   let showKnown = "all"; // all | unknown
@@ -26,19 +27,8 @@
     else localStorage.removeItem(knownKey(lang, word));
   }
 
-  // Language tabs.
-  langs.forEach((lang) => {
-    const btn = el("button", { class: "btn", text: vocab[lang].langLabel }, []);
-    btn.dataset.lang = lang;
-    btn.addEventListener("click", () => {
-      activeLang = lang;
-      localStorage.setItem("vocab.lang", lang);
-      activeCat = "all";
-      buildBar();
-      render();
-    });
-    tabsEl.appendChild(btn);
-  });
+  // Language is set in the header now, so the in-page tabs are gone.
+  if (tabsEl) tabsEl.style.display = "none";
 
   // A category resolves to { label, lean, words:[{word,en,pos?,rank?}] }.
   function resolveCategory(id) {
