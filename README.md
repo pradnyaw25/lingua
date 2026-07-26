@@ -1,17 +1,29 @@
 # Lingua — Parallel Reading & Frequency Words
 
 A tiny, dependency-free static site for learning **French** and **Spanish** through
-side-by-side parallel texts and the most common words in each language.
+side-by-side parallel texts, the 1,000 most common words in each language, and flashcards.
 
-Built for personal use. No build step, no server required — just open the files.
+Built for personal use. No build step, no framework, no server required — just open the files.
+
+**Live:** [pradnya.dev/lingua](https://pradnya.dev/lingua/)
 
 ## Features
 
 - **Parallel reader** — target language and English side by side, sentence-aligned.
-  Hover a sentence to highlight both sides in sync; click to pin it while you study.
-  Toggles: swap sides, hide English (self-test mode), font size.
-- **Frequency words** — the most common words per language with English + part of speech.
-  Search/filter, and mark words as **known** (saved in your browser's `localStorage`).
+  Hover a sentence to highlight both sides in sync; **tap any word in the target column
+  for its meaning** (a popover fed by `data/dictionary.js`). Toggles: swap sides,
+  hide English (self-test), font size.
+- **Frequency words** — the 1,000 most common words per language with English + part of
+  speech. Search/filter, quick-access **category chips** (Numbers, Questions, Adjectives,
+  Verbs, Colors, Days, Months, Family, Greetings), and mark words **known**
+  (saved in your browser's `localStorage`).
+- **Flashcards** — study any set (the frequency list or a category) as a flip-card deck.
+  Direction toggle, shuffle, keyboard shortcuts (`Space` flip, `←`/`→` grade). "Got it"
+  can mark a card known — shared with the vocab table.
+- **Library** — all texts grouped by language, with a **CEFR level filter** (A1–B2).
+- **About** — project blurb and links.
+
+Everything is theme-aware (light + dark) and works on mobile.
 
 ## Run it
 
@@ -21,31 +33,51 @@ Just open `index.html` in a browser — double-click it, or:
 open index.html            # macOS
 ```
 
-Everything loads from local `.js` files (no `fetch`), so it works from `file://`
-with no dev server. If you'd rather serve it (nicer URLs, closer to hosting):
+All content loads from local `.js` files (no `fetch`), so it works from `file://`
+with no dev server. To serve it instead (nicer URLs, closer to hosting):
 
 ```bash
 python3 -m http.server 8000    # then visit http://localhost:8000
 ```
 
+Hosted on GitHub Pages from the repo root — every push to `main` redeploys.
+
 ## Project layout
 
 ```
 lingua/
-  index.html        Library — lists all texts
-  reader.html       Parallel reader
-  vocab.html        Frequency-word tables
-  css/style.css     All styling (light + dark, print-friendly serif)
-  js/app.js         Shared nav + tiny DOM helper
-  js/reader.js      Reader logic (alignment, synced highlight, toolbar)
-  js/vocab.js       Vocab table, search, "known" tracking
-  data/texts.js     window.TEXTS — the parallel texts
-  data/vocab.js     window.VOCAB — the frequency word lists
+  index.html         Library + CEFR level filter
+  reader.html        Parallel reader (synced highlight, click-a-word)
+  vocab.html         Frequency-word tables + category chips
+  flashcards.html    Flashcard sessions
+  about.html         About page
+  css/style.css      All styling (light + dark, book-like serif)
+  js/app.js          Shared nav + tiny DOM helper
+  js/reader.js       Reader logic (tokenizer, popover, toolbar)
+  js/vocab.js        Vocab table, categories, search, "known" tracking
+  js/flashcards.js   Flashcard deck logic
+  data/texts.js         window.TEXTS      — the parallel texts
+  data/vocab.js         window.VOCAB      — the 1,000-word frequency lists
+  data/categories.js    window.CATEGORIES — curated thematic word sets
+  data/dictionary.js    window.DICT       — word → gloss for click-a-word
+  scripts/build_vocab.py       Generate vocab.js from a frequency list + dictionary
+  scripts/build_dictionary.py  Generate dictionary.js from texts + dictionary
+  scripts/samples/             Frequency/dictionary fixtures, supplements, overrides
 ```
 
-## Adding a text
+## The texts
 
-Edit `data/texts.js` and append an object. The only rule that matters:
+16 sentence-aligned texts (4 × A1, 8 × A2, 2 × B1, 2 × B2), all original or public domain:
+
+- **Pixel, the cat who invested** — an original comedic serial (3 episodes, A2) in French
+  and Spanish, mixing everyday life, travel, food, tech and finance.
+- **Café dialogues** (A1), and two intermediate standalone stories — *The Suitcase* (B1,
+  mystery) and *The App* (B2, satire).
+- A few classic Aesop fables (A1–A2).
+
+### Adding a text
+
+Edit `data/texts.js` and append an object. The one rule that matters:
 **`pairs` must be 1:1** — sentence `target[i]` lines up with `en[i]`.
 
 ```js
@@ -54,31 +86,30 @@ Edit `data/texts.js` and append an object. The only rule that matters:
   lang: "fr",
   langLabel: "Français",
   title: "Mon histoire",
-  source: "…public domain / your own text…",
-  level: "A2",
+  source: "Original — Lingua",
+  level: "A2",                // drives the library's level filter
   pairs: [
-    { target: "Première phrase.", en: "First sentence." },
-    { target: "Deuxième phrase.", en: "Second sentence." }
+    { target: `Première phrase.`, en: `First sentence.` },
+    { target: `Deuxième phrase.`, en: `Second sentence.` }
   ]
 }
 ```
 
-**Copyright note:** stick to public-domain works (Aesop, folk tales, older texts) or
-your own writing. Avoid most 20th-century books — e.g. *Le Petit Prince* is still under
-copyright in the US.
+After adding a text, regenerate the dictionary (below) so click-a-word covers its words.
+
+**Copyright note:** stick to public-domain works or your own writing. Avoid most
+20th-century books — e.g. *Le Petit Prince* is still under copyright in the US.
 
 ## The word lists (1,000 per language)
 
 `data/vocab.js` holds the **1,000 most-frequent words** in French and Spanish, each
-`{ rank, word, en, pos }`. It's generated by `scripts/build_vocab.py` from a frequency
-list plus a bilingual dictionary, and hand-edits to `en`/`pos` survive re-runs.
+`{ rank, word, en, pos }`, generated by `scripts/build_vocab.py` from a frequency list
+plus a bilingual dictionary. Hand-edits to `en`/`pos` survive re-runs. Coverage is
+**~92% FR / ~87% ES**; the rest (rare conjugations, inversions, OCR noise) show as blank
+cells and are listed in the script's `data/missing_<lang>.txt` output.
 
-Current coverage: **~92% FR / ~87% ES** have a translation. The rest (rarer verb
-conjugations, question-inversions, some OCR noise) show as **blank English cells** in the
-table — fill them by editing `data/vocab.js` directly, or list them with the script's
-`data/missing_<lang>.txt` output.
-
-### Regenerating / extending
+`data/categories.js` holds the curated thematic sets shown as chips on the vocab page —
+edit it to add or change a category; new chips appear automatically.
 
 ```bash
 python3 scripts/build_vocab.py --lang fr \
@@ -86,29 +117,44 @@ python3 scripts/build_vocab.py --lang fr \
 ```
 
 - `--freq` — a frequency list (`word`, `word<TAB>count`, or `rank,word`).
-- `--dict` — a `headword<TAB>english[<TAB>pos]` dictionary. Multiple files can be
-  concatenated (earlier entries win), which is how the hand-written
-  `scripts/samples/supplement*.tsv` override the machine dictionary for common
-  function words the dictionary lacks.
+- `--dict` — a `headword<TAB>english[<TAB>pos]` dictionary. Multiple files concatenated,
+  earlier entries win — this is how `scripts/samples/supplement*.tsv` override the machine
+  dictionary for common function words it lacks.
 
-See `python3 scripts/build_vocab.py --help` for all options.
+## Click-a-word dictionary
+
+`data/dictionary.js` is a compact `word → English` map that powers the reader's
+click-a-word popover, generated by `scripts/build_dictionary.py`. It scans every text,
+tokenizes each sentence the same way the reader does (splitting French elisions like
+`l'`/`j'`/`qu'`), and looks each word up against the curated top-1000 plus a bilingual
+dictionary. Machine-translation mistakes for words that appear in the texts are corrected
+in `scripts/samples/overrides_<lang>.tsv` (highest priority).
+
+```bash
+python3 scripts/build_dictionary.py \
+    --dict-fr fr-en.tsv --dict-es es-en.tsv \
+    --override-fr scripts/samples/overrides_fr.tsv \
+    --override-es scripts/samples/overrides_es.tsv
+```
+
+Run this whenever you add or edit a text.
 
 ## Data sources & credits
 
-The generated word lists derive from:
+The generated word lists and dictionary derive from:
 
 - **Frequency ranking** — [Hermit Dave's *FrequencyWords*](https://github.com/hermitdave/FrequencyWords)
   (OpenSubtitles, CC BY-SA 4.0).
 - **Machine translations** — [Facebook *MUSE*](https://github.com/facebookresearch/MUSE)
   bilingual dictionaries (CC BY-NC 4.0 — **non-commercial**).
-- Hand-written supplements and all fable texts are original / public-domain.
+- Hand-written supplements/overrides and all texts are original or public-domain.
 
 Because MUSE is non-commercial, keep this project non-commercial as long as those
 translations are included. Attribution is retained here per those licenses.
 
 ## Ideas for later
 
-- Click a single **word** → pop its dictionary translation.
-- **Flashcard mode** over the frequency lists.
-- Reading progress per text; audio for each sentence.
+- Audio (browser speech synthesis) to pronounce any word or sentence.
+- A "needs review" flashcard queue that pulls only not-yet-known words.
+- More episodes and higher-level texts; per-text reading progress.
 - Auto-aligner script to turn a plain bilingual text file into `pairs`.
