@@ -158,7 +158,9 @@ the library by `js/app.js`. No backend — the job just commits static files, sa
 rest of the site.
 
 Each run (`scripts/generate_daily.py`):
-1. pulls a trending topic (Google Trends RSS, with evergreen fallbacks),
+1. pulls a trending topic (Google Trends RSS); when there's nothing usable, it falls
+   back to a story idea from **`scripts/theme_ideas.txt`** — an editable list you own
+   (one idea per line), so you can seed your own topics,
 2. asks OpenAI (`gpt-4.1-mini`, structured outputs) for a French + Spanish story,
    sentence-aligned 1:1 with English, at a CEFR level that rotates by day (A2 → B1 → B2),
 3. **validates** alignment, length, and a sensitive-topic screen (drops the day if it fails),

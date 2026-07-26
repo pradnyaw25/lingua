@@ -26,6 +26,7 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DAILY = os.path.normpath(os.path.join(HERE, "..", "data", "daily.js"))
+THEMES_FILE = os.path.join(HERE, "theme_ideas.txt")
 LEVELS = ["A2", "B1", "B2"]                       # rotated by date
 LEVEL_LEN = {"A2": (10, 15), "B1": (12, 16), "B2": (14, 18)}  # sentences per level
 CAP = 40  # keep the newest N text objects (2 per day → ~20 days)
@@ -79,6 +80,16 @@ SYSTEM = (
     "The French and Spanish versions tell the SAME story, sentence by sentence, and every "
     "sentence aligns 1:1 with its English translation. Language must be natural and correct."
 )
+
+
+def load_themes():
+    """Your editable fallback ideas (scripts/theme_ideas.txt), else the built-ins."""
+    if os.path.exists(THEMES_FILE):
+        lines = [ln.strip() for ln in open(THEMES_FILE, encoding="utf-8")]
+        ideas = [ln for ln in lines if ln and not ln.startswith("#")]
+        if ideas:
+            return ideas
+    return FALLBACK_THEMES
 
 
 def fetch_topic():
@@ -218,7 +229,8 @@ def main():
         if args.mock:
             payload, topic = dict(MOCK, level=level), "a lost umbrella (mock)"
         else:
-            topic = fetch_topic() or FALLBACK_THEMES[sum(map(ord, date)) % len(FALLBACK_THEMES)]
+            themes = load_themes()
+            topic = fetch_topic() or themes[sum(map(ord, date)) % len(themes)]
             payload = generate(topic, args.model, level, n_min, n_max)
         if payload is None:
             print("No content generated (model declined). Skipping today.")

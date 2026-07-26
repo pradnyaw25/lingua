@@ -1,0 +1,29 @@
+# Fallback story ideas for scripts/generate_daily.py.
+# Used when there's nothing usable from current events (or the trend fetch fails).
+# One idea per line. Blank lines and #comment lines are ignored. The daily story
+# draws a gentle, level-appropriate scene from one of these, rotated by date.
+#
+# Keep them light and everyday. Add your own — anything you'd enjoy reading about.
+
+a lost umbrella on a rainy morning
+a neighbor's very loud cat
+learning to bake bread for the first time
+a slow train and a talkative stranger
+a surprise package at the door
+the opening day of a tiny new coffee shop
+a walk in the park right after the rain
+an alarm clock that refuses to work
+planning a small weekend trip
+a houseplant that will not grow
+a forgotten grocery list
+a friendly dog that follows you home
+a very long queue at the post office
+a mysterious old key with no lock
+cooking a family recipe from memory
+getting a little lost in a new city
+a market stall with the best fruit in town
+a power cut and a box of candles
+a phone with a nearly dead battery
+trying a new sport and being wonderfully bad at it
+a rooftop garden in the middle of the city
+a bookshop where the cat runs the register
