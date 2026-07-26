@@ -7426,6 +7426,140 @@ window.GENERATED = [
     ]
   },
   {
+    "id": "fr-lib-56-underrated-oaxaca",
+    "lang": "fr",
+    "langLabel": "Français",
+    "title": "Oaxaca : une perle sous-estimée",
+    "source": "Generated explainer",
+    "level": "B2",
+    "topic": "underrated Oaxaca",
+    "pairs": [
+      {
+        "target": "Oaxaca est une région du sud du Mexique réputée pour sa culture riche et sa diversité.",
+        "en": "Oaxaca is a region in southern Mexico known for its rich culture and diversity."
+      },
+      {
+        "target": "Beaucoup de touristes visitent des villes comme Mexico ou Cancún, mais peu découvrent Oaxaca.",
+        "en": "Many tourists visit cities like Mexico City or Cancún, but few discover Oaxaca."
+      },
+      {
+        "target": "Pourtant, Oaxaca offre une expérience unique grâce à ses traditions anciennes.",
+        "en": "However, Oaxaca offers a unique experience thanks to its ancient traditions."
+      },
+      {
+        "target": "La ville d’Oaxaca possède un centre historique charmant avec une architecture coloniale bien préservée.",
+        "en": "The city of Oaxaca has a charming historic center with well-preserved colonial architecture."
+      },
+      {
+        "target": "Son célèbre marché propose des produits artisanaux, textiles colorés et spécialités culinaires.",
+        "en": "Its famous market offers handcrafted products, colorful textiles, and culinary specialties."
+      },
+      {
+        "target": "Parmi les plats typiques, on trouve le mole, une sauce complexe aux multiples ingrédients.",
+        "en": "Among typical dishes, there is mole, a complex sauce with many ingredients."
+      },
+      {
+        "target": "Ce plat illustre parfaitement la richesse gastronomique de la région.",
+        "en": "This dish perfectly illustrates the region's rich gastronomy."
+      },
+      {
+        "target": "Les habitants sont fiers de leurs traditions, notamment les fêtes comme la Guelaguetza.",
+        "en": "The locals are proud of their traditions, especially festivals like the Guelaguetza."
+      },
+      {
+        "target": "Cet événement célèbre la diversité culturelle avec des danses, des costumes et des musiques folkloriques.",
+        "en": "This event celebrates cultural diversity with dances, costumes, and folk music."
+      },
+      {
+        "target": "La nature autour de Oaxaca est aussi impressionnante, avec des montagnes et des plages proches.",
+        "en": "The nature around Oaxaca is also impressive, with mountains and nearby beaches."
+      },
+      {
+        "target": "On peut visiter des sites archéologiques comme Monte Albán, témoins d’anciennes civilisations.",
+        "en": "You can visit archaeological sites like Monte Albán, witnesses of ancient civilizations."
+      },
+      {
+        "target": "Malgré tout cela, Oaxaca reste souvent en dehors des circuits touristiques classiques.",
+        "en": "Despite all this, Oaxaca often remains off the typical tourist circuits."
+      },
+      {
+        "target": "Cela contribue à son charme authentique et à une atmosphère tranquille.",
+        "en": "This contributes to its authentic charm and a peaceful atmosphere."
+      },
+      {
+        "target": "Visiter Oaxaca, c’est découvrir une partie du Mexique différente et fascinante.",
+        "en": "Visiting Oaxaca means discovering a different and fascinating part of Mexico."
+      }
+    ]
+  },
+  {
+    "id": "es-lib-56-underrated-oaxaca",
+    "lang": "es",
+    "langLabel": "Español",
+    "title": "Oaxaca: una joya subestimada",
+    "source": "Generated explainer",
+    "level": "B2",
+    "topic": "underrated Oaxaca",
+    "pairs": [
+      {
+        "target": "Oaxaca es una región del sur de México conocida por su cultura rica y su diversidad.",
+        "en": "Oaxaca is a region in southern Mexico known for its rich culture and diversity."
+      },
+      {
+        "target": "Muchos turistas visitan ciudades como Ciudad de México o Cancún, pero pocos descubren Oaxaca.",
+        "en": "Many tourists visit cities like Mexico City or Cancún, but few discover Oaxaca."
+      },
+      {
+        "target": "Sin embargo, Oaxaca ofrece una experiencia única gracias a sus tradiciones antiguas.",
+        "en": "However, Oaxaca offers a unique experience thanks to its ancient traditions."
+      },
+      {
+        "target": "La ciudad de Oaxaca tiene un centro histórico encantador con arquitectura colonial bien conservada.",
+        "en": "The city of Oaxaca has a charming historic center with well-preserved colonial architecture."
+      },
+      {
+        "target": "Su famoso mercado ofrece productos artesanales, textiles coloridos y especialidades culinarias.",
+        "en": "Its famous market offers handcrafted products, colorful textiles, and culinary specialties."
+      },
+      {
+        "target": "Entre los platos típicos está el mole, una salsa compleja con muchos ingredientes.",
+        "en": "Among typical dishes, there is mole, a complex sauce with many ingredients."
+      },
+      {
+        "target": "Este plato ilustra perfectamente la riqueza gastronómica de la región.",
+        "en": "This dish perfectly illustrates the region's rich gastronomy."
+      },
+      {
+        "target": "Los habitantes están orgullosos de sus tradiciones, especialmente las fiestas como la Guelaguetza.",
+        "en": "The locals are proud of their traditions, especially festivals like the Guelaguetza."
+      },
+      {
+        "target": "Este evento celebra la diversidad cultural con bailes, trajes y música folclórica.",
+        "en": "This event celebrates cultural diversity with dances, costumes, and folk music."
+      },
+      {
+        "target": "La naturaleza alrededor de Oaxaca también es impresionante, con montañas y playas cercanas.",
+        "en": "The nature around Oaxaca is also impressive, with mountains and nearby beaches."
+      },
+      {
+        "target": "Se pueden visitar sitios arqueológicos como Monte Albán, testigos de antiguas civilizaciones.",
+        "en": "You can visit archaeological sites like Monte Albán, witnesses of ancient civilizations."
+      },
+      {
+        "target": "A pesar de todo esto, Oaxaca a menudo permanece fuera de los circuitos turísticos típicos.",
+        "en": "Despite all this, Oaxaca often remains off the typical tourist circuits."
+      },
+      {
+        "target": "Esto contribuye a su encanto auténtico y a una atmósfera tranquila.",
+        "en": "This contributes to its authentic charm and a peaceful atmosphere."
+      },
+      {
+        "target": "Visitar Oaxaca es descubrir una parte diferente y fascinante de México.",
+        "en": "Visiting Oaxaca means discovering a different and fascinating part of Mexico."
+      }
+    ]
+  },
+  {
     "id": "fr-lib-56-what-chatgpt-actually-does",
     "lang": "fr",
     "langLabel": "Français",
@@ -11276,6 +11410,826 @@ window.GENERATED = [
       {
         "target": "Gracias a Wikipedia, podemos aprender muchas cosas fácilmente.",
         "en": "Thanks to Wikipedia, we can learn many things easily."
+      }
+    ]
+  },
+  {
+    "id": "fr-lib-86-the-rise-of-kylian-mbapp",
+    "lang": "fr",
+    "langLabel": "Français",
+    "title": "L'ascension de Kylian Mbappé",
+    "source": "Generated explainer",
+    "level": "B2",
+    "topic": "the rise of Kylian Mbappé",
+    "pairs": [
+      {
+        "target": "Kylian Mbappé est devenu l’un des meilleurs footballeurs du monde en très peu de temps.",
+        "en": "Kylian Mbappé became one of the best football players in the world in a very short time."
+      },
+      {
+        "target": "Né en 1998 en France, il a commencé à jouer au football très jeune.",
+        "en": "Born in 1998 in France, he started playing football at a very young age."
+      },
+      {
+        "target": "Son talent a rapidement attiré l’attention des clubs professionnels.",
+        "en": "His talent quickly attracted the attention of professional clubs."
+      },
+      {
+        "target": "À seulement 17 ans, il a fait ses débuts dans l’équipe principale de l’AS Monaco.",
+        "en": "At only 17, he made his debut in the main team of AS Monaco."
+      },
+      {
+        "target": "Cette équipe est connue pour former de jeunes joueurs prometteurs.",
+        "en": "This team is known for developing promising young players."
+      },
+      {
+        "target": "Mbappé a impressionné par sa rapidité et ses compétences techniques.",
+        "en": "Mbappé impressed with his speed and technical skills."
+      },
+      {
+        "target": "Grâce à ses performances, il a aidé Monaco à gagner le championnat.",
+        "en": "Thanks to his performances, he helped Monaco win the championship."
+      },
+      {
+        "target": "Son succès l’a mené à signer avec le PSG, un des plus grands clubs français.",
+        "en": "His success led him to sign with PSG, one of the biggest French clubs."
+      },
+      {
+        "target": "Au PSG, il a continué à progresser et à marquer de nombreux buts.",
+        "en": "At PSG, he continued to improve and score many goals."
+      },
+      {
+        "target": "Mbappé a aussi joué un rôle important dans l’équipe nationale française.",
+        "en": "Mbappé also played an important role in the French national team."
+      },
+      {
+        "target": "Lors de la Coupe du Monde 2018, il a été l’un des joueurs clés.",
+        "en": "During the 2018 World Cup, he was one of the key players."
+      },
+      {
+        "target": "Il a aidé la France à remporter le tournoi, ce qui a marqué l’histoire du football.",
+        "en": "He helped France win the tournament, which marked football history."
+      },
+      {
+        "target": "Ses qualités incluent la vitesse, la technique, et une grande intelligence de jeu.",
+        "en": "His qualities include speed, technique, and great game intelligence."
+      },
+      {
+        "target": "Mbappé est un exemple de détermination et de travail acharné.",
+        "en": "Mbappé is an example of determination and hard work."
+      },
+      {
+        "target": "Il inspire de nombreux jeunes à croire en leurs rêves.",
+        "en": "He inspires many young people to believe in their dreams."
+      }
+    ]
+  },
+  {
+    "id": "es-lib-86-the-rise-of-kylian-mbapp",
+    "lang": "es",
+    "langLabel": "Español",
+    "title": "El ascenso de Kylian Mbappé",
+    "source": "Generated explainer",
+    "level": "B2",
+    "topic": "the rise of Kylian Mbappé",
+    "pairs": [
+      {
+        "target": "Kylian Mbappé se convirtió en uno de los mejores futbolistas del mundo en muy poco tiempo.",
+        "en": "Kylian Mbappé became one of the best football players in the world in a very short time."
+      },
+      {
+        "target": "Nacido en 1998 en Francia, comenzó a jugar al fútbol desde muy pequeño.",
+        "en": "Born in 1998 in France, he started playing football at a very young age."
+      },
+      {
+        "target": "Su talento llamó rápidamente la atención de los clubes profesionales.",
+        "en": "His talent quickly attracted the attention of professional clubs."
+      },
+      {
+        "target": "Con solo 17 años, debutó en el equipo principal del AS Mónaco.",
+        "en": "At only 17, he made his debut in the main team of AS Monaco."
+      },
+      {
+        "target": "Este equipo es conocido por formar a jóvenes jugadores prometedores.",
+        "en": "This team is known for developing promising young players."
+      },
+      {
+        "target": "Mbappé impresionó por su rapidez y habilidades técnicas.",
+        "en": "Mbappé impressed with his speed and technical skills."
+      },
+      {
+        "target": "Gracias a sus actuaciones, ayudó al Mónaco a ganar el campeonato.",
+        "en": "Thanks to his performances, he helped Monaco win the championship."
+      },
+      {
+        "target": "Su éxito lo llevó a fichar por el PSG, uno de los clubes más grandes de Francia.",
+        "en": "His success led him to sign with PSG, one of the biggest French clubs."
+      },
+      {
+        "target": "En el PSG, continuó mejorando y marcando muchos goles.",
+        "en": "At PSG, he continued to improve and score many goals."
+      },
+      {
+        "target": "Mbappé también tuvo un papel importante en la selección nacional francesa.",
+        "en": "Mbappé also played an important role in the French national team."
+      },
+      {
+        "target": "En la Copa del Mundo 2018, fue uno de los jugadores clave.",
+        "en": "During the 2018 World Cup, he was one of the key players."
+      },
+      {
+        "target": "Ayudó a Francia a ganar el torneo, lo que marcó la historia del fútbol.",
+        "en": "He helped France win the tournament, which marked football history."
+      },
+      {
+        "target": "Sus cualidades incluyen velocidad, técnica y una gran inteligencia de juego.",
+        "en": "His qualities include speed, technique, and great game intelligence."
+      },
+      {
+        "target": "Mbappé es un ejemplo de determinación y trabajo duro.",
+        "en": "Mbappé is an example of determination and hard work."
+      },
+      {
+        "target": "Inspira a muchos jóvenes a creer en sus sueños.",
+        "en": "He inspires many young people to believe in their dreams."
+      }
+    ]
+  },
+  {
+    "id": "fr-lib-87-goodbye-didier-deschamps",
+    "lang": "fr",
+    "langLabel": "Français",
+    "title": "Au revoir, Didier Deschamps",
+    "source": "Generated explainer",
+    "level": "A2",
+    "topic": "goodbye, Didier Deschamps",
+    "pairs": [
+      {
+        "target": "Didier Deschamps est un célèbre entraîneur de football français.",
+        "en": "Didier Deschamps is a famous French football coach."
+      },
+      {
+        "target": "Il a été joueur avant d'être entraîneur.",
+        "en": "He was a player before becoming a coach."
+      },
+      {
+        "target": "Il a gagné la Coupe du Monde comme joueur en 1998.",
+        "en": "He won the World Cup as a player in 1998."
+      },
+      {
+        "target": "Après sa carrière de joueur, il est devenu entraîneur.",
+        "en": "After his playing career, he became a coach."
+      },
+      {
+        "target": "Il a été l'entraîneur de l'équipe de France pendant plusieurs années.",
+        "en": "He was the coach of the French team for several years."
+      },
+      {
+        "target": "Sous sa direction, l'équipe a gagné la Coupe du Monde encore une fois en 2018.",
+        "en": "Under his leadership, the team won the World Cup again in 2018."
+      },
+      {
+        "target": "Cette victoire a rendu beaucoup de gens très heureux.",
+        "en": "This victory made many people very happy."
+      },
+      {
+        "target": "En 2023, Didier Deschamps a décidé de dire au revoir à son poste d'entraîneur.",
+        "en": "In 2023, Didier Deschamps decided to say goodbye to his coaching position."
+      },
+      {
+        "target": "Il voulait se reposer un peu après de nombreuses années de travail dur.",
+        "en": "He wanted to rest a bit after many years of hard work."
+      },
+      {
+        "target": "Beaucoup de fans ont dit merci et au revoir à Didier Deschamps.",
+        "en": "Many fans said thank you and goodbye to Didier Deschamps."
+      },
+      {
+        "target": "Il est un héros du football français.",
+        "en": "He is a hero of French football."
+      },
+      {
+        "target": "Son travail a inspiré beaucoup de joueurs et d'entraîneurs.",
+        "en": "His work inspired many players and coaches."
+      },
+      {
+        "target": "Même s'il part, son histoire reste importante dans le football.",
+        "en": "Even if he leaves, his story remains important in football."
+      },
+      {
+        "target": "Nous lui souhaitons une belle retraite et beaucoup de bonheur.",
+        "en": "We wish him a great retirement and much happiness."
+      }
+    ]
+  },
+  {
+    "id": "es-lib-87-goodbye-didier-deschamps",
+    "lang": "es",
+    "langLabel": "Español",
+    "title": "Adiós, Didier Deschamps",
+    "source": "Generated explainer",
+    "level": "A2",
+    "topic": "goodbye, Didier Deschamps",
+    "pairs": [
+      {
+        "target": "Didier Deschamps es un famoso entrenador de fútbol francés.",
+        "en": "Didier Deschamps is a famous French football coach."
+      },
+      {
+        "target": "Fue jugador antes de ser entrenador.",
+        "en": "He was a player before becoming a coach."
+      },
+      {
+        "target": "Ganó la Copa del Mundo como jugador en 1998.",
+        "en": "He won the World Cup as a player in 1998."
+      },
+      {
+        "target": "Después de su carrera como jugador, se convirtió en entrenador.",
+        "en": "After his playing career, he became a coach."
+      },
+      {
+        "target": "Fue el entrenador del equipo de Francia durante varios años.",
+        "en": "He was the coach of the French team for several years."
+      },
+      {
+        "target": "Bajo su dirección, el equipo ganó la Copa del Mundo otra vez en 2018.",
+        "en": "Under his leadership, the team won the World Cup again in 2018."
+      },
+      {
+        "target": "Esta victoria hizo muy felices a muchas personas.",
+        "en": "This victory made many people very happy."
+      },
+      {
+        "target": "En 2023, Didier Deschamps decidió decir adiós a su puesto de entrenador.",
+        "en": "In 2023, Didier Deschamps decided to say goodbye to his coaching position."
+      },
+      {
+        "target": "Quería descansar un poco después de muchos años de trabajo duro.",
+        "en": "He wanted to rest a bit after many years of hard work."
+      },
+      {
+        "target": "Muchos aficionados dijeron gracias y adiós a Didier Deschamps.",
+        "en": "Many fans said thank you and goodbye to Didier Deschamps."
+      },
+      {
+        "target": "Es un héroe del fútbol francés.",
+        "en": "He is a hero of French football."
+      },
+      {
+        "target": "Su trabajo inspiró a muchos jugadores y entrenadores.",
+        "en": "His work inspired many players and coaches."
+      },
+      {
+        "target": "Aunque se vaya, su historia sigue siendo importante en el fútbol.",
+        "en": "Even if he leaves, his story remains important in football."
+      },
+      {
+        "target": "Le deseamos una buena jubilación y mucha felicidad.",
+        "en": "We wish him a great retirement and much happiness."
+      }
+    ]
+  },
+  {
+    "id": "fr-lib-88-the-rising-dominance-of-spain-in-footbal",
+    "lang": "fr",
+    "langLabel": "Français",
+    "title": "L'ascension de l'Espagne dans le football",
+    "source": "Generated explainer",
+    "level": "B1",
+    "topic": "the rising dominance of Spain in football",
+    "pairs": [
+      {
+        "target": "Le football est un sport très populaire en Espagne.",
+        "en": "Football is a very popular sport in Spain."
+      },
+      {
+        "target": "Depuis les années 2000, l'Espagne est devenue une puissance dans ce sport.",
+        "en": "Since the 2000s, Spain has become a powerhouse in this sport."
+      },
+      {
+        "target": "L'équipe nationale espagnole a remporté plusieurs titres importants.",
+        "en": "The Spanish national team has won several important titles."
+      },
+      {
+        "target": "Ils ont gagné l'Euro en 2008 et en 2012, ainsi que la Coupe du Monde en 2010.",
+        "en": "They won the Euro in 2008 and 2012, as well as the World Cup in 2010."
+      },
+      {
+        "target": "Cette réussite vient d'un style de jeu unique appelé « tiki-taka ».",
+        "en": "This success comes from a unique style of play called \"tiki-taka.\""
+      },
+      {
+        "target": "Le tiki-taka consiste à faire beaucoup de passes courtes et rapides.",
+        "en": "Tiki-taka involves making many short and quick passes."
+      },
+      {
+        "target": "Cette méthode permet de garder le contrôle du ballon de manière efficace.",
+        "en": "This method allows for effective control of the ball."
+      },
+      {
+        "target": "De plus, l'Espagne possède un excellent système de formation pour les jeunes joueurs.",
+        "en": "Moreover, Spain has an excellent youth training system for young players."
+      },
+      {
+        "target": "Les clubs comme le FC Barcelone et le Real Madrid jouent un rôle important.",
+        "en": "Clubs like FC Barcelona and Real Madrid play an important role."
+      },
+      {
+        "target": "Ils développent les talents locaux tout en attirant des joueurs du monde entier.",
+        "en": "They develop local talent while attracting players from around the world."
+      },
+      {
+        "target": "Le succès espagnol en football a inspiré beaucoup de pays.",
+        "en": "Spanish football success has inspired many countries."
+      },
+      {
+        "target": "Cela montre comment un bon entraînement et une organisation peuvent changer le sport.",
+        "en": "It shows how good training and organization can change the sport."
+      },
+      {
+        "target": "Aujourd'hui, l'Espagne reste un leader dans le football international.",
+        "en": "Today, Spain remains a leader in international football."
+      },
+      {
+        "target": "Les fans du monde entier admirent la technique et la passion espagnoles.",
+        "en": "Fans around the world admire Spanish technique and passion."
+      }
+    ]
+  },
+  {
+    "id": "es-lib-88-the-rising-dominance-of-spain-in-footbal",
+    "lang": "es",
+    "langLabel": "Español",
+    "title": "El auge de España en el fútbol",
+    "source": "Generated explainer",
+    "level": "B1",
+    "topic": "the rising dominance of Spain in football",
+    "pairs": [
+      {
+        "target": "El fútbol es un deporte muy popular en España.",
+        "en": "Football is a very popular sport in Spain."
+      },
+      {
+        "target": "Desde los años 2000, España se ha convertido en una potencia en este deporte.",
+        "en": "Since the 2000s, Spain has become a powerhouse in this sport."
+      },
+      {
+        "target": "La selección nacional española ha ganado varios títulos importantes.",
+        "en": "The Spanish national team has won several important titles."
+      },
+      {
+        "target": "Ganaron la Eurocopa en 2008 y 2012, así como la Copa del Mundo en 2010.",
+        "en": "They won the Euro in 2008 and 2012, as well as the World Cup in 2010."
+      },
+      {
+        "target": "Este éxito proviene de un estilo de juego único llamado «tiki-taka».",
+        "en": "This success comes from a unique style of play called \"tiki-taka.\""
+      },
+      {
+        "target": "El tiki-taka consiste en hacer muchos pases cortos y rápidos.",
+        "en": "Tiki-taka involves making many short and quick passes."
+      },
+      {
+        "target": "Este método permite mantener el control del balón de manera eficaz.",
+        "en": "This method allows for effective control of the ball."
+      },
+      {
+        "target": "Además, España tiene un excelente sistema de formación para los jugadores jóvenes.",
+        "en": "Moreover, Spain has an excellent youth training system for young players."
+      },
+      {
+        "target": "Clubes como el FC Barcelona y el Real Madrid juegan un papel importante.",
+        "en": "Clubs like FC Barcelona and Real Madrid play an important role."
+      },
+      {
+        "target": "Desarrollan talentos locales mientras atraen jugadores de todo el mundo.",
+        "en": "They develop local talent while attracting players from around the world."
+      },
+      {
+        "target": "El éxito español en el fútbol ha inspirado a muchos países.",
+        "en": "Spanish football success has inspired many countries."
+      },
+      {
+        "target": "Esto muestra cómo un buen entrenamiento y organización pueden cambiar el deporte.",
+        "en": "It shows how good training and organization can change the sport."
+      },
+      {
+        "target": "Hoy en día, España sigue siendo un líder en el fútbol internacional.",
+        "en": "Today, Spain remains a leader in international football."
+      },
+      {
+        "target": "Los aficionados de todo el mundo admiran la técnica y pasión españolas.",
+        "en": "Fans around the world admire Spanish technique and passion."
+      }
+    ]
+  },
+  {
+    "id": "fr-lib-89-why-america-loves-erling-haaland",
+    "lang": "fr",
+    "langLabel": "Français",
+    "title": "Pourquoi l'Amérique aime Erling Haaland",
+    "source": "Generated explainer",
+    "level": "B2",
+    "topic": "why America loves Erling Haaland",
+    "pairs": [
+      {
+        "target": "Erling Haaland est un footballeur norvégien célèbre dans le monde entier.",
+        "en": "Erling Haaland is a Norwegian footballer famous worldwide."
+      },
+      {
+        "target": "Ces dernières années, il a attiré beaucoup d'attention aux États-Unis.",
+        "en": "In recent years, he has attracted a lot of attention in the United States."
+      },
+      {
+        "target": "Pourquoi l'Amérique aime-t-elle tant ce joueur ?",
+        "en": "Why does America love this player so much?"
+      },
+      {
+        "target": "D'abord, Haaland est un buteur exceptionnel.",
+        "en": "First, Haaland is an exceptional goal scorer."
+      },
+      {
+        "target": "Il marque souvent et rapidement, ce qui rend les matchs très excitants.",
+        "en": "He scores often and quickly, which makes matches very exciting."
+      },
+      {
+        "target": "Ensuite, son style de jeu est spectaculaire.",
+        "en": "Next, his style of play is spectacular."
+      },
+      {
+        "target": "Il est très puissant, rapide et agile pour un joueur de sa taille.",
+        "en": "He is very powerful, fast, and agile for a player of his size."
+      },
+      {
+        "target": "Cela impressionne beaucoup les fans américains qui aiment le spectacle sportif.",
+        "en": "This impresses many American fans who love sports entertainment."
+      },
+      {
+        "target": "De plus, Haaland a une personnalité accessible et humble.",
+        "en": "Furthermore, Haaland has an accessible and humble personality."
+      },
+      {
+        "target": "Il parle souvent de travail dur et de l'importance de rester concentré.",
+        "en": "He often talks about hard work and the importance of staying focused."
+      },
+      {
+        "target": "Cette attitude inspire de nombreux jeunes et amateurs de sport.",
+        "en": "This attitude inspires many young people and sports fans."
+      },
+      {
+        "target": "Aussi, la popularité croissante du football (soccer) aux États-Unis joue un rôle clé.",
+        "en": "Also, the growing popularity of soccer in the United States plays a key role."
+      },
+      {
+        "target": "Les Américains suivent de plus en plus les ligues européennes où Haaland joue.",
+        "en": "Americans are increasingly following European leagues where Haaland plays."
+      },
+      {
+        "target": "Enfin, sa présence dans la Major League Soccer attirera encore plus d'attention sur ce sport.",
+        "en": "Finally, his presence in Major League Soccer will attract even more attention to the sport."
+      },
+      {
+        "target": "Ainsi, Haaland combine talent, personnalité et timing parfait avec la croissance du football aux États-Unis.",
+        "en": "Thus, Haaland combines talent, personality, and perfect timing with the growth of soccer in the United States."
+      }
+    ]
+  },
+  {
+    "id": "es-lib-89-why-america-loves-erling-haaland",
+    "lang": "es",
+    "langLabel": "Español",
+    "title": "Por qué América ama a Erling Haaland",
+    "source": "Generated explainer",
+    "level": "B2",
+    "topic": "why America loves Erling Haaland",
+    "pairs": [
+      {
+        "target": "Erling Haaland es un futbolista noruego famoso en todo el mundo.",
+        "en": "Erling Haaland is a Norwegian footballer famous worldwide."
+      },
+      {
+        "target": "En los últimos años, ha atraído mucha atención en Estados Unidos.",
+        "en": "In recent years, he has attracted a lot of attention in the United States."
+      },
+      {
+        "target": "¿Por qué América ama tanto a este jugador?",
+        "en": "Why does America love this player so much?"
+      },
+      {
+        "target": "Primero, Haaland es un goleador excepcional.",
+        "en": "First, Haaland is an exceptional goal scorer."
+      },
+      {
+        "target": "Marca con frecuencia y rápidamente, lo que hace los partidos muy emocionantes.",
+        "en": "He scores often and quickly, which makes matches very exciting."
+      },
+      {
+        "target": "Luego, su estilo de juego es espectacular.",
+        "en": "Next, his style of play is spectacular."
+      },
+      {
+        "target": "Es muy poderoso, rápido y ágil para un jugador de su altura.",
+        "en": "He is very powerful, fast, and agile for a player of his size."
+      },
+      {
+        "target": "Esto impresiona mucho a los aficionados americanos que disfrutan del espectáculo deportivo.",
+        "en": "This impresses many American fans who love sports entertainment."
+      },
+      {
+        "target": "Además, Haaland tiene una personalidad accesible y humilde.",
+        "en": "Furthermore, Haaland has an accessible and humble personality."
+      },
+      {
+        "target": "A menudo habla de trabajo duro y la importancia de mantenerse concentrado.",
+        "en": "He often talks about hard work and the importance of staying focused."
+      },
+      {
+        "target": "Esta actitud inspira a muchos jóvenes y aficionados al deporte.",
+        "en": "This attitude inspires many young people and sports fans."
+      },
+      {
+        "target": "También, la creciente popularidad del fútbol en Estados Unidos juega un rol clave.",
+        "en": "Also, the growing popularity of soccer in the United States plays a key role."
+      },
+      {
+        "target": "Los americanos siguen cada vez más las ligas europeas donde juega Haaland.",
+        "en": "Americans are increasingly following European leagues where Haaland plays."
+      },
+      {
+        "target": "Finalmente, su presencia en la Major League Soccer atraerá aún más atención al deporte.",
+        "en": "Finally, his presence in Major League Soccer will attract even more attention to the sport."
+      },
+      {
+        "target": "Así, Haaland combina talento, personalidad y un tiempo perfecto con el crecimiento del fútbol en Estados Unidos.",
+        "en": "Thus, Haaland combines talent, personality, and perfect timing with the growth of soccer in the United States."
+      }
+    ]
+  },
+  {
+    "id": "fr-lib-90-the-legend-of-lionel-messi",
+    "lang": "fr",
+    "langLabel": "Français",
+    "title": "La légende de Lionel Messi",
+    "source": "Generated explainer",
+    "level": "A2",
+    "topic": "the legend of Lionel Messi",
+    "pairs": [
+      {
+        "target": "Lionel Messi est un footballeur célèbre.",
+        "en": "Lionel Messi is a famous soccer player."
+      },
+      {
+        "target": "Il est né en Argentine en 1987.",
+        "en": "He was born in Argentina in 1987."
+      },
+      {
+        "target": "Quand il était petit, il aimait beaucoup jouer au football.",
+        "en": "When he was small, he loved to play football."
+      },
+      {
+        "target": "Il était très talentueux, mais il a eu un problème de santé.",
+        "en": "He was very talented, but he had a health problem."
+      },
+      {
+        "target": "Il avait besoin de médicaments pour grandir.",
+        "en": "He needed medicine to grow."
+      },
+      {
+        "target": "Le club de football FC Barcelone l’a aidé et a payé ses traitements.",
+        "en": "The football club FC Barcelona helped him and paid for his treatments."
+      },
+      {
+        "target": "Messi est allé en Espagne pour jouer au football.",
+        "en": "Messi went to Spain to play football."
+      },
+      {
+        "target": "Il a travaillé dur chaque jour pour devenir meilleur.",
+        "en": "He worked hard every day to become better."
+      },
+      {
+        "target": "Il est devenu l’un des meilleurs joueurs du monde.",
+        "en": "He became one of the best players in the world."
+      },
+      {
+        "target": "Messi est connu pour sa vitesse et sa technique.",
+        "en": "Messi is known for his speed and technique."
+      },
+      {
+        "target": "Il a gagné plusieurs prix importants dans sa carrière.",
+        "en": "He has won many important awards in his career."
+      },
+      {
+        "target": "Beaucoup de jeunes joueurs s’inspirent de lui.",
+        "en": "Many young players are inspired by him."
+      },
+      {
+        "target": "Aujourd’hui, Messi joue toujours au football professionnel.",
+        "en": "Today, Messi still plays professional football."
+      },
+      {
+        "target": "Il est une légende du sport et un exemple pour tous.",
+        "en": "He is a sports legend and an example for all."
+      }
+    ]
+  },
+  {
+    "id": "es-lib-90-the-legend-of-lionel-messi",
+    "lang": "es",
+    "langLabel": "Español",
+    "title": "La leyenda de Lionel Messi",
+    "source": "Generated explainer",
+    "level": "A2",
+    "topic": "the legend of Lionel Messi",
+    "pairs": [
+      {
+        "target": "Lionel Messi es un futbolista famoso.",
+        "en": "Lionel Messi is a famous soccer player."
+      },
+      {
+        "target": "Nació en Argentina en 1987.",
+        "en": "He was born in Argentina in 1987."
+      },
+      {
+        "target": "Cuando era pequeño, le encantaba jugar al fútbol.",
+        "en": "When he was small, he loved to play football."
+      },
+      {
+        "target": "Era muy talentoso, pero tuvo un problema de salud.",
+        "en": "He was very talented, but he had a health problem."
+      },
+      {
+        "target": "Necesitaba medicamentos para crecer.",
+        "en": "He needed medicine to grow."
+      },
+      {
+        "target": "El club de fútbol FC Barcelona lo ayudó y pagó sus tratamientos.",
+        "en": "The football club FC Barcelona helped him and paid for his treatments."
+      },
+      {
+        "target": "Messi se fue a España para jugar al fútbol.",
+        "en": "Messi went to Spain to play football."
+      },
+      {
+        "target": "Trabajó duro cada día para mejorar.",
+        "en": "He worked hard every day to become better."
+      },
+      {
+        "target": "Se convirtió en uno de los mejores jugadores del mundo.",
+        "en": "He became one of the best players in the world."
+      },
+      {
+        "target": "Messi es conocido por su velocidad y técnica.",
+        "en": "Messi is known for his speed and technique."
+      },
+      {
+        "target": "Ha ganado varios premios importantes en su carrera.",
+        "en": "He has won many important awards in his career."
+      },
+      {
+        "target": "Muchos jugadores jóvenes se inspiran en él.",
+        "en": "Many young players are inspired by him."
+      },
+      {
+        "target": "Hoy, Messi todavía juega al fútbol profesionalmente.",
+        "en": "Today, Messi still plays professional football."
+      },
+      {
+        "target": "Es una leyenda del deporte y un ejemplo para todos.",
+        "en": "He is a sports legend and an example for all."
+      }
+    ]
+  },
+  {
+    "id": "fr-lib-91-the-knicks-are-champions",
+    "lang": "fr",
+    "langLabel": "Français",
+    "title": "Les Knicks sont champions",
+    "source": "Generated explainer",
+    "level": "B1",
+    "topic": "the Knicks are champions",
+    "pairs": [
+      {
+        "target": "Les Knicks sont une équipe de basket-ball célèbre à New York.",
+        "en": "The Knicks are a famous basketball team in New York."
+      },
+      {
+        "target": "Ils jouent dans la NBA, la ligue professionnelle américaine.",
+        "en": "They play in the NBA, the American professional league."
+      },
+      {
+        "target": "Récemment, ils ont gagné le championnat NBA.",
+        "en": "Recently, they won the NBA championship."
+      },
+      {
+        "target": "C’est un grand succès pour l’équipe et ses fans.",
+        "en": "It is a great success for the team and its fans."
+      },
+      {
+        "target": "Le championnat NBA est très difficile à gagner.",
+        "en": "The NBA championship is very hard to win."
+      },
+      {
+        "target": "Les équipes jouent beaucoup de matchs pendant la saison.",
+        "en": "Teams play many games during the season."
+      },
+      {
+        "target": "Ensuite, les meilleures équipes se qualifient pour les playoffs.",
+        "en": "Then, the best teams qualify for the playoffs."
+      },
+      {
+        "target": "Les playoffs sont une série de matchs à élimination directe.",
+        "en": "The playoffs are a series of knockout games."
+      },
+      {
+        "target": "Les Knicks ont joué contre des équipes très fortes.",
+        "en": "The Knicks played against very strong teams."
+      },
+      {
+        "target": "Ils ont réussi à gagner plusieurs matchs importants.",
+        "en": "They managed to win several important games."
+      },
+      {
+        "target": "Leurs joueurs ont travaillé dur toute la saison.",
+        "en": "Their players worked hard all season."
+      },
+      {
+        "target": "Cette victoire est très importante pour la ville de New York.",
+        "en": "This victory is very important for New York City."
+      },
+      {
+        "target": "Les fans ont célébré la victoire dans les rues.",
+        "en": "Fans celebrated the victory in the streets."
+      },
+      {
+        "target": "Le coach a dit que c’était le résultat d’un bon travail d’équipe.",
+        "en": "The coach said it was the result of good teamwork."
+      }
+    ]
+  },
+  {
+    "id": "es-lib-91-the-knicks-are-champions",
+    "lang": "es",
+    "langLabel": "Español",
+    "title": "Los Knicks son campeones",
+    "source": "Generated explainer",
+    "level": "B1",
+    "topic": "the Knicks are champions",
+    "pairs": [
+      {
+        "target": "Los Knicks son un equipo de baloncesto famoso en Nueva York.",
+        "en": "The Knicks are a famous basketball team in New York."
+      },
+      {
+        "target": "Juegan en la NBA, la liga profesional estadounidense.",
+        "en": "They play in the NBA, the American professional league."
+      },
+      {
+        "target": "Recientemente, ganaron el campeonato de la NBA.",
+        "en": "Recently, they won the NBA championship."
+      },
+      {
+        "target": "Es un gran éxito para el equipo y sus aficionados.",
+        "en": "It is a great success for the team and its fans."
+      },
+      {
+        "target": "El campeonato de la NBA es muy difícil de ganar.",
+        "en": "The NBA championship is very hard to win."
+      },
+      {
+        "target": "Los equipos juegan muchos partidos durante la temporada.",
+        "en": "Teams play many games during the season."
+      },
+      {
+        "target": "Luego, los mejores equipos se clasifican para los playoffs.",
+        "en": "Then, the best teams qualify for the playoffs."
+      },
+      {
+        "target": "Los playoffs son una serie de partidos de eliminación directa.",
+        "en": "The playoffs are a series of knockout games."
+      },
+      {
+        "target": "Los Knicks jugaron contra equipos muy fuertes.",
+        "en": "The Knicks played against very strong teams."
+      },
+      {
+        "target": "Lograron ganar varios partidos importantes.",
+        "en": "They managed to win several important games."
+      },
+      {
+        "target": "Sus jugadores trabajaron duro toda la temporada.",
+        "en": "Their players worked hard all season."
+      },
+      {
+        "target": "Esta victoria es muy importante para la ciudad de Nueva York.",
+        "en": "This victory is very important for New York City."
+      },
+      {
+        "target": "Los aficionados celebraron la victoria en las calles.",
+        "en": "Fans celebrated the victory in the streets."
+      },
+      {
+        "target": "El entrenador dijo que fue el resultado de un buen trabajo en equipo.",
+        "en": "The coach said it was the result of good teamwork."
       }
     ]
   }
