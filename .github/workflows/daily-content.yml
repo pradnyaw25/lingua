@@ -1,0 +1,55 @@
+name: Daily content
+
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 13:00 UTC every day
+  workflow_dispatch: {}     # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-content
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Anthropic SDK
+        run: pip install anthropic
+
+      - name: Cache source data (frequency lists + dictionaries)
+        uses: actions/cache@v4
+        with:
+          path: scripts/.data
+          key: lingua-source-data-v1
+
+      - name: Fetch source data if not cached
+        run: test -f scripts/.data/fr-en.tsv || bash scripts/fetch_data.sh
+
+      - name: Generate today's story
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/generate_daily.py --date "$(date -u +%F)"
+
+      - name: Regenerate click-a-word dictionary
+        run: bash scripts/regen.sh
+
+      - name: Commit and push if changed
+        run: |
+          if [ -n "$(git status --porcelain data/daily.js data/dictionary.js)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/daily.js data/dictionary.js
+            git commit -m "Daily text: $(date -u +%F)"
+            git push
+          else
+            echo "No new content today — nothing to commit."
+          fi

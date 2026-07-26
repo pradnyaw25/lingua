@@ -20,6 +20,7 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -29,8 +30,14 @@ sys.path.insert(0, HERE)
 from build_vocab import parse_vocab, read_dict, aliases  # noqa: E402
 
 TEXTS = os.path.normpath(os.path.join(HERE, "..", "data", "texts.js"))
+DAILY = os.path.normpath(os.path.join(HERE, "..", "data", "daily.js"))
 VOCAB = os.path.normpath(os.path.join(HERE, "..", "data", "vocab.js"))
 OUT = os.path.normpath(os.path.join(HERE, "..", "data", "dictionary.js"))
+
+# Match `lang:` / `target:` in both texts.js (backtick strings, unquoted keys) and
+# daily.js (JSON — double-quoted keys and values).
+LANG_MARK = re.compile(r'"?lang"?\s*:\s*"(\w+)"')
+TARGET_RE = re.compile(r'"?target"?\s*:\s*(?:`([^`]*)`|"((?:[^"\\]|\\.)*)")')
 
 # Keep this tokenizer in lock-step with tokenize() in js/reader.js.
 LET = r"A-Za-zÀ-ÖØ-öø-ÿŒœ"
@@ -57,17 +64,23 @@ def tokenize(sentence):
     return out
 
 
-def text_words_by_lang():
-    src = open(TEXTS, encoding="utf-8").read()
-    marks = [(m.start(), m.group(1)) for m in re.finditer(r'lang:\s*"(\w+)"', src)]
-    words = {}
+def _collect_words(src, words):
+    marks = [(m.start(), m.group(1)) for m in LANG_MARK.finditer(src)]
     for i, (pos, lang) in enumerate(marks):
         end = marks[i + 1][0] if i + 1 < len(marks) else len(src)
-        region = src[pos:end]
         bag = words.setdefault(lang, set())
-        for m in re.finditer(r"target:\s*`([^`]*)`", region):
-            for w in tokenize(m.group(1)):
+        for m in TARGET_RE.finditer(src[pos:end]):
+            raw = m.group(1) if m.group(1) is not None else json.loads('"' + m.group(2) + '"')
+            for w in tokenize(raw):
                 bag.add(norm(w))
+    return words
+
+
+def text_words_by_lang():
+    words = {}
+    _collect_words(open(TEXTS, encoding="utf-8").read(), words)
+    if os.path.exists(DAILY):
+        _collect_words(open(DAILY, encoding="utf-8").read(), words)
     return words
 
 

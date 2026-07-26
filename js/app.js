@@ -1,5 +1,10 @@
 // Shared helpers: build the top nav and mark the active page.
 (function () {
+  // Merge the daily auto-generated texts (window.DAILY) in front of the library.
+  if (window.DAILY && window.DAILY.length && window.TEXTS) {
+    window.TEXTS = window.DAILY.concat(window.TEXTS);
+  }
+
   const pages = [
     { href: "index.html", label: "Library" },
     { href: "vocab.html", label: "Frequency Words" },

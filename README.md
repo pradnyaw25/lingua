@@ -150,6 +150,32 @@ python3 scripts/build_dictionary.py \
 
 Run this whenever you add or edit a text.
 
+## Daily auto-generated content
+
+`data/daily.js` is a rolling window of short bilingual stories generated **once a day**
+by a GitHub Actions cron (`.github/workflows/daily-content.yml`), and merged in front of
+the library by `js/app.js`. No backend — the job just commits static files, same as the
+rest of the site.
+
+Each run (`scripts/generate_daily.py`):
+1. pulls a trending topic (Google Trends RSS, with evergreen fallbacks),
+2. asks Claude (`claude-opus-5`, structured outputs) for a French + Spanish A2 story,
+   sentence-aligned 1:1 with English,
+3. **validates** alignment, length, and a sensitive-topic screen (drops the day if it fails),
+4. prepends it to `data/daily.js` (keeping the newest ~20 days), then `regen.sh` updates
+   the click-a-word dictionary.
+
+**To enable it:** add an `ANTHROPIC_API_KEY` repo secret (Settings → Secrets → Actions).
+Trigger a first run manually from the Actions tab ("Daily content" → Run workflow), or wait
+for the 13:00 UTC schedule. Test locally without the API:
+
+```bash
+python3 scripts/generate_daily.py --mock
+```
+
+**Note:** daily texts skip the hand-QA the curated dictionary gets — their click-a-word
+glosses come straight from the machine dictionary, so expect the occasional rough gloss.
+
 ## Data sources & credits
 
 The generated word lists and dictionary derive from:
